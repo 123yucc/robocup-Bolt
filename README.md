@@ -104,3 +104,4 @@ Related works:
 - 秋山 英久, 中島 智晴, 五十嵐 治一, RoboCup サッカーシミュレーションにおける局面評価の表現法と学習法, 知能と情報, 2020, 32 巻, 2 号, p. 691-703, 公開日 2020/04/15, Online ISSN 1881-7203, Print ISSN 1347-7986, https://doi.org/10.3156/jsoft.32.2_691
 - Takuya Fukushima, Tomoharu Nakashima, Hidehisa Akiyama, Evaluation-function modeling with multi-layered perceptron for RoboCup soccer 2D simulation, Artificial Life and Robotics, Volume 25, issue 3, pp.440-445, 2020-04-30. https://doi.org/10.1007/s10015-020-00602-w
 
+# robocup-Bolt
