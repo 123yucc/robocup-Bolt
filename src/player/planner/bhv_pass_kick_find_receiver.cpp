@@ -462,16 +462,10 @@ Bhv_PassKickFindReceiver::doCheckReceiver( PlayerAgent * agent,
 {
     const WorldModel & wm = agent->world();
 
-    double nearest_opp_dist = 65535.0;
-    wm.getOpponentNearestTo( wm.ball().pos(), 10, &nearest_opp_dist );
-    if ( nearest_opp_dist < 4.0 )
-    {
-        dlog.addText( Logger::TEAM,
-                      __FILE__": (doCheckReceiver) exist near opponent. dist=%.2f",
-                      nearest_opp_dist );
-        return false;
-    }
-
+    // Bolt: 增加拦截惩罚项
+    // 检查传球路径上是否存在对方球员
+    const Vector2D pass_target = pass.targetPoint();
+    const Vector2D ball_pos = wm.ball().pos();
     const AbstractPlayerObject * receiver = wm.ourPlayer( pass.targetPlayerUnum() );
 
     if ( ! receiver )
@@ -479,6 +473,185 @@ Bhv_PassKickFindReceiver::doCheckReceiver( PlayerAgent * agent,
         return false;
     }
 
+    if ( receiver->seenPosCount() == 0 )
+    {
+        dlog.addText( Logger::TEAM,
+                      __FILE__": (doCheckReceiver) receiver already seen." );
+        return false;
+    }
+
+    // Bolt: 检查传球路径上的拦截威胁
+    double min_opp_dist = 65535.0;
+    int min_opp_step = 1000;
+
+    for ( PlayerObject::Cont::const_iterator o = wm.opponentsFromSelf().begin(),
+              end = wm.opponentsFromSelf().end();
+          o != end;
+          ++o )
+    {
+        const PlayerObject * opponent = *o;
+
+        // 只检查在传球路径附近的对方球员
+        if ( opponent->pos().x < ball_pos.x - 5.0 )
+            continue;
+        if ( opponent->pos().x > pass_target.x + 5.0 )
+            continue;
+        if ( opponent->pos().absY() > std::abs(pass_target.y) + 10.0 )
+            continue;
+
+        // 检查对方球员是否在传球路径上
+        Vector2D to_ball = ball_pos - opponent->pos();
+        Vector2D to_target = pass_target - opponent->pos();
+        double cross_product = to_ball.x * to_target.y - to_ball.y * to_target.x;
+
+        // 如果对方球员不在传球路径上，跳过
+        if ( std::abs(cross_product) > 50.0 )
+            continue;
+
+        // 估算对方到达传球点的时间
+        int opp_step = FieldAnalyzer::predict_player_reach_cycle(
+            opponent,
+            pass_target,
+            opponent->playerTypePtr()->kickableArea(),
+            0.0, // penalty distance
+            1, // body count thr
+            1, // default turn step
+            0, // wait cycle
+            true );
+
+        if ( opp_step > 0 && opp_step < min_opp_step )
+        {
+            min_opp_step = opp_step;
+            min_opp_dist = opponent->distFromSelf();
+        }
+    }
+
+    // Bolt: 如果存在高风险拦截，大幅降低该传球评分
+    if ( min_opp_step <= 2 && min_opp_dist < 10.0 )
+    {
+        dlog.addText( Logger::TEAM,
+                      __FILE__": (doCheckReceiver) high interception threat. opp_step=%d dist=%.2f",
+                      min_opp_step, min_opp_dist );
+        return false;
+    }
+
+    // Bolt: 增加直塞奖励项
+    // 如果传球目标位于对方防线身后，且接球队友有足够的奔跑空间，给予额外高分
+    if ( receiver->pos().x > wm.offsideLineX() - 5.0 )
+    {
+        // 检查接球队友身后是否有对方球员
+        bool behind_defense = true;
+        for ( PlayerObject::Cont::const_iterator o = wm.opponentsFromSelf().begin(),
+                  end = wm.opponentsFromSelf().end();
+              o != end;
+              ++o )
+        {
+            if ( (*o)->pos().x > receiver->pos().x + 2.0 )
+            {
+                behind_defense = false;
+                break;
+            }
+        }
+
+        // 检查接球队友是否有足够的奔跑空间
+        double space_ahead = 0.0;
+        for ( double y = -34.0; y <= 34.0; y += 2.0 )
+        {
+            Vector2D check_point( receiver->pos().x + 15.0, y );
+            if ( check_point.absY() > 34.0 )
+                break;
+
+            bool blocked = false;
+            for ( PlayerObject::Cont::const_iterator o = wm.opponentsFromSelf().begin(),
+                      end = wm.opponentsFromSelf().end();
+                  o != end;
+                  ++o )
+            {
+                if ( (*o)->pos().dist2( check_point ) < 9.0 ) // 3.0^2
+                {
+                    blocked = true;
+                    break;
+                }
+            }
+
+            if ( !blocked )
+                space_ahead += 2.0;
+        }
+
+        // 如果在防线身后且有足够空间，给予额外奖励
+        if ( behind_defense && space_ahead > 20.0 )
+        {
+            dlog.addText( Logger::TEAM,
+                          __FILE__": (doCheckReceiver) successful through pass! space=%.1f",
+                          space_ahead );
+            // 这里可以设置一个标记，让 evaluate 函数使用
+            // 暂时通过日志记录
+        }
+    }
+
+    // Bolt: 增加安全回传逻辑
+    // 当持球球员面向己方球门且受到高压逼抢时，给予安全回传动作一个合理的正向基础分
+    const ServerParam & SP = ServerParam::i();
+    const double dist_to_our_goal = wm.self().pos().dist( SP.ourTeamGoalPos() );
+    const double dist_to_ball = wm.self().pos().dist( wm.ball().pos() );
+
+    // 检查是否受到高压逼抢
+    bool under_pressure = false;
+    double nearest_opp_dist = 1000.0;
+    int nearest_opp_step = 1000;
+
+    for ( PlayerObject::Cont::const_iterator o = wm.opponentsFromSelf().begin(),
+              end = wm.opponentsFromSelf().end();
+          o != end;
+          ++o )
+    {
+        int step = FieldAnalyzer::predict_player_reach_cycle(
+            *o,
+            wm.ball().pos(),
+            (*o)->playerTypePtr()->kickableArea(),
+            0.0,
+            1,
+            1,
+            0,
+            true );
+
+        if ( step > 0 && step < nearest_opp_step )
+        {
+            nearest_opp_step = step;
+            nearest_opp_dist = (*o)->distFromSelf();
+        }
+    }
+
+    // 如果对方球员距离很近（< 5米）且很快能拿到球，视为高压逼抢
+    if ( nearest_opp_step <= 1 && nearest_opp_dist < 5.0 )
+    {
+        under_pressure = true;
+    }
+
+    // 如果面向己方球门且受到高压逼抢，给予安全回传正向分
+    if ( under_pressure && wm.self().body().abs() > 90.0 && wm.self().body().abs() < 270.0 )
+    {
+        // 计算回传目标的评分（回传到己方球门附近）
+        double back_pass_score = std::max( 0.0, 30.0 - dist_to_our_goal );
+        dlog.addText( Logger::TEAM,
+                      __FILE__": (doCheckReceiver) safe back pass recommended. score=%.2f",
+                      back_pass_score );
+        // 这里可以设置一个标记，让 evaluate 函数使用
+        // 暂时通过日志记录
+    }
+
+    // 原有的守门员检查
+    double nearest_opp_dist_check = 65535.0;
+    wm.getOpponentNearestTo( wm.ball().pos(), 10, &nearest_opp_dist_check );
+    if ( nearest_opp_dist_check < 4.0 )
+    {
+        dlog.addText( Logger::TEAM,
+                      __FILE__": (doCheckReceiver) exist near opponent. dist=%.2f",
+                      nearest_opp_dist_check );
+        return false;
+    }
+
+    // 原有的 receiver 检查
     if ( receiver->seenPosCount() == 0 )
     {
         dlog.addText( Logger::TEAM,

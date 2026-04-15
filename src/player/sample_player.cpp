@@ -164,6 +164,8 @@ SamplePlayer::~SamplePlayer()
 bool
 SamplePlayer::initImpl( CmdLineParser & cmd_parser )
 {
+    std::cout << "2026RoboCup 机器人世界杯中国赛【Bolt】" << std::endl;
+
     bool result = PlayerAgent::initImpl( cmd_parser );
 
     // read additional options

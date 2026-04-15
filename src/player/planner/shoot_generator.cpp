@@ -755,6 +755,11 @@ ShootGenerator::evaluateCourses( const WorldModel & wm )
                                     ? ( goalie->pos() - M_first_ball_pos ).th()
                                     : 180.0 );
 
+    // Bolt: 计算球门死角位置
+    const Vector2D goal_left( SP.pitchHalfLength(), -SP.goalHalfWidth() );
+    const Vector2D goal_right( SP.pitchHalfLength(), SP.goalHalfWidth() );
+    const Vector2D goal_center( SP.pitchHalfLength(), 0.0 );
+
     const Container::iterator end = M_courses.end();
     for ( Container::iterator it = M_courses.begin();
           it != end;
@@ -762,20 +767,67 @@ ShootGenerator::evaluateCourses( const WorldModel & wm )
     {
         double score = 1.0;
 
+        // Bolt: 基础加分 - 一步射门
         if ( it->kick_step_ == 1 )
         {
             score += 50.0;
         }
 
+        // Bolt: 守门员无法到达加分
         if ( it->goalie_never_reach_ )
         {
             score += 100.0;
         }
 
+        // Bolt: 对方球员无法到达加分
         if ( it->opponent_never_reach_ )
         {
             score += 100.0;
         }
+
+        // Bolt: 射门角度权重优化
+        // 计算射门角度（球到球门的角度）
+        const Vector2D ball_to_goal = it->target_point_ - M_first_ball_pos;
+        const double shoot_angle = ( ball_to_goal.th() - goalie_angle ).abs();
+
+        // Bolt: 角度越大（越接近90度），得分越高
+        // 球门死角（±90度）给予额外加分
+        double angle_bonus = 0.0;
+        if ( shoot_angle > 60.0 )
+        {
+            // 角度越大，加分越多
+            angle_bonus = ( shoot_angle - 60.0 ) * 2.0;
+        }
+
+        // Bolt: 如果射向死角且守门员距离较远，给予额外高分
+        if ( it->goalie_never_reach_ && shoot_angle > 75.0 )
+        {
+            angle_bonus += 50.0; // 角度死角额外加分
+        }
+
+        score += angle_bonus;
+
+        // Bolt: 射门力度优化
+        // 距离越近，适当降低力度以提高精度
+        double distance_to_goal = M_first_ball_pos.dist( it->target_point_ );
+        double power_factor = 1.0;
+
+        if ( distance_to_goal < 15.0 )
+        {
+            // 近距离射门：降低力度
+            power_factor = 0.85;
+        }
+        else if ( distance_to_goal < 25.0 )
+        {
+            // 中距离射门：正常力度
+            power_factor = 0.95;
+        }
+        // 远距离射门：使用最大力度
+
+        // Bolt: 根据力度调整评分
+        // 力度越大，评分越高（但不超过最大值）
+        double power_score = 1.0 + ( it->first_ball_speed_ / SP.ballSpeedMax() ) * 20.0 * power_factor;
+        score *= power_score;
 
         double goalie_rate = 1.0;
         if ( goalie )
@@ -807,13 +859,13 @@ ShootGenerator::evaluateCourses( const WorldModel & wm )
 
 #ifdef DEBUG_PRINT_EVALUATE
         dlog.addText( Logger::SHOOT,
-                      "(shoot eval) %d: score=%f(%f) pos(%.2f %.2f) speed=%.3f goalie_rate=%f y_rate=%f",
+                      "(shoot eval) %d: score=%f(%f) pos(%.2f %.2f) speed=%.3f goalie_rate=%f y_rate=%f angle_bonus=%.2f",
                       it->index_,
                       score * goalie_rate * y_rate, score,
                       it->target_point_.x, it->target_point_.y,
                       it->first_ball_speed_,
                       goalie_rate,
-                      y_rate );
+                      y_rate, angle_bonus );
 #endif
         score *= goalie_rate;
         score *= y_rate;

@@ -5,3 +5,7 @@ sample_trainer
 start.sh
 train.sh
 
+*.rcg
+*.rcl
+incomplete.*
+build/
