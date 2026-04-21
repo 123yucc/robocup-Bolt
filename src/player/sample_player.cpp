@@ -35,6 +35,7 @@
 
 #include "action_chain_holder.h"
 #include "sample_field_evaluator.h"
+#include "planner/rl_field_evaluator.h"  // Bolt: RL evaluator
 
 #include "soccer_role.h"
 
@@ -782,7 +783,11 @@ SamplePlayer::getFieldEvaluator() const
 FieldEvaluator::ConstPtr
 SamplePlayer::createFieldEvaluator() const
 {
-    return FieldEvaluator::ConstPtr( new SampleFieldEvaluator );
+    // Bolt: Always use RLFieldEvaluator (it wraps SampleFieldEvaluator as base)
+    // RL enhancement only applies when trained weights are loaded
+    // This ensures data collection works for future training
+    dlog.addText(Logger::TEAM, "Bolt: Using RLFieldEvaluator (base=SampleFieldEvaluator)");
+    return FieldEvaluator::ConstPtr( new RLFieldEvaluator(350) );
 }
 
 

@@ -1,0 +1,387 @@
+******************************************************************
+ HELIOS base
+ Created by Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2000-2007.  Hidehisa Akiyama
+ Copyright 2007-2011.  Hidehisa Akiyama and Hiroki Shimora
+ 
+ Gliders2d
+ Copyright 2018-2019.  Mikhail Prokopenko and Peter Wang
+ 
+ Cyrus2D_base
+ Copyright 2021-2022.  Omid Amini and Nader Zare
+ All rights reserved.
+******************************************************************
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.023 ms
+
+--- localhost ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.023/0.023/0.023/0.000 ms
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 1 side: r
+BoltBase 1: [-1, 0] (v18+) force synch see mode.
+BoltBase 1:  KickTable created.
+BoltBase 1: [-1, 0] set synch see mode.
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+BoltBase: init ok.  unum: 2 side: r
+BoltBase 2: [-1, 0] (v18+) force synch see mode.
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 3 side: r
+BoltBase 3: [-1, 0] (v18+) force synch see mode.
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: BoltBase: init ok.  unum: 5 side: r
+BoltBase 5: [-1, 0] (v18+) force synch see mode.
+init ok.  unum: 4 side: r
+BoltBase 4: [-1, 0] (v18+) force synch see mode.
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 6 side: r
+BoltBase 6: [-1, 0] (v18+) force synch see mode.
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 7 side: r
+BoltBase 7: [-1, 0] (v18+) force synch see mode.
+BoltBase: init ok.  unum: 8 side: r
+BoltBase 8: [-1, 0] (v18+) force synch see mode.
+BoltBase coach: [-1, 0] recv (ok eye on)
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase 4:  KickTable created.
+BoltBase 4: [-1, 0] set synch see mode.
+BoltBase 5:  KickTable created.
+BoltBase 5: [BoltBase: init ok.  unum: 9 side: r
+BoltBase 9: [-1, 0] (v18+) force synch see mode.
+-1, 0] set synch see mode.
+BoltBase 2:  KickTable created.
+BoltBase 6:  KickTable created.
+BoltBase 2: [-1, 0] set synch see mode.
+BoltBase 2: [0, 2] missed last action?(1) last decision=[-1, 0]
+BoltBase 6: [-1, 0] set synch see mode.
+BoltBaseBoltBase 8:  KickTable created.
+ 3:  KickTable created.
+BoltBaseBoltBase 8: [-1, 0] set synch see mode.
+ 3: [-1, 0] set synch see mode.
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 10 side: r
+BoltBase 10: [-1, 0] (v18+) force synch see mode.
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 11 side: r
+BoltBase 11: [-1, 0] (v18+) force synch see mode.
+BoltBase 7:  KickTable created.
+BoltBase 7: [-1, 0] set synch see mode.
+BoltBase 9:  KickTable created.
+BoltBase 9: [-1, 0] set synch see mode.
+BoltBase 10:  KickTable created.
+BoltBase 10: [-1, 0] set synch see mode.
+BoltBase 11:  KickTable created.
+BoltBase 11: [-1, 0] set synch see mode.
+id speed step inc  power  stam  karea
+ 0 1.000   6  45.0 100.0  55.0  1.085
+ 1 0.781   6  50.6 100.0  49.4  1.177
+ 2 0.871   6  48.2 100.0  51.8  1.124
+ 3 1.011   7  44.3 100.0  55.7  1.129
+ 4 0.810   7  51.2 100.0  48.8  1.139
+ 5 0.811   5  51.7 100.0  48.3  1.080
+ 6 0.857   5  45.4 100.0  54.6  1.011
+ 7 0.972   5  43.3 100.0  56.7  1.133
+ 8 0.992   6  46.5 100.0  53.5  1.043
+ 9 0.889   6  48.7 100.0  51.3  1.012
+ 10 0.921   7  51.2 100.0  48.8  1.138
+ 11 0.805   5  44.9 100.0  55.1  1.166
+ 12 0.810   4  41.2 100.0  58.8  1.069
+ 13 0.965   6  44.7 100.0  55.3  1.081
+ 14 0.869   5  42.2 100.0  57.8  1.055
+ 15 1.019   7  41.9 100.0  58.1  1.109
+ 16 0.775   4  46.4 100.0  53.6  1.156
+ 17 0.772   5  50.9 100.0  49.1  1.047
+BoltBase coach: change player 1 to type 0
+BoltBase coach: change player 11 to type 3
+BoltBase coach: change player 2 to type 15
+BoltBase coach: change player 3 to type 8
+BoltBase coach: change player 10 to type 7
+BoltBase coach: change player 9 to type 13
+BoltBase coach: change player 6 to type 10
+BoltBase coach: change player 4 to type 9
+BoltBase coach: change player 5 to type 14
+BoltBase coach: change player 7 to type 2
+BoltBase coach: change player 8 to type 6
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+layerSize: 4
+layerSize: 4
+layerSize: 4
+BoltBase coach: [17, 0] determined opponent 11 type = 3
+BoltBase coach: [17, 0] determined opponent 6 type = 10
+BoltBase coach: [17, 0] determined opponent 2 type = 15
+BoltBase coach: [18, 0] determined opponent 3 type = 8
+layerSize: 4
+layerSize: 4
+layerSize: 4
+layerSize: 4
+layerSize: 4
+BoltBase coach: [19, 0] determined opponent 7 type = 2
+layerSize: 4
+layerSize: 4
+BoltBase coach: [24, 0] determined opponent 9 type = 13
+BoltBase coach: [25, 0] determined opponent 4 type = 9
+BoltBase coach: [105, 0] determined opponent 8 type = 6
+BoltBase coach: [138, 0] determined opponent 10 type = 7
+BoltBase coach: [138, 0] determined opponent 5 type = 14
+BoltBase coach: [261, 0] sent freeform (player_types (1 0)(2 15)(3 8)(4 9)(5 14)(6 10)(7 2)(8 6)(9 13)(10 7)(11 3))
+BoltBase coach: [261, 0] freeform 1 / 128
+BoltBase coach: [301, 0] updated clang capacity.
+BoltBase 9: [552, 0] lost kick by foul at [552, 0] sense=3 internal=4
+BoltBase coach: [601, 0] updated clang capacity.
+BoltBase 9: [657, 0] lost kick by foul at [657, 0] sense=12 internal=13
+BoltBase coach: [901, 0] updated clang capacity.
+BoltBase coach: [1201, 0] updated clang capacity.
+BoltBase coach: [1501, 0] updated clang capacity.
+BoltBase 8: [1526, 0] lost kick by foul at [1526, 0] sense=19 internal=20
+BoltBase 7: [1567, 0] lost kick by foul at [1567, 0] sense=22 internal=23
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+BoltBase coach: [1801, 0] updated clang capacity.
+BoltBase coach: [2101, 0] updated clang capacity.
+BoltBase 10: [2197, 0] lost kick? at [2197, 0] sense=42 internal=43
+BoltBase coach: [2401, 0] updated clang capacity.
+BoltBase 8: [2680, 0] kick power is over max. com=115.845 > sparam=100
+BoltBase coach: [2701, 0] updated clang capacity.
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge
+/home/linna/librcsc/rcsc/geom/voronoi_diagram.cpp:295:Unexpected reach. no triangle for edge

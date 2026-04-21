@@ -31,6 +31,7 @@
 #include "bhv_basic_tackle.h"
 
 #include "tackle_generator.h"
+#include "strategy.h"
 
 #include "basic_actions/neck_turn_to_ball_or_scan.h"
 #include "basic_actions/neck_turn_to_point.h"
@@ -57,8 +58,25 @@ Bhv_BasicTackle::execute( PlayerAgent * agent )
     const ServerParam & SP = ServerParam::i();
     const WorldModel & wm = agent->world();
 
-    bool use_foul = false;
+    // ============================================================
+    // Bolt: 根据位置和角色调整铲球概率
+    // ============================================================
     double tackle_prob = wm.self().tackleProbability();
+
+    // 在禁区前沿（危险区域）增加铲球概率
+    bool in_danger_zone = ( wm.ball().pos().x < -35.0
+                           && wm.ball().pos().absY() < 20.0 );
+
+    // 后卫和中场在危险区域更积极
+    int role = Strategy::i().roleNumber( wm.self().unum() );
+    bool is_defender = ( role >= 2 && role <= 5 );
+
+    if ( in_danger_zone && is_defender )
+    {
+        tackle_prob += 0.15;  // 增加 15% 的铲球概率
+    }
+
+    bool use_foul = false;
 
     if ( agent->config().version() >= 14.0
          && wm.self().card() == NO_CARD

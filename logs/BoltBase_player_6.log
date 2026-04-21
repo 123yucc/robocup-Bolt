@@ -1,0 +1,18 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+2026RoboCup 机器人世界杯中国赛【Bolt】
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+BoltBase: init ok.  unum: 6 side: r
+BoltBase 6: [-1, 0] (v18+) force synch see mode.
+BoltBase 6:  KickTable created.
+BoltBase 6: [-1, 0] set synch see mode.

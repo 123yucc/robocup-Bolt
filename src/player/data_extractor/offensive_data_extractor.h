@@ -71,6 +71,11 @@ public:
                         double bell_speed);
 
     std::vector<double> get_data(DEState &state);
+
+    // Bolt: RL-specific feature extraction (extends to ~350 dimensions)
+    std::vector<double> get_rl_data(DEState &state);
+    void extract_rl_features(DEState &state);
+
 private:
     void init_file(DEState &state);
 

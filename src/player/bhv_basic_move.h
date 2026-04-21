@@ -40,6 +40,14 @@ public:
 
 private:
     double getDashPower( const rcsc::PlayerAgent * agent );
+
+    // Bolt: 防守盯人相关函数
+    bool shouldDefendMark( rcsc::PlayerAgent * agent,
+                           const int & role,
+                           const rcsc::Vector2D & ball );
+    rcsc::Vector2D calculateMarkPoint( const rcsc::Vector2D & defender_pos,
+                                       const rcsc::Vector2D & opponent_pos,
+                                       const rcsc::Vector2D & our_goal_pos );
 };
 
 #endif

@@ -1,0 +1,10 @@
+rcssmonitor-19.0.1
+
+Copyright (C) 2009 - 2022 RoboCup Soccer Simulator Maintenance Group.
+
+QSocketNotifier: Can only be used with threads started with QThread
+Connect to [127.0.0.1] ...
+send: (dispinit version 5)
+updated server port number = 32814
+send: (dispstart)
+send: (dispbye)

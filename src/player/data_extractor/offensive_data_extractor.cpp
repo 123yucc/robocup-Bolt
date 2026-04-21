@@ -8,7 +8,9 @@
 #include "../planner/cooperative_action.h"
 #include "../sample_player.h"
 #include "../planner/action_state_pair.h"
+#include "../strategy.h"
 #include <rcsc/player/world_model.h>
+#include <rcsc/common/server_param.h>
 #include <random>
 #include <time.h>
 #include <vector>
@@ -678,5 +680,151 @@ uint OffensiveDataExtractor::find_unum_index(DEState &state, uint unum) {
 ODEPolar::ODEPolar(rcsc::Vector2D p) {
     teta = p.th().degree();
     r = p.r();
+}
+
+/*-------------------------------------------------------------------*/
+// Bolt: RL-specific feature extraction methods
+/*-------------------------------------------------------------------*/
+std::vector<double> OffensiveDataExtractor::get_rl_data(DEState &state) {
+    features.clear();
+
+    // Get base features (290 dimensions)
+    if (option.cycle)
+        ADD_ELEM("cycle", convertor_cycle(state.cycle()));
+    extract_ball(state);
+    extract_players(state);
+
+    // Add RL-specific features (~60 additional dimensions)
+    extract_rl_features(state);
+
+    return features;
+}
+
+/*-------------------------------------------------------------------*/
+void OffensiveDataExtractor::extract_rl_features(DEState &state) {
+    #ifdef ODEDebug
+    dlog.addText(Logger::BLOCK, "Bolt: extract_rl_features");
+    #endif
+
+    const WorldModel & wm = state.wm();
+
+    // 1. Ball velocity features (4 dimensions)
+    if (wm.ball().vel().isValid()) {
+        ADD_ELEM("ball_vel_x", convertor_bvx(wm.ball().vel().x));
+        ADD_ELEM("ball_vel_y", convertor_bvy(wm.ball().vel().y));
+        ADD_ELEM("ball_vel_r", convertor_bv(wm.ball().vel().r()));
+        ADD_ELEM("ball_vel_t", convertor_angle(wm.ball().vel().th().degree()));
+    } else {
+        ADD_ELEM("ball_vel_x", invalid_data_);
+        ADD_ELEM("ball_vel_y", invalid_data_);
+        ADD_ELEM("ball_vel_r", invalid_data_);
+        ADD_ELEM("ball_vel_t", invalid_data_);
+    }
+
+    // 2. Game mode feature (1 dimension)
+    int game_mode_type = static_cast<int>(wm.gameMode().type());
+    ADD_ELEM("game_mode", convertor_type(game_mode_type));
+
+    // 3. Score features (2 dimensions)
+    // Note: Score only available from fullstate sensor in coach mode
+    // For player, estimate from game mode
+    int our_score = 0;
+    int their_score = 0;
+    if (wm.gameMode().scoreLeft() >= 0 && wm.gameMode().scoreRight() >= 0)
+    {
+        if (wm.ourSide() == rcsc::LEFT)
+        {
+            our_score = wm.gameMode().scoreLeft();
+            their_score = wm.gameMode().scoreRight();
+        }
+        else
+        {
+            our_score = wm.gameMode().scoreRight();
+            their_score = wm.gameMode().scoreLeft();
+        }
+    }
+    ADD_ELEM("our_score", our_score / 10.0);
+    ADD_ELEM("their_score", their_score / 10.0);
+
+    // 4. Interception timing features (4 dimensions)
+    int tm_reach_cycle = wm.interceptTable().teammateStep();
+    int opp_reach_cycle = wm.interceptTable().opponentStep();
+    int self_reach_cycle = wm.interceptTable().selfStep();
+
+    ADD_ELEM("tm_reach_cycle", convertor_cycle(tm_reach_cycle));
+    ADD_ELEM("opp_reach_cycle", convertor_cycle(opp_reach_cycle));
+    ADD_ELEM("self_reach_cycle", convertor_cycle(self_reach_cycle));
+    ADD_ELEM("reach_diff", convertor_cycle(tm_reach_cycle - opp_reach_cycle));
+
+    // 5. Pressure indicator (1 dimension)
+    // Calculate pressure based on nearby opponents
+    double pressure_score = 0.0;
+    const Vector2D & ball_pos = wm.ball().pos();
+    if (ball_pos.isValid()) {
+        for (const auto & opp : wm.opponentsFromBall()) {
+            double dist = opp->distFromBall();
+            if (dist < 5.0) {
+                pressure_score += 1.0;
+            } else if (dist < 10.0) {
+                pressure_score += 0.5;
+            }
+        }
+    }
+    ADD_ELEM("pressure_score", pressure_score / 5.0);  // Normalize to 0-1
+
+    // 6. Formation deviation (1 dimension)
+    // How far each teammate is from their strategic position
+    double formation_deviation = 0.0;
+    for (int i = 1; i <= 11; ++i) {
+        const AbstractPlayerObject * tm = wm.ourPlayer(i);
+        if (tm && tm->pos().isValid()) {
+            Vector2D home_pos = Strategy::instance().getPosition(i);
+            if (home_pos.isValid()) {
+                formation_deviation += tm->pos().dist(home_pos);
+            }
+        }
+    }
+    ADD_ELEM("formation_dev", formation_deviation / 200.0);  // Normalize
+
+    // 7. Stamina features for teammates (11 dimensions)
+    // Note: AbstractPlayerObject doesn't have stamina, use self's stamina or estimate from heard info
+    // For now, only self has accurate stamina; teammates use heard stamina capacity
+    for (int i = 1; i <= 11; ++i) {
+        if (i == wm.self().unum()) {
+            // Self has accurate stamina
+            ADD_ELEM("tm_stamina_" + std::to_string(i), convertor_stamina(wm.self().stamina()));
+        } else {
+            // Teammates: use stamina capacity from audio memory (heard info)
+            double stamina_capacity = wm.ourStaminaCapacity(i);
+            if (stamina_capacity >= 0) {
+                ADD_ELEM("tm_stamina_" + std::to_string(i), stamina_capacity / 8000.0);
+            } else {
+                ADD_ELEM("tm_stamina_" + std::to_string(i), invalid_data_);
+            }
+        }
+    }
+
+    // 8. Offensive/Defensive situation (1 dimension)
+    // -1 = defensive, 0 = neutral, 1 = offensive
+    double situation_score = 0.0;
+    if (ball_pos.isValid()) {
+        situation_score = ball_pos.x / 52.5;  // -1 to 1
+    }
+    ADD_ELEM("situation_score", situation_score);
+
+    // 9. Offside line distance (1 dimension)
+    double offside_dist = state.offsideLineX() - ball_pos.x;
+    ADD_ELEM("offside_dist", convertor_dist_x(offside_dist));
+
+    // 10. Ball distance to goals (2 dimensions)
+    double dist_to_our_goal = ball_pos.dist(ServerParam::i().ourTeamGoalPos());
+    double dist_to_opp_goal = ball_pos.dist(ServerParam::i().theirTeamGoalPos());
+    ADD_ELEM("dist_to_our_goal", convertor_dist(dist_to_our_goal));
+    ADD_ELEM("dist_to_opp_goal", convertor_dist(dist_to_opp_goal));
+
+    #ifdef ODEDebug
+    dlog.addText(Logger::BLOCK, "Bolt: Added %zu RL features, total features: %zu",
+                 features.size() - 290, features.size());
+    #endif
 }
 

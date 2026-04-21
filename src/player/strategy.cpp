@@ -611,6 +611,11 @@ Strategy::updatePosition( const WorldModel & wm )
     M_positions.clear();
     f->getPositions( ball_pos, M_positions );
 
+    // ============================================================
+    // Bolt: 动态防线调整（基于球的位置）
+    // ============================================================
+    adjustDefenseLineBasedOnBall( ball_pos, wm );
+
     // G2d: various states
     bool indFK = false;
     if ( ( wm.gameMode().type() == GameMode::BackPass_
@@ -1092,17 +1097,120 @@ Strategy::getPosition( const int unum ) const
         return Vector2D::INVALIDATED;
     }
 
-    try
+    // ============================================================
+    // Bolt: 动态防线调整
+    // ============================================================
+    Vector2D base_pos = M_positions.at( number - 1 );
+
+    // 检查是否需要调整防线
+    if ( shouldAdjustDefenseLine( base_pos ) )
     {
-        return M_positions.at( number - 1 );
+        base_pos = adjustDefenseLine( base_pos );
     }
-    catch ( std::exception & e )
+
+    return base_pos;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 判断是否需要调整防线（已禁用，使用 adjustDefenseLineBasedOnBall）
+*/
+bool
+Strategy::shouldAdjustDefenseLine( const Vector2D & base_pos ) const
+{
+    // 禁用旧版本逻辑，避免双重调整
+    return false;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 调整防线位置（已禁用，使用 adjustDefenseLineBasedOnBall）
+*/
+Vector2D
+Strategy::adjustDefenseLine( const Vector2D & base_pos ) const
+{
+    // 禁用旧版本逻辑
+    return base_pos;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 基于球位置的动态防线调整（优化版本）
+  只调整后卫和中场，前锋保持进攻位置
+*/
+void
+Strategy::adjustDefenseLineBasedOnBall( const Vector2D & ball_pos,
+                                         const WorldModel & wm )
+{
+    const ServerParam & SP = ServerParam::i();
+
+    // 1. 只在 PlayOn 模式下调整
+    if ( wm.gameMode().type() != GameMode::PlayOn )
     {
-        std::cerr<< __FILE__ << ':' << __LINE__ << ':'
-                 << " Exception caught! " << e.what()
-                 << std::endl;
-        return Vector2D::INVALIDATED;
+        return;
     }
+
+    // 2. 根据球的位置确定防线调整策略
+    // 区分不同角色的调整幅度
+
+    // 球在我方半场危险区域（x < -35）
+    if ( ball_pos.x < -35.0 )
+    {
+        // 后卫(2-5): 后撤收缩防守
+        for ( int role = 2; role <= 5; ++role )
+        {
+            int idx = role - 1;
+            if ( idx < M_positions.size() )
+            {
+                M_positions[idx].x -= 2.0;
+                M_positions[idx].x = std::max( -SP.pitchHalfLength() + 5.0, M_positions[idx].x );
+            }
+        }
+        // 中场(6-8): 适度后撤支援防守
+        for ( int role = 6; role <= 8; ++role )
+        {
+            int idx = role - 1;
+            if ( idx < M_positions.size() )
+            {
+                M_positions[idx].x -= 1.0;
+            }
+        }
+        // 前锋(9-11): 保持进攻位置，不后撤
+        // 不做调整，让他们准备反击
+    }
+    // 球在我方半场中场区域（-35 < x < -10）
+    else if ( ball_pos.x < -10.0 )
+    {
+        // 后卫: 适度收缩
+        for ( int role = 2; role <= 5; ++role )
+        {
+            int idx = role - 1;
+            if ( idx < M_positions.size() )
+            {
+                M_positions[idx].x -= 1.0;
+            }
+        }
+        // 中场和前锋: 保持原位
+    }
+    // 球在对方半场（x > -10）
+    else
+    {
+        // 后卫: 保持防线，不盲目前压（避免被打反击）
+        // 中场和前锋: 可以前压支援进攻
+        for ( int role = 6; role <= 11; ++role )
+        {
+            int idx = role - 1;
+            if ( idx < M_positions.size() )
+            {
+                M_positions[idx].x += 1.5;
+                M_positions[idx].x = std::min( wm.offsideLineX() - 1.0, M_positions[idx].x );
+            }
+        }
+    }
+
+    dlog.addText( Logger::TEAM,
+                  __FILE__": Defense line adjusted (optimized). ball_pos=(%.2f, %.2f)",
+                  ball_pos.x, ball_pos.y );
 }
 
 /*-------------------------------------------------------------------*/

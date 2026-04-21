@@ -2288,3 +2288,277 @@ SampleCommunication::attentiontoSomeone( PlayerAgent * agent )
         agent->doAttentiontoOff();
     }
 }
+
+/*-------------------------------------------------------------------*/
+// Bolt: RL-specific communication methods
+/*-------------------------------------------------------------------*/
+
+namespace {
+
+/*!
+  \class RLValueMessage
+  \brief Simple RL value message encoder for Bolt team
+*/
+class RLValueMessage
+    : public SayMessage {
+private:
+    int M_encoded_value;
+
+public:
+    explicit
+    RLValueMessage( const int encoded_value )
+        : M_encoded_value( encoded_value )
+      { }
+
+    char header() const override
+      {
+          return 'v';  // RL value message header
+      }
+
+    int length() const override
+      {
+          return 3;  // "vXX" format
+      }
+
+    bool appendTo( std::string & to ) const override
+      {
+          to += 'v';
+          to += static_cast<char>('0' + (M_encoded_value / 100) % 10);
+          to += static_cast<char>('0' + (M_encoded_value / 10) % 10);
+          to += static_cast<char>('0' + M_encoded_value % 10);
+          return true;
+      }
+
+    std::ostream & printDebug( std::ostream & os ) const override
+      {
+          return os << "RLValueMessage( " << M_encoded_value << " )";
+      }
+};
+
+/*!
+  \class RLIntentionMessage
+  \brief RL intention message encoder for Bolt team
+*/
+class RLIntentionMessage
+    : public SayMessage {
+private:
+    int M_action;
+    int M_encoded_x;
+    int M_encoded_y;
+
+public:
+    RLIntentionMessage( const int action, const int encoded_x, const int encoded_y )
+        : M_action( action ), M_encoded_x( encoded_x ), M_encoded_y( encoded_y )
+      { }
+
+    char header() const override
+      {
+          return 'i';  // RL intention message header
+      }
+
+    int length() const override
+      {
+          return 5;  // "iAXXY" format
+      }
+
+    bool appendTo( std::string & to ) const override
+      {
+          to += 'i';
+          to += static_cast<char>('0' + M_action);
+          to += static_cast<char>('A' + (M_encoded_x / 26));
+          to += static_cast<char>('a' + (M_encoded_x % 26));
+          to += static_cast<char>('A' + (M_encoded_y / 26));
+          to += static_cast<char>('a' + (M_encoded_y % 26));
+          return true;
+      }
+
+    std::ostream & printDebug( std::ostream & os ) const override
+      {
+          return os << "RLIntentionMessage( action=" << M_action
+                    << ", x=" << M_encoded_x << ", y=" << M_encoded_y << " )";
+      }
+};
+
+/*!
+  \class RLCoordinationMessage
+  \brief RL coordination message encoder for Bolt team
+*/
+class RLCoordinationMessage
+    : public SayMessage {
+private:
+    int M_pressure;
+    int M_suggested_action;
+    bool M_has_possession;
+
+public:
+    RLCoordinationMessage( const int pressure, const int suggested_action, const bool has_possession )
+        : M_pressure( pressure ), M_suggested_action( suggested_action ), M_has_possession( has_possession )
+      { }
+
+    char header() const override
+      {
+          return 'c';  // RL coordination message header
+      }
+
+    int length() const override
+      {
+          return 4;  // "cPAS" format
+      }
+
+    bool appendTo( std::string & to ) const override
+      {
+          to += 'c';
+          to += static_cast<char>('0' + M_pressure);
+          to += static_cast<char>('0' + M_suggested_action);
+          to += (M_has_possession ? '1' : '0');
+          return true;
+      }
+
+    std::ostream & printDebug( std::ostream & os ) const override
+      {
+          return os << "RLCoordinationMessage( pressure=" << M_pressure
+                    << ", action=" << M_suggested_action
+                    << ", possession=" << M_has_possession << " )";
+      }
+};
+
+} // end of anonymous namespace
+
+/*!
+  \brief Send RL value estimate to teammates
+  \param agent Player agent
+  \param value_estimate RL value estimate
+  \return true if message sent
+*/
+bool
+SampleCommunication::sayRLValue( PlayerAgent * agent, double value_estimate )
+{
+    // Encode value in compressed format
+    // Scale value to range 0-255 for efficient encoding
+    int encoded_value = static_cast<int>(std::min(std::max(value_estimate / 10.0 + 128.0, 0.0), 255.0));
+
+    agent->addSayMessage( new RLValueMessage( encoded_value ) );
+
+    dlog.addText(Logger::COMMUNICATION,
+                 __FILE__": (sayRLValue) value=%.2f, encoded=%d",
+                 value_estimate, encoded_value);
+
+    return true;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  \brief Send RL intention (action + target) to teammates
+  \param agent Player agent
+  \param action_index Action category (0-3)
+  \param target Target position
+  \return true if message sent
+*/
+bool
+SampleCommunication::sayRLIntention( PlayerAgent * agent, int action_index, const Vector2D & target )
+{
+    // Encode action and target in compressed format
+    int encoded_x = static_cast<int>((target.x + 52.5) / 2.0);
+    int encoded_y = static_cast<int>((target.y + 34.0) / 2.0);
+
+    // Clamp values
+    encoded_x = std::min(std::max(encoded_x, 0), 52);
+    encoded_y = std::min(std::max(encoded_y, 0), 34);
+
+    agent->addSayMessage( new RLIntentionMessage( action_index, encoded_x, encoded_y ) );
+
+    dlog.addText(Logger::COMMUNICATION,
+                 __FILE__": (sayRLIntention) action=%d, target=(%.1f,%.1f)",
+                 action_index, target.x, target.y);
+
+    return true;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  \brief Send RL coordination message
+  \param agent Player agent
+  \return true if message sent
+*/
+bool
+SampleCommunication::sayRLCoordination( PlayerAgent * agent )
+{
+    const WorldModel & wm = agent->world();
+
+    bool has_possession = (wm.interceptTable().teammateStep() <= wm.interceptTable().opponentStep());
+
+    // Calculate pressure level
+    double pressure = 0.0;
+    for (const auto & opp : wm.opponentsFromBall())
+    {
+        if (opp->distFromBall() < 5.0)
+            pressure += 1.0;
+        else if (opp->distFromBall() < 10.0)
+            pressure += 0.5;
+    }
+
+    int encoded_pressure = static_cast<int>(pressure / 5.0 * 10.0);
+
+    // Suggested team action based on ball position
+    int suggested_action = 0;
+    double ball_x = wm.ball().pos().x;
+    if (ball_x > 20.0)
+        suggested_action = 2;
+    else if (ball_x > -20.0)
+        suggested_action = 1;
+
+    agent->addSayMessage( new RLCoordinationMessage( encoded_pressure, suggested_action, has_possession ) );
+
+    dlog.addText(Logger::COMMUNICATION,
+                 __FILE__": (sayRLCoordination) possession=%d, pressure=%.1f, suggested=%d",
+                 has_possession, pressure, suggested_action);
+
+    return true;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  \brief Parse RL messages from teammates
+  \param wm World model
+*/
+void
+SampleCommunication::parseRLMessages( const WorldModel & wm )
+{
+    // Parse audio memory for RL messages
+    // Note: This would integrate with existing AudioMemory system
+
+    // Placeholder: check for messages from audio memory
+    // Real implementation would parse say messages from AudioMemory
+
+    dlog.addText(Logger::COMMUNICATION,
+                 __FILE__": (parseRLMessages) cycle=%d",
+                 wm.time().cycle());
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  \brief Get aggregated team value estimate
+  \return Average value estimate from teammates
+*/
+double
+SampleCommunication::getTeamValueEstimate() const
+{
+    // Placeholder: would aggregate value estimates from all teammates
+    // Real implementation would parse and average values from AudioMemory
+
+    return 0.0;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  \brief Get best action from team coordination
+  \return Most common suggested action
+*/
+int
+SampleCommunication::getTeamBestAction() const
+{
+    // Placeholder: would aggregate intentions from teammates
+    // Real implementation would parse and vote for best action
+
+    return 0;
+}

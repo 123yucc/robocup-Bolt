@@ -154,8 +154,21 @@ Bhv_GoalieBasicMove::getTargetPoint( PlayerAgent * agent )
     }
     const Vector2D base_pos = wm.ball().inertiaPoint( ball_reach_step );
 
+    // ============================================================
+    // Bolt: 检测单刀情况，主动出击
+    // ============================================================
+    bool is_one_on_one = checkOneOnOne( agent, base_pos );
+    if ( is_one_on_one )
+    {
+        Vector2D rush_point = calculateRushPoint( agent, base_pos );
+        agent->debugClient().addMessage( "RushOut" );
+        dlog.addText( Logger::TEAM,
+                      __FILE__": Rush out to (%.2f, %.2f)",
+                      rush_point.x, rush_point.y );
+        return rush_point;
+    }
 
-    //---------------------------------------------------------//
+    // ============================================================
     // angle is very dangerous
     if ( base_pos.y > ServerParam::i().goalHalfWidth() + 3.0 )
     {
@@ -775,4 +788,116 @@ Bhv_GoalieBasicMove::doGoToPointLookBall( PlayerAgent * agent,
 
         agent->setNeckAction( new Neck_TurnToBall() );
     }
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 检测单刀情况（优化版本 - 更保守的触发条件）
+*/
+bool
+Bhv_GoalieBasicMove::checkOneOnOne( PlayerAgent * agent,
+                                    const Vector2D & ball_pos )
+{
+    const WorldModel & wm = agent->world();
+    const ServerParam & SP = ServerParam::i();
+
+    // 1. 必须是 PlayOn 模式
+    if ( wm.gameMode().type() != GameMode::PlayOn )
+    {
+        return false;
+    }
+
+    // 2. 对方必须能踢到球（或者球即将被对方控制）
+    if ( ! wm.kickableOpponent()
+         && wm.interceptTable().opponentStep() > 3 )
+    {
+        return false;
+    }
+
+    // 3. 球必须在非常危险区域（更严格：x < -40）
+    if ( ball_pos.x > -40.0 )
+    {
+        return false;
+    }
+
+    // 4. 检查是否有我方防守球员在球附近
+    double min_mate_dist = 100.0;
+    for ( const PlayerObject * mate : wm.teammatesFromBall() )
+    {
+        if ( mate->posCount() > 10 )
+            continue;
+        if ( mate->goalie() )
+            continue;
+
+        double dist = mate->distFromBall();
+        if ( dist < min_mate_dist )
+        {
+            min_mate_dist = dist;
+        }
+    }
+
+    // 如果有队友在球附近（距离 < 3m，更严格），不需要门将出击
+    if ( min_mate_dist < 3.0 )
+    {
+        return false;
+    }
+
+    // 5. 球距离球门的距离（更严格：10m以内）
+    Vector2D goal_center( -SP.pitchHalfLength(), 0.0 );
+    double dist_to_goal = ball_pos.dist( goal_center );
+
+    if ( dist_to_goal > 10.0 )
+    {
+        return false;
+    }
+
+    // 6. 球的移动方向检查 - 如果球向球门移动才出击
+    Vector2D ball_vel = wm.ball().vel();
+    if ( ball_vel.x > 0.5 )  // 球向对方半场移动，不出击
+    {
+        return false;
+    }
+
+    dlog.addText( Logger::TEAM,
+                  __FILE__": One-on-one detected (safe). ball_pos=(%.2f, %.2f) dist_to_goal=%.2f",
+                  ball_pos.x, ball_pos.y, dist_to_goal );
+    return true;
+}
+
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 计算主动出击点（优化版本 - 更保守的出击位置）
+*/
+Vector2D
+Bhv_GoalieBasicMove::calculateRushPoint( PlayerAgent * agent,
+                                          const Vector2D & ball_pos )
+{
+    const ServerParam & SP = ServerParam::i();
+
+    Vector2D goal_center( -SP.pitchHalfLength(), 0.0 );
+
+    // 出击到球门线前方 2-3 米的位置，缩小射门角度但不过度出击
+    // 计算球到球门中心连线上，距离球门中心 3 米的点
+    Vector2D goal_to_ball = ball_pos - goal_center;
+    AngleDeg angle_to_ball = goal_to_ball.th();
+
+    // 出击距离：距离球门中心 3 米
+    double rush_dist = 3.0;
+
+    // 沿球门中心到球的方向移动 rush_dist
+    Vector2D rush_point = goal_center + Vector2D::polar2vector( rush_dist, angle_to_ball );
+
+    // 限制 Y 坐标在球门范围内
+    rush_point.y = std::max( -SP.goalHalfWidth() + 0.5,
+                             std::min( SP.goalHalfWidth() - 0.5, rush_point.y ) );
+
+    // 限制 X 坐标不要过于靠前（不出禁区）
+    rush_point.x = std::max( -SP.pitchHalfLength() - 0.5,
+                             std::min( -SP.pitchHalfLength() + 5.0, rush_point.x ) );
+
+    dlog.addText( Logger::TEAM,
+                  __FILE__": Rush point (conservative). x=%.2f, y=%.2f",
+                  rush_point.x, rush_point.y );
+
+    return rush_point;
 }

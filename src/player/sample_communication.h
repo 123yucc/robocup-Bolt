@@ -36,6 +36,7 @@
 
 #include <rcsc/game_time.h>
 #include <rcsc/types.h>
+#include <rcsc/geom/vector_2d.h>  // Bolt: Add Vector2D header
 
 namespace rcsc {
 class WorldModel;
@@ -93,6 +94,18 @@ private:
     bool sayRecovery( rcsc::PlayerAgent * agent );
 
     void attentiontoSomeone( rcsc::PlayerAgent * agent );
+
+    // Bolt: RL-specific communication methods
+    bool sayRLValue( rcsc::PlayerAgent * agent, double value_estimate );
+    bool sayRLIntention( rcsc::PlayerAgent * agent, int action_index, const rcsc::Vector2D & target );
+    bool sayRLCoordination( rcsc::PlayerAgent * agent );
+
+    // Parse RL messages from teammates
+    void parseRLMessages( const rcsc::WorldModel & wm );
+
+    // Get aggregated RL signals from teammates
+    double getTeamValueEstimate() const;
+    int getTeamBestAction() const;
 };
 
 #endif

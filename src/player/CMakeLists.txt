@@ -108,6 +108,10 @@ add_executable(sample_player
   data_extractor/offensive_data_extractor.cpp
   bhv_unmark.cpp
   bhv_basic_block.cpp
+  # Bolt: RL module files
+  planner/rl_field_evaluator.cpp
+  planner/rl_reward_calculator.cpp
+  planner/rl_experience_buffer.cpp
   )
 
 

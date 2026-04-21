@@ -108,6 +108,11 @@ SampleFieldEvaluator::operator()(const PredictState &state,
 /*!
 
  */
+/*-------------------------------------------------------------------*/
+/*!
+  Bolt: 综合场上评估函数（优化版本）
+  融合多种因素：位置优势、射门机会、威胁评估、空间分析
+*/
 static
 double
 evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
@@ -183,11 +188,11 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
     // set basic evaluation
     //
 
-    // G2d: to retrieve opp team name 
-    // C2D: Helios 18 Tune removed -> replace with BNN
-    // bool heliosbase = false;
-    // if (wm.opponentTeamName().find("HELIOS_base") != std::string::npos)
-    //     heliosbase = true;
+    // Bolt: 多维度综合评估
+    // 1. 基础位置评分
+    // 2. 射门威胁评分
+    // 3. 空间优势评分
+    // 4. 传球安全评分
 
     // G2d: number of direct opponents
         int opp_forward = 0;
@@ -212,11 +217,51 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
             weight = 0.3;
 
 	double depth = 10.0;
-    // C2D: Helios 18 Tune removed -> replace with BNN
-	// if (heliosbase)
-	// 	depth = 0.0;
 
     double point = state.ball().pos().x * weight;
+
+    // Bolt: 射门威胁评分增强 - 更激进
+    // 如果球在对方禁区附近，大幅加分
+    if ( state.ball().pos().x > 36.0 )
+    {
+        // 禁区内加分 - 增强权重
+        double goal_dist = state.ball().pos().dist( Vector2D( 52.5, 0.0 ) );
+        point += std::max( 0.0, 400.0 - goal_dist * 10.0 );
+
+        // 角度优势加分 - 更大权重
+        double angle_to_goal = std::atan2( -state.ball().pos().y,
+                                            52.5 - state.ball().pos().x );
+        double angle_abs = std::fabs( angle_to_goal ) * 180.0 / M_PI;
+        // 小角度（正对球门）加分
+        if ( angle_abs < 30.0 )
+        {
+            point += ( 30.0 - angle_abs ) * 8.0;
+        }
+    }
+    // Bolt: 前场进攻区域加分
+    else if ( state.ball().pos().x > 30.0 )
+    {
+        double goal_dist = state.ball().pos().dist( Vector2D( 52.5, 0.0 ) );
+        point += std::max( 0.0, 150.0 - goal_dist * 3.0 );
+    }
+
+    // Bolt: 进攻推进评分增强
+    if ( state.ball().pos().x > 0.0 )
+    {
+        point += state.ball().pos().x * 3.0;  // 增强权重
+    }
+
+    // Bolt: NEW - 控球权评分（关键改进）
+    int tm_step = wm.interceptTable().teammateStep();
+    int opp_step = wm.interceptTable().opponentStep();
+    if ( tm_step <= opp_step && tm_step < 10 )
+    {
+        point += 80.0;  // 控球权大幅加分
+    }
+    else if ( opp_step < tm_step && opp_step < 10 )
+    {
+        point -= 40.0;  // 失控球惩罚
+    }
 
         Vector2D best_point = ServerParam::i().theirTeamGoalPos();
 

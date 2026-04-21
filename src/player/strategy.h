@@ -190,6 +190,11 @@ public:
     PositionType getPositionType( const int unum ) const;
     rcsc::Vector2D getPosition( const int unum ) const;
 
+    // Bolt: 动态防线调整相关函数
+    bool shouldAdjustDefenseLine( const rcsc::Vector2D & base_pos ) const;
+    rcsc::Vector2D adjustDefenseLine( const rcsc::Vector2D & base_pos ) const;
+    void adjustDefenseLineBasedOnBall( const rcsc::Vector2D & ball_pos,
+                                        const rcsc::WorldModel & wm );
 
 private:
     void updateSituation( const rcsc::WorldModel & wm );

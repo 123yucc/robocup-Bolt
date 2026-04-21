@@ -73,6 +73,12 @@ private:
                               const double & dash_power,
                               const double & back_power_rate = 0.7 );
 
+    // Bolt: 主动出击相关函数
+    bool checkOneOnOne( rcsc::PlayerAgent * agent,
+                       const rcsc::Vector2D & ball_pos );
+    rcsc::Vector2D calculateRushPoint( rcsc::PlayerAgent * agent,
+                                       const rcsc::Vector2D & ball_pos );
+
 };
 
 #endif
