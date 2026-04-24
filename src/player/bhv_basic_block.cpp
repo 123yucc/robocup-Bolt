@@ -67,9 +67,10 @@ bool Bhv_BasicBlock::execute(PlayerAgent *agent)
         return false;
     }
     Vector2D target_point = best_blocker_target.second;
-    double safe_dist = 2;
+    // 阶段5优化：缩小安全距离，提高拦截积极性
+    double safe_dist = 1.5;
     if (wm.self().pos().dist(target_point) > 15)
-        safe_dist = 5;
+        safe_dist = 3.0;
     if (last_block_pos.isValid() && last_block_cycle > wm.time().cycle() - 5 && target_point.dist(last_block_pos) < safe_dist)
     {
         target_point = last_block_pos;
@@ -161,6 +162,11 @@ std::pair<int, Vector2D> Bhv_BasicBlock::get_best_blocker(const PlayerAgent *age
     int opp_min = wm.interceptTable().opponentStep();
     Vector2D ball_inertia = wm.ball().inertiaPoint(opp_min);
     double dribble_speed = 0.7;
+
+    // 阶段5优化：获取对手速度用于动态步长计算
+    const PlayerObject * nearest_opp = wm.interceptTable().firstOpponent();
+    double opp_speed = (nearest_opp && nearest_opp->velCount() < 5) ? nearest_opp->vel().r() : 0.5;
+
     #ifdef DEBUG_BLOCK
     dlog.addText(Logger::BLOCK, "=====get best blocker=====");
     #endif
@@ -207,7 +213,8 @@ AngleDeg Bhv_BasicBlock::dribble_direction_detector(Vector2D dribble_pos)
     AngleDeg best_dir(-180);
     double best_score = -1e9;
     double dist = 10;
-    for (double dir = -180; dir < 180; dir += 10)
+    // 阶段5优化：提高方向预测精度 10° → 5°
+    for (double dir = -180; dir < 180; dir += 5)
     {
         Vector2D target = dribble_pos + Vector2D::polar2vector(dist, AngleDeg(dir));
         if (target.absX() > ServerParam::i().pitchHalfLength())
