@@ -118,6 +118,10 @@ bool Bhv_Unmark::can_unmarking(const WorldModel &wm) {
     int unum = wm.self().unum();
     double stamina = wm.self().stamina();
     double dist2target = Strategy::instance().getPosition(unum).dist(wm.self().pos());
+
+    // 阶段6优化：动态体力阈值（比赛后期降低20%）
+    double time_factor = (wm.time().cycle() > 3000) ? 0.8 : 1.0;
+
     int min_stamina_limit = 3500;
     if (wm.self().unum() >= 9) {
         if (wm.ball().pos().x > 30)
@@ -147,6 +151,8 @@ bool Bhv_Unmark::can_unmarking(const WorldModel &wm) {
         else if (wm.ball().pos().x > -55)
             min_stamina_limit = 2500;
     }
+
+    min_stamina_limit = static_cast<int>(min_stamina_limit * time_factor);
 
     if (opp_min < mate_min || stamina < min_stamina_limit || dist2target > 10) {
         dlog.addText(Logger::POSITIONING,
@@ -201,9 +207,10 @@ void Bhv_Unmark::simulate_dash(rcsc::PlayerAgent *agent, int tm,
     double offside_lineX = wm.offsideLineX();
 
     vector<Vector2D> positions;
+    // 阶段6优化：增加跑位采样密度
     if (self_pos.dist(home_pos) < 5){
         for (double dist = 2.0; dist <= 7.0; dist += 1.0){
-            for (double angle = -180; angle < 180; angle += 20){
+            for (double angle = -180; angle < 180; angle += 10){  // was 20
                 Vector2D position = self_pos + Vector2D::polar2vector(dist, angle);
                 positions.push_back(position);
             }
@@ -211,7 +218,7 @@ void Bhv_Unmark::simulate_dash(rcsc::PlayerAgent *agent, int tm,
     }else{
         for (double dist = 3.0; dist <= 8.0; dist += 1){
             double center_angle = (home_pos - self_pos).th().degree();
-            for (double angle = -30; angle < 30; angle += 10){
+            for (double angle = -30; angle < 30; angle += 5){  // was 10
                 Vector2D position = self_pos + Vector2D::polar2vector(dist, angle + center_angle);
                 positions.push_back(position);
             }
@@ -307,9 +314,10 @@ void Bhv_Unmark::lead_pass_simulator(const WorldModel &wm, Vector2D passer_pos,
     Vector2D pass_start = wm.ball().inertiaPoint(mate_min);
     // Vector2D current_self_pos = wm.self().pos();
 
+    // 阶段6优化：扩展传球目标点
     vector<Vector2D> pass_targets;
-    for (double dist = 0; dist <= 3; dist += 3.0){
-        for (double angle = -180; angle < 180; angle += 90){
+    for (double dist = 0; dist <= 5; dist += 1.0){  // was 0,3 (增加1,2,4,5m)
+        for (double angle = -180; angle < 180; angle += 45){  // was 90 (8方向→16方向)
             pass_targets.push_back(unmark_target + Vector2D::polar2vector(dist, angle));
             if (dist == 0)
                 break;
