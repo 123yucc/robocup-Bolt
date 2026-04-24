@@ -676,7 +676,7 @@ StrictCheckPassGenerator::createLeadingPass( const WorldModel & wm,
         = ServerParam::i().ballSpeedMax()
         * std::pow( ServerParam::i().ballDecay(), MIN_RECEIVE_STEP );
 
-    static const int ANGLE_DIVS = 24;
+    static const int ANGLE_DIVS = 36;
     static const double ANGLE_STEP = 360.0 / ANGLE_DIVS;
     static const double DIST_DIVS = 4;
     static const double DIST_STEP = 1.1;
@@ -892,9 +892,9 @@ StrictCheckPassGenerator::createThroughPass( const WorldModel & wm,
         = ServerParam::i().ballSpeedMax()
         * std::pow( ServerParam::i().ballDecay(), MIN_RECEIVE_STEP );
 
-    static const int ANGLE_DIVS = 14;
-    static const double MIN_ANGLE = -40.0;
-    static const double MAX_ANGLE = +40.0;
+    static const int ANGLE_DIVS = 20;
+    static const double MIN_ANGLE = -50.0;
+    static const double MAX_ANGLE = +50.0;
     static const double ANGLE_STEP = ( MAX_ANGLE - MIN_ANGLE ) / ANGLE_DIVS;
 
     static const double MIN_MOVE_DIST = 6.0;

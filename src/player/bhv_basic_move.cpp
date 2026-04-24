@@ -74,12 +74,40 @@ Bhv_BasicMove::execute( PlayerAgent * agent )
 
     //-----------------------------------------------
     // tackle
-    // G2d: tackle probability
+    // 阶段4优化：动态铲球概率计算
     double doTackleProb = 0.8;
-    if (wm.ball().pos().x < 0.0)
-    {
-      doTackleProb = 0.5;
+    const Vector2D ball_pos = wm.ball().pos();
+    const double ball_dist = wm.ball().distFromSelf();
+    const int opp_min = wm.interceptTable().opponentStep();
+    const int self_min = wm.interceptTable().selfStep();
+
+    // 基于场地位置的基础概率
+    if (ball_pos.x < -36.0) {
+        // 禁区内：更激进（0.4）
+        doTackleProb = 0.4;
+    } else if (ball_pos.x < 0.0) {
+        // 后场：中等激进（0.5）
+        doTackleProb = 0.5;
+    } else if (ball_pos.x < 36.0) {
+        // 前场：保守（0.7）
+        doTackleProb = 0.7;
+    } else {
+        // 对方禁区：非常保守（0.8）
+        doTackleProb = 0.8;
     }
+
+    // 紧急情况：对手即将控球，降低阈值
+    if (opp_min <= 2 && opp_min < self_min) {
+        doTackleProb -= 0.15;
+    }
+
+    // 球距离很近：更激进
+    if (ball_dist < 1.5) {
+        doTackleProb -= 0.1;
+    }
+
+    // 确保概率在合理范围内
+    doTackleProb = std::max(0.25, std::min(0.85, doTackleProb));
 
     if ( Bhv_BasicTackle( doTackleProb, 80.0 ).execute( agent ) )
     {
@@ -88,9 +116,7 @@ Bhv_BasicMove::execute( PlayerAgent * agent )
 
     /*--------------------------------------------------------*/
     // chase ball
-    const int self_min = wm.interceptTable().selfStep();
     const int mate_min = wm.interceptTable().teammateStep();
-    const int opp_min = wm.interceptTable().opponentStep();
 
     const Vector2D target_point = Strategy::i().getPosition( wm.self().unum() );
 

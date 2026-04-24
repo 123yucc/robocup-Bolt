@@ -64,7 +64,7 @@ using namespace rcsc;
  */
 ShootGenerator::ShootGenerator()
 {
-    M_courses.reserve( 32 );
+    M_courses.reserve( 64 );
 
     clear();
 }
@@ -156,7 +156,7 @@ ShootGenerator::generate( const WorldModel & wm )
         goal_r.x = wm.self().pos().x + 1.5;
     }
 
-    const int DIST_DIVS = 25;
+    const int DIST_DIVS = 50;
     const double dist_step = std::fabs( goal_l.y - goal_r.y ) / ( DIST_DIVS - 1 );
 
 #ifdef DEBUG_PRINT
