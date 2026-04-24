@@ -461,6 +461,69 @@ Bhv_GoalieBasicMove::doMoveForDangerousState( PlayerAgent * agent,
     dlog.addText( Logger::TEAM,
                   __FILE__": doMoveForDangerousState" );
 
+    // 智能单刀出击检测
+    if ( !wm.opponentsFromBall().empty() )
+    {
+        const PlayerObject * opp = wm.opponentsFromBall().front();
+        if ( opp && opp->distFromBall() < 3.0 )
+        {
+            const Vector2D ball_pos = wm.ball().pos();
+
+            // 检测单刀情况：对手在危险区域且我方队友无法及时拦截
+            if ( ball_pos.x < -35.0 && ball_pos.absY() < 20.0 )
+            {
+                // 计算对手到球门的射门角度
+                const Vector2D goal_center( -ServerParam::i().pitchHalfLength(), 0.0 );
+                const AngleDeg shoot_angle = ( Vector2D( -ServerParam::i().pitchHalfLength(), ServerParam::i().goalHalfWidth() ) - ball_pos ).th()
+                    - ( Vector2D( -ServerParam::i().pitchHalfLength(), -ServerParam::i().goalHalfWidth() ) - ball_pos ).th();
+
+                // 检查我方队友拦截步数
+                int teammate_min_step = 1000;
+                for ( PlayerObject::Cont::const_iterator it = wm.teammates().begin();
+                      it != wm.teammates().end(); ++it )
+                {
+                    if ( (*it)->goalie() ) continue;
+                    int step = (*it)->pos().dist( ball_pos ) / 0.8;
+                    if ( step < teammate_min_step ) teammate_min_step = step;
+                }
+
+                // 单刀判定：队友拦截步数>5 且 射门角度>15度
+                if ( teammate_min_step > 5 && shoot_angle.abs() > 15.0 )
+                {
+                    // 计算动态出击点
+                    double ball_dist = ball_pos.dist( goal_center );
+                    double rush_dist = 2.5 + std::min( 3.0, ball_dist / 10.0 );
+
+                    // 速度优势判断
+                    Vector2D opp_vel = opp->vel();
+                    if ( wm.self().vel().r() > opp_vel.r() + 0.3 )
+                    {
+                        rush_dist += 1.0;
+                    }
+
+                    Vector2D rush_point = goal_center + ( ball_pos - goal_center ).setLengthVector( rush_dist );
+
+                    // 侧面球处理
+                    if ( ball_pos.absY() > 10.0 )
+                    {
+                        rush_point.y *= 0.7;
+                    }
+
+                    dlog.addText( Logger::TEAM,
+                                  __FILE__": Smart Rush! angle=%.1f tm_step=%d dist=%.1f",
+                                  shoot_angle.degree(), teammate_min_step, rush_dist );
+                    agent->debugClient().addMessage( "SmartRush" );
+                    agent->debugClient().setTarget( rush_point );
+                    agent->debugClient().addCircle( rush_point, 1.0 );
+
+                    Body_GoToPoint( rush_point, 0.1, ServerParam::i().maxDashPower() ).execute( agent );
+                    agent->setNeckAction( new Neck_GoalieTurnNeck() );
+                    return true;
+                }
+            }
+        }
+    }
+
     if ( std::fabs( move_point.x - wm.self().pos().x ) > x_buf
          && ball_next.x < -ServerParam::i().pitchHalfLength() + 11.0
          && ball_next.absY() < ServerParam::i().goalHalfWidth() + 1.0 )
