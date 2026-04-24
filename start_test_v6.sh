@@ -1,0 +1,22 @@
+#!/bin/bash
+# 阶段6测试脚本 - BoltV6 vs BoltV5
+
+echo "=========================================="
+echo "请按以下步骤操作："
+echo "=========================================="
+echo ""
+echo "终端1 - 启动服务器："
+echo "rcssserver"
+echo ""
+echo "终端2 - 启动BoltV6（左队，新版本）："
+echo "cd /home/linna/robocup-Bolt && ./build/bin/sample_player --team-name BoltV6"
+echo ""
+echo "终端3 - 启动BoltV5（右队，对手）："
+echo "cd /home/linna/robocup-Bolt-stage5 && ./build/bin/sample_player --team-name BoltV5"
+echo ""
+echo "终端4 - 启动监视器："
+echo "rcssmonitor"
+echo ""
+echo "=========================================="
+echo "然后在监视器中点击开球按钮"
+echo "=========================================="
