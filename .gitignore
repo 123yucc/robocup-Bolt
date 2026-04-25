@@ -9,3 +9,27 @@ train.sh
 *.rcl
 incomplete.*
 build/
+
+# ML artifacts
+data/extracted/
+data/datasets/
+data/manifests/
+models/checkpoints/
+experiments/
+eval/match_results/
+eval/parsed_logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Runtime
+/tmp/bolt_runtime/
+*.log
+
+# Submission binary (built from source)
+bolt_submission/bin/
+bolt_submission/sample_player
+bolt_submission/sample_coach
