@@ -84,6 +84,8 @@
 #include <string>
 #include <cstdlib>
 
+#include "learning/bolt_shot_inference.h"
+
 using namespace rcsc;
 
 /*-------------------------------------------------------------------*/
@@ -475,6 +477,8 @@ SamplePlayer::handleServerParam()
         std::cerr << "set Keepaway mode communication." << std::endl;
         M_communication = Communication::Ptr( new KeepawayCommunication() );
     }
+
+    BoltShotInference::tryLoad( "./shot_target_mlp_weights.txt" );
 }
 
 /*-------------------------------------------------------------------*/

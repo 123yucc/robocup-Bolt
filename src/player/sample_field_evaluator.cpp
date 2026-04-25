@@ -36,6 +36,7 @@
 
 #include "field_analyzer.h"
 #include "simple_pass_checker.h"
+#include "learning/bolt_shot_inference.h"
 
 #include <rcsc/player/player_evaluator.h>
 #include <rcsc/common/server_param.h>
@@ -434,6 +435,19 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
             dlog.addText( Logger::ACTION_CHAIN,
                           "(eval) bonus for goal self %f (%f)", 5.0e+5, point );
 #endif
+        }
+
+        if ( BoltShotInference::isLoaded() )
+        {
+            double best_ml = 0.0;
+            static const double TARGET_YS[] = { 0.0, -3.5, 3.5 };
+            for ( double target_y : TARGET_YS )
+            {
+                double score = BoltShotInference::score( wm, holder->pos(), state.ball().pos(), target_y );
+                if ( score > best_ml ) best_ml = score;
+            }
+            static const double LAMBDA_SHOT = 1.0e+5;
+            point += LAMBDA_SHOT * best_ml;
         }
     }
 
