@@ -36,6 +36,7 @@
 
 #include "field_analyzer.h"
 #include "simple_pass_checker.h"
+#include "learning/bolt_shot_inference.h"
 
 #include <rcsc/player/player_evaluator.h>
 #include <rcsc/common/server_param.h>
@@ -434,6 +435,17 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
             dlog.addText( Logger::ACTION_CHAIN,
                           "(eval) bonus for goal self %f (%f)", 5.0e+5, point );
 #endif
+        }
+
+        // ML shot quality residual (best of center and ±3.5 y targets)
+        if ( BoltShotInference::isLoaded() ) {
+            double best_ml = 0.0;
+            for ( double ty : { 0.0, -3.5, 3.5 } ) {
+                double s = BoltShotInference::score( wm, holder->pos(), state.ball().pos(), ty );
+                if ( s > best_ml ) best_ml = s;
+            }
+            static const double LAMBDA_SHOT = 1.0e+5;
+            point += LAMBDA_SHOT * best_ml;
         }
     }
 

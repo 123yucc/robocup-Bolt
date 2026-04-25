@@ -29,6 +29,7 @@
 
 #include "data_extractor/offensive_data_extractor.h"
 #include "data_extractor/DEState.h"
+#include "learning/bolt_unmark_inference.h"
 
 using namespace std;
 using namespace rcsc;
@@ -429,6 +430,17 @@ double Bhv_Unmark::evaluate_position(const WorldModel &wm, const UnmarkPosition 
     sum_eval += opp_eval;
     (!have_turn) ? sum_eval += 10 : sum_eval += 0;
     (up_pos) ? sum_eval += 10 : sum_eval += 0;
+
+    // ML residual: add learned receivability score on top of heuristic
+    if (BoltUnmarkInference::isLoaded()) {
+        int passer_unum = 0;
+        const AbstractPlayerObject* tm = wm.interceptTable().firstTeammate();
+        if (tm && tm->unum() != wm.self().unum())
+            passer_unum = tm->unum();
+        static const double LAMBDA_UNMARK = 5.0;
+        sum_eval += LAMBDA_UNMARK * BoltUnmarkInference::score(wm, unmark_position.target, passer_unum);
+    }
+
     return sum_eval;
 }
 
@@ -469,8 +481,9 @@ bool Bhv_Unmark::run(PlayerAgent *agent, const UnmarkPosition &unmark_position) 
 void Bhv_Unmark::load_dnn(){
     static bool load_dnn = false;
     if(!load_dnn){
-        load_dnn = true; 
+        load_dnn = true;
         pass_prediction->ReadFromKeras("./unmark_dnn_weights.txt");
+        BoltUnmarkInference::tryLoad("./unmark_mlp_weights.txt");
     }
 }
 

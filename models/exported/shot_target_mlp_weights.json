@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-25T00:54:52.720891",
+  "config": {
+    "name": "shot_target_mlp_v1",
+    "label_key": "labels_goal",
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "seed": 42,
+    "hidden_dims": [
+      128,
+      64,
+      32
+    ],
+    "dropout": 0.2,
+    "head": "goal",
+    "batch_size": 256,
+    "epochs": 50,
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "n_train": 7278,
+  "n_val": 909,
+  "n_test": 909,
+  "best_epoch": 48,
+  "best_val_auc": 0.971156964488406,
+  "test_auc": 0.9652137232845894
+}

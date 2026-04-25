@@ -108,6 +108,8 @@ add_executable(sample_player
   data_extractor/offensive_data_extractor.cpp
   bhv_unmark.cpp
   bhv_basic_block.cpp
+  learning/bolt_unmark_inference.cpp
+  learning/bolt_shot_inference.cpp
   )
 
 
@@ -117,6 +119,7 @@ target_include_directories(sample_player
     ${PROJECT_SOURCE_DIR}/src/player
     ${PROJECT_SOURCE_DIR}/src/player/planner
     ${PROJECT_SOURCE_DIR}/src/player/setplay
+    ${PROJECT_SOURCE_DIR}/src/player/learning
     ${PROJECT_BINARY_DIR}
   PUBLIC
     ${Boost_INCLUDE_DIRS}

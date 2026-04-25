@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-25T01:00:17.725947",
+  "config": {
+    "name": "unmark_mlp_v1",
+    "label_key": "labels_receivable",
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "seed": 42,
+    "hidden_dims": [
+      128,
+      64,
+      32
+    ],
+    "dropout": 0.2,
+    "head": "receivable",
+    "batch_size": 256,
+    "epochs": 50,
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "data_dir": "data/extracted/unmark_v2",
+  "n_train": 93151,
+  "n_val": 11643,
+  "n_test": 11643,
+  "best_epoch": 48,
+  "best_val_auc": 0.8599181634538752,
+  "test_auc": 0.8580884098522819,
+  "test_acc": 0.9094735033925964
+}
