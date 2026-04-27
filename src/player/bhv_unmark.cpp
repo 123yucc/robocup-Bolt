@@ -445,8 +445,17 @@ double Bhv_Unmark::evaluate_position(const WorldModel &wm, const UnmarkPosition 
         if (tm && tm->unum() != wm.self().unum())
             passer_unum = tm->unum();
 
-        static const double LAMBDA_UNMARK = 5.0;
-        sum_eval += LAMBDA_UNMARK * BoltUnmarkInference::score(wm, unmark_position.target, passer_unum);
+        // 阶段7优化：提高跑位权重（翻倍）
+        static const double LAMBDA_UNMARK = 10.0;
+        double ml_score = BoltUnmarkInference::score(wm, unmark_position.target, passer_unum);
+        sum_eval += LAMBDA_UNMARK * ml_score;
+
+#ifdef DEBUG_PRINT
+        dlog.addText( Logger::POSITIONING,
+                      "(eval) ML unmark score: %.4f, contribution=%.1f at (%.1f, %.1f)",
+                      ml_score, LAMBDA_UNMARK * ml_score,
+                      unmark_position.target.x, unmark_position.target.y );
+#endif
     }
 
     return sum_eval;

@@ -440,15 +440,50 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
         if ( BoltShotInference::isLoaded() )
         {
             double best_ml = 0.0;
-            static const double TARGET_YS[] = { 0.0, -3.5, 3.5 };
+            double best_ty = 0.0;
+
+            // 阶段7优化：根据守门员位置自适应采样
+            Vector2D goalie_pos(52.5, 0.0);
+            int goalie_unum = wm.theirGoalieUnum();
+            if ( goalie_unum > 0 )
+            {
+                const AbstractPlayerObject* opp_goalie = wm.theirPlayer( goalie_unum );
+                if (opp_goalie && opp_goalie->pos().isValid()) {
+                    goalie_pos = opp_goalie->pos();
+                }
+            }
+
+            // 扩展采样范围：覆盖85%球门宽度
+            static const double TARGET_YS[] = { -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0 };
             for ( double target_y : TARGET_YS )
             {
                 double score = BoltShotInference::score( wm, holder->pos(), state.ball().pos(), target_y );
-                if ( score > best_ml ) best_ml = score;
+                if ( score > best_ml ) {
+                    best_ml = score;
+                    best_ty = target_y;
+                }
             }
-            static const double LAMBDA_SHOT = 1.0e+5;
+
+            // 阶段7优化：调整权重平衡（降低50%）
+            static const double LAMBDA_SHOT = 5.0e+4;
             point += LAMBDA_SHOT * best_ml;
+
+#ifdef DEBUG_PRINT
+            dlog.addText( Logger::SHOOT,
+                          "(eval) ML shot score: %.4f at y=%.1f, contribution=%.1f",
+                          best_ml, best_ty, LAMBDA_SHOT * best_ml );
+#endif
         }
+    }
+
+    // 阶段7优化：前传奖励机制
+    if ( state.ball().pos().x > wm.ball().pos().x + 5.0 ) {
+        point += 20.0;
+#ifdef DEBUG_PRINT
+        dlog.addText( Logger::ACTION_CHAIN,
+                      "(eval) forward pass bonus: +20.0 (ball %.1f -> %.1f)",
+                      wm.ball().pos().x, state.ball().pos().x );
+#endif
     }
 
     return point;

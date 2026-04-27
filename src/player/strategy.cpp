@@ -1468,16 +1468,32 @@ Strategy::get_normal_dash_power( const WorldModel & wm )
     const int mate_min = wm.interceptTable().teammateStep();
     const int opp_min = wm.interceptTable().opponentStep();
 
+    // 阶段8优化：动态体力恢复阈值
+    double recover_threshold_low = 0.5;
+    double recover_threshold_high = 0.7;
+
+    // 比赛后期（3000周期后）降低恢复阈值，保持更高体力
+    if (wm.time().cycle() > 3000) {
+        recover_threshold_low = 0.55;
+        recover_threshold_high = 0.75;
+    }
+
+    // 关键位置（前锋、中场核心）提高恢复阈值
+    if (role >= 9 || role == 7) {
+        recover_threshold_low += 0.05;
+        recover_threshold_high += 0.05;
+    }
+
     // check recover
     if ( wm.self().staminaModel().capacityIsEmpty() )
     {
         s_recover_mode = false;
     }
-    else if ( wm.self().stamina() < ServerParam::i().staminaMax() * 0.5 )
+    else if ( wm.self().stamina() < ServerParam::i().staminaMax() * recover_threshold_low )
     {
         s_recover_mode = true;
     }
-    else if ( wm.self().stamina() > ServerParam::i().staminaMax() * 0.7 )
+    else if ( wm.self().stamina() > ServerParam::i().staminaMax() * recover_threshold_high )
     {
         s_recover_mode = false;
     }
@@ -1498,11 +1514,18 @@ Strategy::get_normal_dash_power( const WorldModel & wm )
     }
     else if ( s_recover_mode )
     {
-        dash_power = my_inc - 25.0; // preffered recover value
+        // 阶段8优化：智能恢复力量
+        // 危险情况下（对手即将控球）使用更高恢复力量
+        if (opp_min <= mate_min + 2 && wm.ball().pos().x < 0.0) {
+            dash_power = my_inc - 15.0; // 快速恢复
+        } else {
+            dash_power = my_inc - 25.0; // 标准恢复
+        }
         if ( dash_power < 0.0 ) dash_power = 0.0;
 
         dlog.addText( Logger::TEAM,
-                      __FILE__": (get_normal_dash_power) recovering" );
+                      __FILE__": (get_normal_dash_power) recovering dash_power=%.1f",
+                      dash_power );
     }
 
     // G2d: run to offside line

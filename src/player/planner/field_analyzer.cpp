@@ -564,11 +564,29 @@ FieldAnalyzer::can_shoot_from( const bool is_self,
                                const AbstractPlayerObject::Cont & opponents,
                                const int valid_opponent_threshold )
 {
-    static const double SHOOT_DIST_THR2 = std::pow( 17.0, 2 );
-    //static const double SHOOT_ANGLE_THRESHOLD = 20.0;
+    // 阶段8优化：根据位置动态调整射门距离阈值
+    // 中路可以更远射门，边路需要更近
+    double shoot_dist_thr = 17.0;
+    if (std::abs(pos.y) < 10.0) {
+        shoot_dist_thr = 20.0; // 中路增加3米
+    } else if (std::abs(pos.y) > 20.0) {
+        shoot_dist_thr = 14.0; // 边路减少3米
+    }
+
+    static const double SHOOT_DIST_THR2 = std::pow( shoot_dist_thr, 2 );
+
+    // 阶段8优化：根据位置动态调整角度阈值
+    // 禁区内降低要求，禁区外提高要求
+    double angle_threshold = 20.0;
+    if (pos.x > 36.0 && std::abs(pos.y) < 20.0) {
+        angle_threshold = 15.0; // 禁区内降低5度
+    } else if (pos.x < 30.0) {
+        angle_threshold = 25.0; // 远距离提高5度
+    }
+
     static const double SHOOT_ANGLE_THRESHOLD = ( is_self
-                                                  ? 20.0
-                                                  : 15.0 );
+                                                  ? angle_threshold
+                                                  : angle_threshold - 5.0 );
     static const double OPPONENT_DIST_THR2 = std::pow( 20.0, 2 );
 
     if ( ServerParam::i().theirTeamGoalPos().dist2( pos )
