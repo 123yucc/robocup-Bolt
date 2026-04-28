@@ -110,6 +110,7 @@ add_executable(sample_player
   bhv_basic_block.cpp
   learning/bolt_unmark_inference.cpp
   learning/bolt_shot_inference.cpp
+  learning/bolt_pass_inference.cpp
   )
 
 

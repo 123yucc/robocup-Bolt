@@ -85,6 +85,7 @@
 #include <cstdlib>
 
 #include "learning/bolt_shot_inference.h"
+#include "learning/bolt_pass_inference.h"
 
 using namespace rcsc;
 
@@ -479,6 +480,7 @@ SamplePlayer::handleServerParam()
     }
 
     BoltShotInference::tryLoad( "./shot_target_mlp_weights.txt" );
+    BoltPassInference::tryLoad( "./pass_decision_mlp_weights.txt" );
 }
 
 /*-------------------------------------------------------------------*/

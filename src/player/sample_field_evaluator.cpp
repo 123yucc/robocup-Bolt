@@ -37,6 +37,9 @@
 #include "field_analyzer.h"
 #include "simple_pass_checker.h"
 #include "learning/bolt_shot_inference.h"
+#include "learning/bolt_pass_inference.h"
+#include "planner/action_state_pair.h"
+#include "planner/cooperative_action.h"
 
 #include <rcsc/player/player_evaluator.h>
 #include <rcsc/common/server_param.h>
@@ -63,7 +66,7 @@ static const int VALID_PLAYER_THRESHOLD = 8;
 /*!
 
  */
-static double evaluate_state( const PredictState & state , const rcsc::WorldModel & wm );
+static double evaluate_state( const PredictState & state , const rcsc::WorldModel & wm, const std::vector<ActionStatePair> & path );
 
 
 /*-------------------------------------------------------------------*/
@@ -90,10 +93,10 @@ SampleFieldEvaluator::~SampleFieldEvaluator()
  */
 double
 SampleFieldEvaluator::operator()(const PredictState &state,
-                                 const std::vector<ActionStatePair> & /*path*/,
+                                 const std::vector<ActionStatePair> & path,
                                  const rcsc::WorldModel &wm) const
 {
-    const double final_state_evaluation = evaluate_state( state , wm);
+    const double final_state_evaluation = evaluate_state( state , wm, path);
 
     //
     // ???
@@ -111,7 +114,7 @@ SampleFieldEvaluator::operator()(const PredictState &state,
  */
 static
 double
-evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
+evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const std::vector<ActionStatePair> & path )
 {
     const ServerParam & SP = ServerParam::i();
 
@@ -484,6 +487,33 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm )
                       "(eval) forward pass bonus: +20.0 (ball %.1f -> %.1f)",
                       wm.ball().pos().x, state.ball().pos().x );
 #endif
+    }
+
+    // 阶段9优化：传球决策ML评分
+    if ( !path.empty() && BoltPassInference::isLoaded() ) {
+        const CooperativeAction & first_action = path[0].action();
+
+        if ( first_action.category() == CooperativeAction::Pass ) {
+            // 获取传球者和接球者位置
+            Vector2D passer_pos = wm.ball().pos();
+            Vector2D receiver_pos = first_action.targetPoint();
+            Vector2D ball_pos = wm.ball().pos();
+
+            // 调用ML推理
+            double pass_score = BoltPassInference::score( wm, passer_pos, receiver_pos, ball_pos );
+
+            // 阶段9：传球ML权重
+            static const double LAMBDA_PASS = 50.0;
+            point += LAMBDA_PASS * pass_score;
+
+#ifdef DEBUG_PRINT
+            dlog.addText( Logger::PASS,
+                          "(eval) ML pass score: %.4f, contribution=%.1f, passer=(%.1f,%.1f) receiver=(%.1f,%.1f)",
+                          pass_score, LAMBDA_PASS * pass_score,
+                          passer_pos.x, passer_pos.y,
+                          receiver_pos.x, receiver_pos.y );
+#endif
+        }
     }
 
     return point;
