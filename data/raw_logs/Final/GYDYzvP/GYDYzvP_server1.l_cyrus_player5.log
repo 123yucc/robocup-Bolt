@@ -1,0 +1,67 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 5 side: l
+CYRUS 5: [-1, 0] (v18+) force synch see mode.
+CYRUS 5:  KickTable created.
+CYRUS 5: [-1, 0] set synch see mode.
+Read Setting: ./data/settings/Other.json
+yes in 8000
+yes in 8001
+yes in 8002
+yes in 8003
+yes in 8004
+yes in 8005
+yes in 8006
+yes in 8007
+yes in 8008
+yes in 8009
+yes in 8010
+yes in 8011
+yes in 8012
+yes in 8013
+yes in 9711
+yes in 9712
+yes in 9713
+yes in 9714
+yes in 9715
+yes in 9716
+yes in 9717
+yes in 9718
+yes in 9719
+yes in 9720
+yes in 9721
+yes in 9722
+yes in 9723
+yes in 9724
+yes in 9725
+yes in 9726
+yes in 9727
+yes in 9729
+yes in 9732
+yes in 9733
+yes in 9735
+yes in 9736
+yes in 9738
+yes in 9739
+yes in 9741
+yes in 9742
+yes in 9744
+yes in 9745
+yes in 9747
+yes in 9748
+yes in 9750
+yes in 9753
+yes in 9754
+yes in 9757
+CYRUS 5: finished.

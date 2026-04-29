@@ -1,0 +1,391 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam: init ok.  unum: 11 side: r
+AEteam 11: [-1, 0] (v18+) force synch see mode.
+AEteam 11:  KickTable created.
+AEteam 11: [-1, 0] set synch see mode.
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+layerSize: 4
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [590, 0]  WARNING. no turn_neck.
+AEteam 11: [591, 0]  WARNING. no turn_neck.
+AEteam 11: [592, 0]  WARNING. no turn_neck.
+AEteam 11: [593, 0]  WARNING. no turn_neck.
+AEteam 11: [594, 0]  WARNING. no turn_neck.
+AEteam 11: [595, 0]  WARNING. no turn_neck.
+AEteam 11: [597, 0]  WARNING. no turn_neck.
+AEteam 11: [598, 0]  WARNING. no turn_neck.
+AEteam 11: [599, 0]  WARNING. no turn_neck.
+AEteam 11: [600, 0]  WARNING. no turn_neck.
+AEteam 11: [601, 0]  WARNING. no turn_neck.
+AEteam 11: [602, 0]  WARNING. no turn_neck.
+AEteam 11: [603, 0]  WARNING. no turn_neck.
+AEteam 11: [604, 0]  WARNING. no turn_neck.
+AEteam 11: [605, 0]  WARNING. no turn_neck.
+AEteam 11: [606, 0]  WARNING. no turn_neck.
+AEteam 11: [608, 0]  WARNING. no turn_neck.
+AEteam 11: [609, 0]  WARNING. no turn_neck.
+AEteam 11: [610, 0]  WARNING. no turn_neck.
+AEteam 11: [611, 0]  WARNING. no turn_neck.
+AEteam 11: [614, 0]  WARNING. no turn_neck.
+AEteam 11: [615, 0]  WARNING. no turn_neck.
+AEteam 11: [616, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [1032, 0]  WARNING. no turn_neck.
+AEteam 11: [1033, 0]  WARNING. no turn_neck.
+AEteam 11: [1034, 0]  WARNING. no turn_neck.
+AEteam 11: [1040, 0]  WARNING. no turn_neck.
+AEteam 11: [1041, 0]  WARNING. no turn_neck.
+AEteam 11: [1042, 0]  WARNING. no turn_neck.
+AEteam 11: [1043, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [1131, 0]  WARNING. no turn_neck.
+AEteam 11: [1134, 0]  WARNING. no turn_neck.
+AEteam 11: [1135, 0]  WARNING. no turn_neck.
+AEteam 11: [1136, 0]  WARNING. no turn_neck.
+AEteam 11: [1137, 0]  WARNING. no turn_neck.
+AEteam 11: [1138, 0]  WARNING. no turn_neck.
+AEteam 11: [1139, 0]  WARNING. no turn_neck.
+AEteam 11: [1140, 0]  WARNING. no turn_neck.
+AEteam 11: [1141, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [1732, 0]  WARNING. no turn_neck.
+AEteam 11: [1733, 0]  WARNING. no turn_neck.
+AEteam 11: [1734, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [1740, 0]  WARNING. no turn_neck.
+AEteam 11: [1741, 0]  WARNING. no turn_neck.
+AEteam 11: [1742, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [1755, 0]  WARNING. no turn_neck.
+AEteam 11: [1756, 0]  WARNING. no turn_neck.
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [2308, 0]  WARNING. no turn_neck.
+AEteam 11: [2309, 0]  WARNING. no turn_neck.
+AEteam 11: [2310, 0]  WARNING. no turn_neck.
+AEteam 11: [2311, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [2355, 0] lost kick by foul at [2355, 0] sense=30 internal=31
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [3129, 0]  WARNING. no turn_neck.
+AEteam 11: [3130, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [3135, 0]  WARNING. no turn_neck.
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+/home/soroush/Soccer/CyrusSenior2023/src/player/strategy.cpp 1121: Illegal number : -1
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [3318, 0]  WARNING. no turn_neck.
+AEteam 11: [3320, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [3354, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [4442, 0] lost kick by foul at [4442, 0] sense=53 internal=54
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: [4816, 0]  WARNING. no turn_neck.
+AEteam 11: [4817, 0]  WARNING. no turn_neck.
+AEteam 11: [4818, 0]  WARNING. no turn_neck.
+AEteam 11: [4819, 0]  WARNING. no turn_neck.
+AEteam 11: [4820, 0]  WARNING. no turn_neck.
+AEteam 11: [4834, 0]  WARNING. no turn_neck.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: ERROR: no intercept evaluator.
+AEteam 11: finished.

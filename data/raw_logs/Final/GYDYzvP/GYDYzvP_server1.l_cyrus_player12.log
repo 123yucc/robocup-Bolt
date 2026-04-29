@@ -1,0 +1,114 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+coach: ***WARNING*** detected unsupported options: -P 6002 
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS coach: [-1, 0] recv (ok eye on)
+$$$$$$$$$$$$$$$$$$$$$$$$isother
+CYRUS coach: change player 1 to type 0
+CYRUS coach: change player 9 to type 15
+CYRUS coach: change player 2 to type 14
+CYRUS coach: change player 11 to type 3
+CYRUS coach: change player 4 to type 9
+id speed step inc  power  stam  karea
+ 0 1.000   6  45.0 100.0  55.0  1.085
+ 1 0.785   6  48.2 100.0  51.8  1.125
+ 2 0.955   6  44.5 100.0  55.5  1.180
+ 3 0.985   5  41.2 100.0  58.8  1.095
+ 4 0.827   5  41.9 100.0  58.1  1.130
+ 5 0.888   5  45.6 100.0  54.4  1.182
+ 6 0.803   5  43.9 100.0  56.1  1.066
+ 7 0.763   6  50.5 100.0  49.5  1.102
+ 8 0.813   5  46.7 100.0  53.3  1.134
+ 9 0.990   7  44.7 100.0  55.3  1.079
+ 10 0.777   5  50.2 100.0  49.8  1.062
+ 11 0.832   5  46.2 100.0  53.8  1.007
+ 12 0.913   6  44.0 100.0  56.0  0.985
+ 13 0.927   6  46.7 100.0  53.3  1.007
+ 14 1.007   6  41.8 100.0  58.2  1.022
+ 15 1.029   7  46.1 100.0  53.9  1.028
+ 16 0.867   4  43.5 100.0  56.5  1.078
+ 17 0.872   5  48.2 100.0  51.8  1.088
+CYRUS coach: change player 10 to type 2
+CYRUS coach: change player 3 to type 13
+CYRUS coach: change player 5 to type 12
+CYRUS coach: change player 7 to type 5
+CYRUS coach: change player 8 to type 16
+CYRUS coach: change player 6 to type 17
+CYRUS coach: [96, 0] determined opponent 10 type = 3
+CYRUS coach: [97, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [97, 0] determined opponent 7 type = 16
+CYRUS coach: [100, 0] determined opponent 1 type = 0
+CYRUS coach: [100, 0] determined opponent 2 type = 2
+CYRUS coach: [100, 0] determined opponent 9 type = 14
+CYRUS coach: [101, 0] determined opponent 3 type = 13
+CYRUS coach: [101, 0] determined opponent 8 type = 17
+CYRUS coach: [101, 0] determined opponent 4 type = 12
+CYRUS coach: [102, 0] determined opponent 5 type = 5
+CYRUS coach: [102, 0] no player type for opponent 6. restart analysis.
+CYRUS coach: [105, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [106, 0] sent freeform (player_types (1 0)(2 2)(3 13)(4 12)(5 5)(6 -1)(7 16)(8 17)(9 14)(10 3)(11 -1))
+CYRUS coach: [106, 0] freeform 1 / 128
+CYRUS coach: [145, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [167, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [167, 0] determined opponent 6 type = 15
+CYRUS coach: [185, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [187, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [189, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [190, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [195, 0] no player type for opponent 11. restart analysis.
+CYRUS coach: [218, 0] determined opponent 11 type = 9
+CYRUS coach: [285, 0] freeform 2 / 128
+CYRUS coach: [285, 0] sent freeform (player_types (1 0)(2 2)(3 13)(4 12)(5 5)(6 15)(7 16)(8 17)(9 14)(10 3)(11 9))
+CYRUS coach: [301, 0] updated clang capacity.
+CYRUS coach: [601, 0] updated clang capacity.
+CYRUS coach: [901, 0] updated clang capacity.
+CYRUS coach: [1201, 0] updated clang capacity.
+CYRUS coach: [1501, 0] updated clang capacity.
+CYRUS coach: [1801, 0] updated clang capacity.
+CYRUS coach: [2101, 0] updated clang capacity.
+CYRUS coach: [2401, 0] updated clang capacity.
+CYRUS coach: [2701, 0] updated clang capacity.
+CYRUS coach: [3001, 0] updated clang capacity.
+CYRUS coach: [3301, 0] updated clang capacity.
+CYRUS coach: [3601, 0] updated clang capacity.
+CYRUS coach: [3901, 0] updated clang capacity.
+CYRUS coach: [4201, 0] updated clang capacity.
+CYRUS coach: [4501, 0] updated clang capacity.
+CYRUS coach: [4801, 0] updated clang capacity.
+CYRUS coach: [5101, 0] updated clang capacity.
+CYRUS coach: [5401, 0] updated clang capacity.
+CYRUS coach: [5701, 0] updated clang capacity.
+CYRUS coach: change player 6 to type 11
+CYRUS coach: change player 8 to type 4
+CYRUS coach: change player 7 to type 8
+CYRUS coach: [5807, 0] no player type for opponent 8. restart analysis.
+CYRUS coach: [5808, 0] no player type for opponent 8. restart analysis.
+CYRUS coach: [5823, 0] no player type for opponent 8. restart analysis.
+CYRUS coach: [5932, 0] determined opponent 8 type = 11
+CYRUS coach: [6000, 1] freeform 3 / 128
+CYRUS coach: [6000, 1] sent freeform (player_types (1 0)(2 2)(3 13)(4 12)(5 5)(6 15)(7 16)(8 11)(9 14)(10 3)(11 9))
+CYRUS coach: [6000, 0] new freeform allowed 256
+CYRUS coach: [6001, 0] updated clang capacity.
+CYRUS coach: [6301, 0] updated clang capacity.
+CYRUS coach: [6601, 0] updated clang capacity.
+CYRUS coach: [6901, 0] updated clang capacity.
+CYRUS coach: [7201, 0] updated clang capacity.
+CYRUS coach: [7501, 0] updated clang capacity.
+CYRUS coach: [7801, 0] updated clang capacity.
+CYRUS coach: [8101, 0] updated clang capacity.
+CYRUS coach: [8401, 0] updated clang capacity.
+CYRUS coach: [8701, 0] updated clang capacity.
+CYRUS coach: [9001, 0] updated clang capacity.
+CYRUS coach: [9301, 0] updated clang capacity.
+CYRUS coach: [9601, 0] updated clang capacity.
+CYRUS coach: finished.

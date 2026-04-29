@@ -1,0 +1,100 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 9 side: l
+CYRUS 9: [-1, 0] (v18+) force synch see mode.
+CYRUS 9:  KickTable created.
+CYRUS 9: [-1, 0] set synch see mode.
+Read Setting: ./data/settings/Other.json
+CYRUS 9: [375, 0] lost kick by foul at [375, 0] sense=17 internal=18
+CYRUS 9: [2497, 0] lost kick? at [2497, 0] sense=57 internal=58
+CYRUS 9: [4270, 0] lost kick by foul at [4270, 0] sense=88 internal=89
+yes in 8000
+yes in 8001
+yes in 8002
+yes in 8003
+yes in 8004
+yes in 8005
+yes in 8006
+yes in 8007
+yes in 8008
+yes in 8009
+yes in 8010
+yes in 8011
+yes in 8012
+yes in 8013
+yes in 8014
+yes in 8015
+yes in 8016
+yes in 8017
+yes in 8018
+yes in 8019
+yes in 8020
+yes in 8021
+yes in 8024
+yes in 8025
+yes in 8026
+yes in 8030
+yes in 8032
+yes in 8033
+yes in 8034
+yes in 8035
+yes in 8037
+yes in 8038
+yes in 8042
+yes in 8573
+yes in 8574
+yes in 8575
+yes in 8576
+yes in 8577
+yes in 8578
+yes in 8579
+yes in 8580
+yes in 8581
+yes in 8582
+yes in 8583
+yes in 8584
+yes in 8585
+yes in 8586
+yes in 8587
+yes in 8588
+yes in 8589
+yes in 8590
+yes in 8591
+yes in 8592
+yes in 8593
+yes in 8594
+yes in 8595
+yes in 8596
+yes in 8597
+yes in 8598
+yes in 8599
+yes in 8600
+yes in 8601
+yes in 8602
+yes in 8603
+yes in 8604
+yes in 8605
+yes in 8606
+yes in 8607
+yes in 8608
+yes in 8609
+yes in 8612
+yes in 8613
+yes in 8614
+yes in 8615
+yes in 8616
+yes in 8618
+yes in 8619
+yes in 8622
+CYRUS 9: finished.

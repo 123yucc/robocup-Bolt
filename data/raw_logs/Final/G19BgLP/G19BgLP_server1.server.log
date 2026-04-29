@@ -1,0 +1,79 @@
+[sudo] password for ss2dtr: rcssserver-19.0.0
+
+Copyright (C) 1995, 1996, 1997, 1998, 1999 Electrotechnical Laboratory.
+2000 - RoboCup Soccer Simulator Maintenance Group.
+
+Trying to create configuration file: ~/.rcssserver/server.conf
+Created configuration file: ~/.rcssserver/server.conf
+Trying to create configuration file: ~/.rcssserver/player.conf
+Created configuration file: ~/.rcssserver/player.conf
+Trying to create configuration file: ~/.rcssserver/CSVSaver.conf
+Created configuration file: ~/.rcssserver/CSVSaver.conf
+Simulator Random Seed: 1721549572
+CSVSaver: Ready
+STDOutSaver: Ready
+Using simulator's random seed as Hetero Player Seed: 1721549572
+wind factor: rand: 0.000000, vector: (0.000000, 0.000000)
+
+Hit CTRL-C to exit
+Waiting for players to connect
+A new (v5) monitor connected.
+A new (v18) player (FRA-UNIted 1) connected.
+A new (v18) player (FRA-UNIted 2) connected.
+A new (v18) player (FRA-UNIted 3) connected.
+A new (v18) player (FRA-UNIted 4) connected.
+A new (v18) player (FRA-UNIted 5) connected.
+A new (v18) player (FRA-UNIted 6) connected.
+A new (v18) player (FRA-UNIted 7) connected.
+A new (v18) player (FRA-UNIted 8) connected.
+A new (v18) player (FRA-UNIted 9) connected.
+A new (v18) player (FRA-UNIted 10) connected.
+A new (v18) player (FRA-UNIted 11) connected.
+A new (v8) online coach (FRA-UNIted) connected.
+A new (v17) player (RoboCIn 1) connected.
+A new (v17) player (RoboCIn 2) connected.
+A new (v17) player (RoboCIn 3) connected.
+A new (v17) player (RoboCIn 4) connected.
+A new (v17) player (RoboCIn 5) connected.
+A new (v17) player (RoboCIn 6) connected.
+A new (v17) player (RoboCIn 7) connected.
+A new (v17) player (RoboCIn 8) connected.
+A new (v17) player (RoboCIn 9) connected.
+A new (v17) player (RoboCIn 10) connected.
+A new (v17) player (RoboCIn 11) connected.
+Waiting to kick off
+A new (v17) online coach (RoboCIn) connected.
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+syntax error
+Error parsing >(dash 0 nan)(pointto 1e+06 11.0068)(turn_neck -50.1653)(say "4khk9yp9qU")(attentionto our 7)<
+Waiting after end of match
+A player disconnected : (RoboCIn 6)
+A player disconnected : (RoboCIn 7)
+A player disconnected : (RoboCIn 9)
+A player disconnected : (RoboCIn 2)
+A player disconnected : (RoboCIn 4)
+A player disconnected : (RoboCIn 1)
+A player disconnected : (RoboCIn 11)
+A player disconnected : (RoboCIn 10)
+A player disconnected : (RoboCIn 8)
+A player disconnected : (RoboCIn 5)
+A player disconnected : (RoboCIn 3)
+An online coach disconnected : (RoboCIn)
+
+Game Over. Exiting...
+
+Saving Results:
+	CSVSaver: saving...
+	CSVSaver: ...disabled
+	STDOutSaver: saving...
+
+Game Results:
+	2024-07-21 08:12:52
+	'FRA-UNIted' vs 'RoboCIn'
+	Score: 2 - 0
+ 
+	STDOutSaver: ...saved
+
+Saving Results Complete

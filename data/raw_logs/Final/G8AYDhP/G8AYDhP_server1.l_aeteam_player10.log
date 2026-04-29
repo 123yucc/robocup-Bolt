@@ -1,0 +1,362 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam: init ok.  unum: 10 side: l
+AEteam 10: [-1, 0] (v18+) force synch see mode.
+AEteam 10:  KickTable created.
+AEteam 10: [-1, 0] set synch see mode.
+layerSize: 4
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [557, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [2350, 0]  WARNING. no turn_neck.
+AEteam 10: [2351, 0]  WARNING. no turn_neck.
+AEteam 10: [2352, 0]  WARNING. no turn_neck.
+AEteam 10: [2353, 0]  WARNING. no turn_neck.
+AEteam 10: [2354, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [2649, 0] lost kick? at [2649, 0] sense=77 internal=78
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [3480, 0]  WARNING. no turn_neck.
+AEteam 10: [3482, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [3695, 0]  WARNING. no turn_neck.
+AEteam 10: [3696, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [4351, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [4734, 0]  WARNING. no turn_neck.
+AEteam 10: [4735, 0]  WARNING. no turn_neck.
+AEteam 10: [4736, 0]  WARNING. no turn_neck.
+AEteam 10: [4739, 0]  WARNING. no turn_neck.
+AEteam 10: [4740, 0]  WARNING. no turn_neck.
+AEteam 10: [4741, 0]  WARNING. no turn_neck.
+AEteam 10: [4742, 0]  WARNING. no turn_neck.
+AEteam 10: [4743, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [4838, 0]  WARNING. no turn_neck.
+AEteam 10: [4839, 0]  WARNING. no turn_neck.
+AEteam 10: [4840, 0]  WARNING. no turn_neck.
+AEteam 10: [4841, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [5520, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: [5719, 0]  WARNING. no turn_neck.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: ERROR: no intercept evaluator.
+AEteam 10: finished.

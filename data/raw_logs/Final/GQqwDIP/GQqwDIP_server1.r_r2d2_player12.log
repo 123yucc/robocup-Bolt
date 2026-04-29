@@ -1,0 +1,96 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+R2D2 coach: [-1, 0] recv (ok eye on)
+R2D2 coach: [0, 1] send team_graphic 32 tiles
+R2D2 coach: [0, 2] send team_graphic 32 tiles
+R2D2 coach: [0, 3] send team_graphic 28 tiles
+id speed step inc  power  stam  karea
+ 0 1.000   6  45.0 100.0  55.0  1.085
+ 1 0.908   7  47.4 100.0  52.6  1.025
+ 2 0.835   5  47.2 100.0  52.8  0.998
+ 3 0.987   7  42.9 100.0  57.1  1.121
+ 4 0.916   6  44.9 100.0  55.1  0.989
+ 5 0.837   4  43.2 100.0  56.8  1.056
+ 6 0.958   6  46.2 100.0  53.8  1.169
+ 7 1.029   7  48.7 100.0  51.3  1.136
+ 8 0.872   6  46.4 100.0  53.6  1.082
+ 9 0.828   5  43.6 100.0  56.4  1.043
+ 10 0.840   4  42.8 100.0  57.2  1.038
+ 11 0.911   4  41.1 100.0  58.9  1.117
+ 12 0.801   7  51.7 100.0  48.3  1.104
+ 13 0.857   4  40.3 100.0  59.7  1.148
+ 14 0.864   4  44.2 100.0  55.8  0.992
+ 15 0.839   5  43.4 100.0  56.6  1.073
+ 16 1.046   6  43.6 100.0  56.4  1.156
+ 17 0.873   6  51.0 100.0  49.0  1.177
+R2D2 coach: change player 1 to type 0
+R2D2 coach: change player 11 to type 16
+R2D2 coach: change player 2 to type 7
+R2D2 coach: change player 3 to type 3
+R2D2 coach: change player 10 to type 6
+R2D2 coach: change player 9 to type 11
+R2D2 coach: change player 6 to type 4
+R2D2 coach: change player 4 to type 1
+R2D2 coach: change player 5 to type 14
+R2D2 coach: change player 7 to type 17
+R2D2 coach: change player 8 to type 8
+R2D2 coach: [17, 0] determined opponent 9 type = 11
+R2D2 coach: [20, 0] determined opponent 7 type = 13
+R2D2 coach: [23, 0] determined opponent 5 type = 7
+R2D2 coach: [29, 0] determined opponent 8 type = 1
+R2D2 coach: [29, 0] determined opponent 3 type = 16
+R2D2 coach: [32, 0] determined opponent 2 type = 6
+R2D2 coach: [33, 0] determined opponent 10 type = 3
+R2D2 coach: [34, 0] determined opponent 4 type = 17
+R2D2 coach: [36, 0] determined opponent 11 type = 4
+R2D2 coach: [57, 0] determined opponent 6 type = 14
+R2D2 coach: [98, 0] sent freeform (player_types (1 0)(2 6)(3 16)(4 17)(5 7)(6 14)(7 13)(8 1)(9 11)(10 3)(11 4))
+R2D2 coach: [98, 0] freeform 1 / 128
+R2D2 coach: [301, 0] updated clang capacity.
+R2D2 coach: [601, 0] updated clang capacity.
+R2D2 coach: [901, 0] updated clang capacity.
+R2D2 coach: [1201, 0] updated clang capacity.
+R2D2 coach: [1501, 0] updated clang capacity.
+R2D2 coach: [1801, 0] updated clang capacity.
+R2D2 coach: [2101, 0] updated clang capacity.
+R2D2 coach: [2401, 0] updated clang capacity.
+R2D2 coach: change player 8 to type 13
+R2D2 coach: [2701, 0] updated clang capacity.
+R2D2 coach: [3001, 0] updated clang capacity.
+R2D2 coach: [3301, 0] updated clang capacity.
+R2D2 coach: [3601, 0] updated clang capacity.
+R2D2 coach: [3901, 0] updated clang capacity.
+R2D2 coach: [4201, 0] updated clang capacity.
+R2D2 coach: [4501, 0] updated clang capacity.
+R2D2 coach: [4801, 0] updated clang capacity.
+R2D2 coach: [5101, 0] updated clang capacity.
+R2D2 coach: [5401, 0] updated clang capacity.
+R2D2 coach: [5701, 0] updated clang capacity.
+R2D2 coach: [5761, 0] determined opponent 8 type = 8
+R2D2 coach: [5809, 0] sent freeform (player_types (1 0)(2 6)(3 16)(4 17)(5 7)(6 14)(7 13)(8 8)(9 11)(10 3)(11 4))
+R2D2 coach: [5809, 0] freeform 2 / 128
+R2D2 coach: [6000, 0] new freeform allowed 256
+R2D2 coach: [6001, 0] updated clang capacity.
+R2D2 coach: [6301, 0] updated clang capacity.
+R2D2 coach: [6601, 0] updated clang capacity.
+R2D2 coach: [6901, 0] updated clang capacity.
+R2D2 coach: [7201, 0] updated clang capacity.
+R2D2 coach: [7501, 0] updated clang capacity.
+R2D2 coach: [7801, 0] updated clang capacity.
+R2D2 coach: [8101, 0] updated clang capacity.
+R2D2 coach: [8401, 0] updated clang capacity.
+R2D2 coach: [8701, 0] updated clang capacity.
+R2D2 coach: [9001, 0] updated clang capacity.
+R2D2 coach: [9301, 0] updated clang capacity.
+R2D2 coach: finished.

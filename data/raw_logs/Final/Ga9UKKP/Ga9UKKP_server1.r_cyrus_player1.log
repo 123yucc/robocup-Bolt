@@ -1,0 +1,231 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 1 side: r
+CYRUS 1: [-1, 0] (v18+) force synch see mode.
+CYRUS 1:  KickTable created.
+CYRUS 1: [-1, 0] set synch see mode.
+Read Setting: data/settings/yush.json
+layerSize: 3
+layerSize: 4
+gotopoint in 8305cycle to move_pos(-30, -0.305195)
+gotopoint in 8307cycle to move_pos(-30, 0.0867661)
+gotopoint in 8309cycle to move_pos(-30, 0.0572184)
+gotopoint in 8310cycle to move_pos(-30, 0.0209194)
+gotopoint in 8311cycle to move_pos(-30, 0.0820847)
+gotopoint in 8312cycle to move_pos(-30, 0.0800955)
+gotopoint in 8313cycle to move_pos(-30, 0.46718)
+gotopoint in 8314cycle to move_pos(-30, 0.195839)
+gotopoint in 8316cycle to move_pos(-30, -0.895175)
+gotopoint in 8317cycle to move_pos(-30, -0.405463)
+gotopoint in 8318cycle to move_pos(-30, -0.136669)
+gotopoint in 8320cycle to move_pos(-30, 0.00146094)
+gotopoint in 8321cycle to move_pos(-30, 0.469381)
+gotopoint in 8322cycle to move_pos(-30, 0.41723)
+gotopoint in 8323cycle to move_pos(-30, 0.273508)
+gotopoint in 8324cycle to move_pos(-30, 0.208096)
+turn body to 90 angle in pos 8325
+gotopoint in 8326cycle to move_pos(-30, -0.104239)
+turn body to 87 angle in pos 8327
+turn for tackl In 8328
+ Tackle 8329
+CYRUS 1: [8486, 0]  attentionto. try to attention to itself 
+CYRUS 1: [8487, 0]  attentionto. try to attention to itself 
+CYRUS 1: [8488, 0]  attentionto. try to attention to itself 
+CYRUS 1: [8489, 0]  attentionto. try to attention to itself 
+CYRUS 1: [8490, 0]  attentionto. try to attention to itself 
+gotopoint in 8574cycle to move_pos(-30, -0.159983)
+gotopoint in 8575cycle to move_pos(-30, -0.0820959)
+gotopoint in 8576cycle to move_pos(-30, -0.0199213)
+gotopoint in 8577cycle to move_pos(-30, -0.0239304)
+gotopoint in 8579cycle to move_pos(-30, 0.0402443)
+gotopoint in 8580cycle to move_pos(-30, 0.0512559)
+gotopoint in 8582cycle to move_pos(-30, -1.86025)
+gotopoint in 8583cycle to move_pos(-30, -1.18396)
+gotopoint in 8584cycle to move_pos(-30, -2.54344)
+gotopoint in 8585cycle to move_pos(-30, -1.55082)
+gotopoint in 8586cycle to move_pos(-30, -1.83896)
+gotopoint in 8587cycle to move_pos(-30, -1.34408)
+gotopoint in 8589cycle to move_pos(-30, -1.03392)
+gotopoint in 8591cycle to move_pos(-30, -0.466355)
+gotopoint in 8592cycle to move_pos(-30, -0.691222)
+turn body to 61 angle in pos 8593
+gotopoint in 8594cycle to move_pos(-30, -1.44335)
+gotopoint in 8595cycle to move_pos(-30, -1.63702)
+turn for tackl In 8596
+shoot intercept 8598
+shoot intercept 8599
+shoot intercept 8600
+shoot intercept 8601
+Intercept 3 In 8602
+Intercept 2 In 8603
+Intercept 2 In 8604
+Intercept 2 In 8605
+Intercept 2 In 8606
+Intercept 2 In 8607
+Intercept 2 In 8608
+Intercept 2 In 8609
+Intercept 2 In 8610
+Intercept 2 In 8611
+gotopoint in 8834cycle to move_pos(-30, -0.068402)
+gotopoint in 8835cycle to move_pos(-30, -0.068402)
+gotopoint in 8836cycle to move_pos(-30, -0.106396)
+gotopoint in 8838cycle to move_pos(-30, 0.0246919)
+gotopoint in 8839cycle to move_pos(-30, 0.136557)
+gotopoint in 8841cycle to move_pos(-30, 0.142109)
+gotopoint in 8842cycle to move_pos(-30, -0.0442488)
+gotopoint in 8844cycle to move_pos(-30, -0.00411225)
+gotopoint in 8845cycle to move_pos(-30, -0.185375)
+gotopoint in 8846cycle to move_pos(-30, -0.430654)
+gotopoint in 8847cycle to move_pos(-30, -0.227675)
+gotopoint in 8848cycle to move_pos(-30, -0.305298)
+turn body to -90 angle in pos 8849
+gotopoint in 8850cycle to move_pos(-30, -0.117158)
+turn body to -71 angle in pos 8851
+gotopoint in 8852cycle to move_pos(-30, 0.148461)
+gotopoint in 8853cycle to move_pos(-30, 0.130242)
+turn body to 65 angle in pos 8854
+gotopoint in 8855cycle to move_pos(-30, 0.877477)
+gotopoint in 8856cycle to move_pos(-30, 1.26687)
+gotopoint in 8857cycle to move_pos(-30, 1.55804)
+clear 8859
+CYRUS 1: [8870, 0] lost kick? at [8870, 0] sense=29 internal=30
+CYRUS 1: [8871, 0] lost kick? at [8871, 0] sense=29 internal=30
+gotopoint in 9052cycle to move_pos(-30, -0.15911)
+gotopoint in 9053cycle to move_pos(-30, -0.15911)
+gotopoint in 9054cycle to move_pos(-30, 0.17011)
+gotopoint in 9055cycle to move_pos(-30, -0.0542004)
+gotopoint in 9056cycle to move_pos(-30, -0.114282)
+gotopoint in 9058cycle to move_pos(-30, 0.0155727)
+gotopoint in 9059cycle to move_pos(-30, 0.527856)
+gotopoint in 9060cycle to move_pos(-30, 0.682401)
+gotopoint in 9061cycle to move_pos(-30, 0.461173)
+turn body to 90 angle in pos 9062
+gotopoint in 9063cycle to move_pos(-30, 0.510672)
+gotopoint in 9065cycle to move_pos(-30, 0.0488779)
+gotopoint in 9066cycle to move_pos(-30, -0.180808)
+gotopoint in 9067cycle to move_pos(-30, -0.244812)
+gotopoint in 9068cycle to move_pos(-30, -0.371045)
+gotopoint in 9069cycle to move_pos(-30, -0.695903)
+turn body to -65 angle in pos 9070
+turn body to -65 angle in pos 9071
+GOALIE3
+GOALIE3
+turn body to -65 angle in pos 9074
+turn body to -65 angle in pos 9075
+CYRUS 1: [9089, 0] lost kick? at [9089, 0] sense=40 internal=41
+CYRUS 1: [9090, 0] lost kick? at [9090, 0] sense=40 internal=41
+gotopoint in 9311cycle to move_pos(-30, 0.00356416)
+gotopoint in 9312cycle to move_pos(-30, 0.00539712)
+gotopoint in 9313cycle to move_pos(-30, 0.0174366)
+gotopoint in 9314cycle to move_pos(-30, 0.022444)
+gotopoint in 9315cycle to move_pos(-30, -0.0441395)
+gotopoint in 9316cycle to move_pos(-30, -0.101658)
+gotopoint in 9317cycle to move_pos(-30, -0.369361)
+gotopoint in 9318cycle to move_pos(-30, -0.367577)
+gotopoint in 9319cycle to move_pos(-30, -0.497081)
+gotopoint in 9320cycle to move_pos(-30, -0.471451)
+gotopoint in 9321cycle to move_pos(-30, -0.557849)
+gotopoint in 9322cycle to move_pos(-30, -0.692272)
+turn body to -90 angle in pos 9323
+turn body to -86 angle in pos 9324
+turn body to -86 angle in pos 9325
+turn body to -86 angle in pos 9326
+turn body to -86 angle in pos 9327
+gotopoint in 9328cycle to move_pos(-30, -0.821749)
+turn body to -86 angle in pos 9329
+turn body to -86 angle in pos 9330
+turn body to -86 angle in pos 9331
+turn body to -86 angle in pos 9332
+gotopoint in 9333cycle to move_pos(-30, -0.29353)
+shoot intercept 9334
+shoot intercept 9335
+shoot intercept 9336
+shoot intercept 9337
+shoot intercept 9338
+shoot intercept 9339
+shoot intercept 9340
+shoot intercept 9341
+shoot intercept 9342
+Intercept 3 In 9343
+gotopoint in 9343cycle to move_pos(-64.4666, 4.78124)
+Intercept 2 In 9344
+Intercept 2 In 9345
+Intercept 2 In 9346
+gotopoint in 9624cycle to move_pos(-30, 0.143289)
+gotopoint in 9626cycle to move_pos(-30, -0.243458)
+gotopoint in 9628cycle to move_pos(-30, -0.153368)
+gotopoint in 9629cycle to move_pos(-30, -0.212665)
+gotopoint in 9630cycle to move_pos(-30, -0.476087)
+gotopoint in 9631cycle to move_pos(-30, -0.201989)
+gotopoint in 9632cycle to move_pos(-30, -0.232985)
+gotopoint in 9633cycle to move_pos(-30, -0.704101)
+gotopoint in 9634cycle to move_pos(-30, -0.540502)
+gotopoint in 9635cycle to move_pos(-30, -0.529202)
+gotopoint in 9636cycle to move_pos(-30, -0.427795)
+gotopoint in 9637cycle to move_pos(-30, -0.416749)
+gotopoint in 9638cycle to move_pos(-30, -0.704823)
+gotopoint in 9639cycle to move_pos(-30, -0.599764)
+turn body to -90 angle in pos 9640
+turn body to -95 angle in pos 9641
+gotopoint in 9642cycle to move_pos(-30, -0.983089)
+turn body to -95 angle in pos 9643
+turn body to -95 angle in pos 9644
+Intercept 1 in9645
+Intercept 1 in9646
+gotopoint in 9647cycle to move_pos(-30, 0.574529)
+gotopoint in 9648cycle to move_pos(-30, 0.893215)
+gotopoint in 9649cycle to move_pos(-30, 1.19785)
+gotopoint in 9650cycle to move_pos(-30, 2.05854)
+turn body to 113 angle in pos 9651
+shoot intercept 9653
+shoot intercept 9654
+shoot intercept 9655
+shoot intercept 9656
+shoot intercept 9657
+shoot intercept 9658
+shoot intercept 9659
+Intercept 3 In 9660
+gotopoint in 9660cycle to move_pos(-66.7263, -5.33768)
+Intercept 2 In 9661
+Intercept 2 In 9662
+Intercept 2 In 9663
+Intercept 2 In 9664
+Intercept 2 In 9922
+Intercept 2 In 9923
+gotopoint in 9924cycle to move_pos(-30, 0.108267)
+gotopoint in 9925cycle to move_pos(-30, 0.194816)
+gotopoint in 9926cycle to move_pos(-30, 0.282466)
+gotopoint in 9927cycle to move_pos(-30, -0.0129959)
+gotopoint in 9928cycle to move_pos(-30, -0.0773907)
+gotopoint in 9930cycle to move_pos(-30, 0.0972702)
+gotopoint in 9931cycle to move_pos(-30, 0.553419)
+gotopoint in 9932cycle to move_pos(-30, 0.287215)
+gotopoint in 9933cycle to move_pos(-30, 0.546266)
+turn body to 90 angle in pos 9934
+gotopoint in 9935cycle to move_pos(-30, 0.608733)
+turn body to 80 angle in pos 9936
+turn body to 80 angle in pos 9937
+gotopoint in 9938cycle to move_pos(-30, 0.894046)
+turn body to 80 angle in pos 9939
+turn body to 80 angle in pos 9940
+turn body to 80 angle in pos 9941
+turn body to 80 angle in pos 9942
+turn body to 80 angle in pos 9943
+gotopoint in 9944cycle to move_pos(-30, 1.6869)
+gotopoint in 9945cycle to move_pos(-30, 2.335)
+gotopoint in 9946cycle to move_pos(-30, 2.84542)
+gotopoint in 9947cycle to move_pos(-30, 2.82802)
+gotopoint in 9948cycle to move_pos(-30, 2.99121)
+shoot intercept 9949
+CYRUS 1: finished.

@@ -1,0 +1,202 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam: init ok.  unum: 4 side: r
+AEteam 4: [-1, 0] (v18+) force synch see mode.
+AEteam 4:  KickTable created.
+AEteam 4: [-1, 0] set synch see mode.
+layerSize: 4
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: [4343, 0]  WARNING. no turn_neck.
+AEteam 4: [4344, 0]  WARNING. no turn_neck.
+AEteam 4: [4345, 0]  WARNING. no turn_neck.
+AEteam 4: [4346, 0]  WARNING. no turn_neck.
+AEteam 4: [4347, 0]  WARNING. no turn_neck.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: [5508, 0] lost kick? at [5508, 0] sense=35 internal=36
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: ERROR: no intercept evaluator.
+AEteam 4: finished.

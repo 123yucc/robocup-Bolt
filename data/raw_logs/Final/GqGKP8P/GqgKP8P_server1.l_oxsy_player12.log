@@ -1,0 +1,80 @@
+
+REPORT OF COACH
+---------------
+
+cycles = 30
+------------
+
+1) type = 0  dist = 29.333333  ddb = 29.333333  krb = 0.000000  dwk = 29.333333
+2) type = 10  dist = 28.980787  ddb = 28.980787  krb = 0.000000  dwk = 28.980787
+3) type = 8  dist = 27.903370  ddb = 27.903370  krb = 0.000000  dwk = 27.903370
+4) type = 5  dist = 26.951577  ddb = 26.951577  krb = 0.000000  dwk = 26.951577
+5) type = 17  dist = 26.932873  ddb = 26.932873  krb = 0.000000  dwk = 26.932873
+6) type = 9  dist = 26.500049  ddb = 26.500049  krb = 0.000000  dwk = 26.500049
+7) type = 7  dist = 26.225852  ddb = 26.225852  krb = 0.000000  dwk = 26.225852
+8) type = 13  dist = 25.965669  ddb = 25.965669  krb = 0.000000  dwk = 25.965669
+9) type = 12  dist = 25.892795  ddb = 25.892795  krb = 0.000000  dwk = 25.892795
+10) type = 11  dist = 25.548478  ddb = 25.548478  krb = 0.000000  dwk = 25.548478
+11) type = 15  dist = 25.528682  ddb = 25.528682  krb = 0.000000  dwk = 25.528682
+12) type = 2  dist = 25.339870  ddb = 25.339870  krb = 0.000000  dwk = 25.339870
+13) type = 6  dist = 25.142538  ddb = 25.142538  krb = 0.000000  dwk = 25.142538
+14) type = 3  dist = 24.845071  ddb = 24.845071  krb = 0.000000  dwk = 24.845071
+15) type = 1  dist = 24.114245  ddb = 24.114245  krb = 0.000000  dwk = 24.114245
+16) type = 16  dist = 23.986186  ddb = 23.986186  krb = 0.000000  dwk = 23.986186
+17) type = 4  dist = 23.952863  ddb = 23.952863  krb = 0.000000  dwk = 23.952863
+18) type = 14  dist = 23.788849  ddb = 23.788849  krb = 0.000000  dwk = 23.788849
+
+
+REPORT OF COACH (TIME = 0)
+---------------
+
+opp_team_name = FRA-UNIted
+
+opp_number = 1  probable_opp_type = -1
+opp_number = 2  probable_opp_type = -1
+opp_number = 3  probable_opp_type = -1
+opp_number = 4  probable_opp_type = -1
+opp_number = 5  probable_opp_type = -1
+opp_number = 6  probable_opp_type = -1
+opp_number = 7  probable_opp_type = -1
+opp_number = 8  probable_opp_type = -1
+opp_number = 9  probable_opp_type = -1
+opp_number = 10  probable_opp_type = -1
+opp_number = 11  probable_opp_type = -1
+
+
+REPORT OF COACH (TIME = 112)
+---------------
+
+opp_team_name = FRA-UNIted
+
+opp_number = 1  probable_opp_type = -1
+opp_number = 2  probable_opp_type = 17
+opp_number = 3  probable_opp_type = 10
+opp_number = 4  probable_opp_type = 2
+opp_number = 5  probable_opp_type = 8
+opp_number = 6  probable_opp_type = 12
+opp_number = 7  probable_opp_type = 9
+opp_number = 8  probable_opp_type = 15
+opp_number = 9  probable_opp_type = 13
+opp_number = 10  probable_opp_type = 5
+opp_number = 11  probable_opp_type = 7
+
+
+REPORT OF COACH (TIME = 303)
+---------------
+
+opp_team_name = FRA-UNIted
+
+opp_number = 1  probable_opp_type = -1
+opp_number = 2  probable_opp_type = 17
+opp_number = 3  probable_opp_type = 10
+opp_number = 4  probable_opp_type = 2
+opp_number = 5  probable_opp_type = 8
+opp_number = 6  probable_opp_type = 12
+opp_number = 7  probable_opp_type = 9
+opp_number = 8  probable_opp_type = 15
+opp_number = 9  probable_opp_type = 13
+opp_number = 10  probable_opp_type = 5
+opp_number = 11  probable_opp_type = 7
+

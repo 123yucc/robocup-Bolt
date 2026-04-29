@@ -1,0 +1,46 @@
+******************************************************************
+ HELIOS2024
+ Okayama University of Science & Osaka Metropolitan University
+ Copyright 2000-2007.  Hidehisa Akiyama
+ Copyright 2007-2010.  Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011- Hidehisa Akiyama, Hiroki Shimora,
+   Tomoharu Nakashima (2011-),
+   Yousuke Narimoto, Tomohiko Okayama (2011-)
+   Katsuhiro Yamashita (2013-)
+   Satoshi Mifune (2014-)
+   Sho Tanaka, Jordan Henrio (2015-)
+   Tomonari Nakade, Takuya Fukushima (2016-)
+   Yudai Suzuki, An Ohori (2017-)
+   Jiarun Zhong (2018-)
+   Ryota Kuga, Masaki Yamaguchi, Hiroki Omori (2019-)
+   Kyou Hatakeyama (2021-)
+   Takumi Fujikawa (2022-)
+   Akei Hishiki (2023-)
+   Sota Okayama, Shota Yano (2024-)
+ All rights reserved.
+
+ LIBLINEAR
+   Copyright (c) 2007-2015 The LIBLINEAR Project.
+   All rights reserved.
+ LIBSVM
+   Copyright (c) 2000-2014 Chih-Chung Chang and Chih-Jen Lin
+   All rights reserved.
+******************************************************************
+./start: 85: ping: not found
+player options: --player-config ./player.conf  --common-conf ./common.conf -h 172.11.0.111 -t HELIOS2024 -v 19 --game-id 20240721-092004 --strategy-dir ./data/strategy --formation-dir ./data/formations --setplay-dir ./data/setplay --strategy-conf ./data/strategy.conf --chain-search-method BestFirstSearch --evaluator-name Default --intercept-evaluator-name Default --max-chain-length 3 --max-evaluate-size 3000 --svmrank-evaluator-model ./data/svmrank_evaluator/model --svmrank-intercept-evaluator-model ./data/svmrank_intercept_evaluator/model --neural-network-evaluator-dir ./data/neural_network_evaluator/ --center-forward-free-move-model ./data/center_forward_free_move/model --svm-formation-classifier-model ./data/svm_formation_classifier/svm.model --intercept-conf-dir ./data/intercept_probability/ --opponent-data-dir ./data/opponent_data/ --audio_shift 0 -p 6000
+coach options: --coach-config ./coach.conf  --common-conf ./common.conf -h 172.11.0.111 -t HELIOS2024 -v 19 --game-id 20240721-092004 --strategy-dir ./data/strategy --formation-dir ./data/formations --setplay-dir ./data/setplay --strategy-conf ./data/strategy.conf --chain-search-method BestFirstSearch --evaluator-name Default --intercept-evaluator-name Default --max-chain-length 3 --max-evaluate-size 3000 --svmrank-evaluator-model ./data/svmrank_evaluator/model --svmrank-intercept-evaluator-model ./data/svmrank_intercept_evaluator/model --neural-network-evaluator-dir ./data/neural_network_evaluator/ --center-forward-free-move-model ./data/center_forward_free_move/model --svm-formation-classifier-model ./data/svm_formation_classifier/svm.model --intercept-conf-dir ./data/intercept_probability/ --opponent-data-dir ./data/opponent_data/ --audio_shift 0 -p 6002 --use_team_graphic on --team_graphic_file ./data/team_logo-l.xpm
+dist-datetime = 20240721-1417-JST
+******************************************************************
+ librcsc 2024
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+HELIOS2024: init ok.  unum: 11 side: r
+HELIOS2024 11:  KickTable created.
+HELIOS2024 11: [-1, 0] set synch see mode.
+HELIOS2024 11: [6831, 0] lost kick by foul at [6831, 0] sense=55 internal=56
+HELIOS2024 11: [7946, 0] lost kick by foul at [7946, 0] sense=73 internal=74
+HELIOS2024 11: finished.

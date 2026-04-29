@@ -1,0 +1,89 @@
+[sudo] password for ss2dtr: rcssserver-19.0.0
+
+Copyright (C) 1995, 1996, 1997, 1998, 1999 Electrotechnical Laboratory.
+2000 - RoboCup Soccer Simulator Maintenance Group.
+
+Trying to create configuration file: ~/.rcssserver/server.conf
+Created configuration file: ~/.rcssserver/server.conf
+Trying to create configuration file: ~/.rcssserver/player.conf
+Created configuration file: ~/.rcssserver/player.conf
+Trying to create configuration file: ~/.rcssserver/CSVSaver.conf
+Created configuration file: ~/.rcssserver/CSVSaver.conf
+Simulator Random Seed: 1721548143
+CSVSaver: Ready
+STDOutSaver: Ready
+Using simulator's random seed as Hetero Player Seed: 1721548143
+wind factor: rand: 0.000000, vector: (0.000000, 0.000000)
+
+Hit CTRL-C to exit
+Waiting for players to connect
+A new (v5) monitor connected.
+A new (v18) player (AEteam 1) connected.
+A new (v18) player (AEteam 2) connected.
+A new (v18) player (AEteam 3) connected.
+A new (v18) player (AEteam 4) connected.
+A new (v18) player (AEteam 5) connected.
+A new (v18) player (AEteam 6) connected.
+A new (v18) player (AEteam 7) connected.
+A new (v18) player (AEteam 8) connected.
+A new (v18) player (AEteam 9) connected.
+A new (v18) player (AEteam 10) connected.
+A new (v18) player (AEteam 11) connected.
+A new (v18) online coach (AEteam) connected.
+A new (v18) player (Oxsy 1) connected.
+A new (v18) player (Oxsy 2) connected.
+A new (v18) player (Oxsy 3) connected.
+A new (v18) player (Oxsy 4) connected.
+A new (v18) player (Oxsy 5) connected.
+A new (v18) player (Oxsy 6) connected.
+A new (v18) player (Oxsy 7) connected.
+A new (v18) player (Oxsy 8) connected.
+A new (v18) player (Oxsy 9) connected.
+A new (v18) player (Oxsy 10) connected.
+A new (v18) player (Oxsy 11) connected.
+Waiting to kick off
+A new (v18) online coach (Oxsy) connected.
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+Waiting after end of match
+A player disconnected : (AEteam 9)
+A player disconnected : (AEteam 7)
+A player disconnected : (AEteam 2)
+A player disconnected : (AEteam 1)
+A player disconnected : (AEteam 10)
+A player disconnected : (AEteam 8)
+A player disconnected : (AEteam 3)
+A player disconnected : (AEteam 11)
+A player disconnected : (AEteam 6)
+A player disconnected : (AEteam 5)
+An online coach disconnected : (AEteam)
+A player disconnected : (AEteam 4)
+A player disconnected : (Oxsy 10)
+A player disconnected : (Oxsy 6)
+An online coach disconnected : (Oxsy)
+A player disconnected : (Oxsy 1)
+A player disconnected : (Oxsy 3)
+A player disconnected : (Oxsy 7)
+A player disconnected : (Oxsy 5)
+A player disconnected : (Oxsy 9)
+A player disconnected : (Oxsy 11)
+A player disconnected : (Oxsy 8)
+A player disconnected : (Oxsy 2)
+A player disconnected : (Oxsy 4)
+
+Game Over. Exiting...
+
+Saving Results:
+	CSVSaver: saving...
+	CSVSaver: ...disabled
+	STDOutSaver: saving...
+
+Game Results:
+	2024-07-21 07:49:03
+	'AEteam' vs 'Oxsy'
+	Score: 1 - 2
+ 
+	STDOutSaver: ...saved
+
+Saving Results Complete

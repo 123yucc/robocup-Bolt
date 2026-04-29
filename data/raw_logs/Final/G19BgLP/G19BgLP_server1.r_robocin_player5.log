@@ -1,0 +1,18 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+RoboCIn: init ok.  unum: 5 side: r
+RoboCIn 5:  KickTable created.
+RoboCIn 5: [-1, 0] set synch see mode.
+RoboCIn 5: [3486, 0] lost kick by foul at [3486, 0] sense=9 internal=10
+RoboCIn 5: finished.

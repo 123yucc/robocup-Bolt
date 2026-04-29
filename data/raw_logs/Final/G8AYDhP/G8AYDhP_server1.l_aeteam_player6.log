@@ -1,0 +1,273 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam: init ok.  unum: 6 side: l
+AEteam 6: [-1, 0] (v18+) force synch see mode.
+AEteam 6:  KickTable created.
+AEteam 6: [-1, 0] set synch see mode.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+layerSize: 4
+AEteam 6: [49, 0]  WARNING. no turn_neck.
+AEteam 6: [50, 0]  WARNING. no turn_neck.
+AEteam 6: [51, 0]  WARNING. no turn_neck.
+AEteam 6: [52, 0]  WARNING. no turn_neck.
+AEteam 6: [53, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [69, 0]  WARNING. no turn_neck.
+AEteam 6: [70, 0]  WARNING. no turn_neck.
+AEteam 6: [71, 0]  WARNING. no turn_neck.
+AEteam 6: [72, 0]  WARNING. no turn_neck.
+AEteam 6: [73, 0]  WARNING. no turn_neck.
+AEteam 6: [79, 0]  WARNING. no turn_neck.
+AEteam 6: [83, 0]  WARNING. no turn_neck.
+AEteam 6: [84, 0]  WARNING. no turn_neck.
+AEteam 6: [85, 0]  WARNING. no turn_neck.
+AEteam 6: [86, 0]  WARNING. no turn_neck.
+AEteam 6: [105, 0]  WARNING. no turn_neck.
+AEteam 6: [106, 0]  WARNING. no turn_neck.
+AEteam 6: [107, 0]  WARNING. no turn_neck.
+AEteam 6: [108, 0]  WARNING. no turn_neck.
+AEteam 6: [109, 0]  WARNING. no turn_neck.
+AEteam 6: [110, 0]  WARNING. no turn_neck.
+AEteam 6: [111, 0]  WARNING. no turn_neck.
+AEteam 6: [112, 0]  WARNING. no turn_neck.
+AEteam 6: [113, 0]  WARNING. no turn_neck.
+AEteam 6: [114, 0]  WARNING. no turn_neck.
+AEteam 6: [115, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [448, 0]  WARNING. no turn_neck.
+AEteam 6: [449, 0]  WARNING. no turn_neck.
+AEteam 6: [450, 0]  WARNING. no turn_neck.
+AEteam 6: [451, 0]  WARNING. no turn_neck.
+AEteam 6: [452, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [857, 0]  WARNING. no turn_neck.
+AEteam 6: [858, 0]  WARNING. no turn_neck.
+AEteam 6: [859, 0]  WARNING. no turn_neck.
+AEteam 6: [860, 0]  WARNING. no turn_neck.
+AEteam 6: [861, 0]  WARNING. no turn_neck.
+AEteam 6: [862, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [1251, 0]  WARNING. no turn_neck.
+AEteam 6: [1269, 0]  WARNING. no turn_neck.
+AEteam 6: [1270, 0]  WARNING. no turn_neck.
+AEteam 6: [1271, 0]  WARNING. no turn_neck.
+AEteam 6: [1272, 0]  WARNING. no turn_neck.
+AEteam 6: [1273, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [1277, 0]  WARNING. no turn_neck.
+AEteam 6: [1278, 0]  WARNING. no turn_neck.
+AEteam 6: [1279, 0]  WARNING. no turn_neck.
+AEteam 6: [1318, 0]  WARNING. no turn_neck.
+AEteam 6: [1319, 0]  WARNING. no turn_neck.
+AEteam 6: [1320, 0]  WARNING. no turn_neck.
+AEteam 6: [1321, 0]  WARNING. no turn_neck.
+AEteam 6: [1322, 0]  WARNING. no turn_neck.
+AEteam 6: [1342, 0]  WARNING. no turn_neck.
+AEteam 6: [1343, 0]  WARNING. no turn_neck.
+AEteam 6: [1344, 0]  WARNING. no turn_neck.
+AEteam 6: [1345, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [2055, 0]  WARNING. no turn_neck.
+AEteam 6: [2059, 0]  WARNING. no turn_neck.
+AEteam 6: [2060, 0]  WARNING. no turn_neck.
+AEteam 6: [2061, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [2232, 0]  WARNING. no turn_neck.
+AEteam 6: [2233, 0]  WARNING. no turn_neck.
+AEteam 6: [2234, 0]  WARNING. no turn_neck.
+AEteam 6: [2235, 0]  WARNING. no turn_neck.
+AEteam 6: [2236, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [4306, 0]  WARNING. no turn_neck.
+AEteam 6: [4307, 0]  WARNING. no turn_neck.
+AEteam 6: [4308, 0]  WARNING. no turn_neck.
+AEteam 6: [4309, 0]  WARNING. no turn_neck.
+AEteam 6: [4310, 0]  WARNING. no turn_neck.
+AEteam 6: [4311, 0]  WARNING. no turn_neck.
+AEteam 6: [4312, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [4349, 0]  WARNING. no turn_neck.
+AEteam 6: [4350, 0]  WARNING. no turn_neck.
+AEteam 6: [4351, 0]  WARNING. no turn_neck.
+AEteam 6: [4352, 0]  WARNING. no turn_neck.
+AEteam 6: [4353, 0]  WARNING. no turn_neck.
+AEteam 6: [4354, 0]  WARNING. no turn_neck.
+AEteam 6: [4357, 0]  WARNING. no turn_neck.
+AEteam 6: [4358, 0]  WARNING. no turn_neck.
+AEteam 6: [4359, 0]  WARNING. no turn_neck.
+AEteam 6: [4360, 0]  WARNING. no turn_neck.
+AEteam 6: [4361, 0]  WARNING. no turn_neck.
+AEteam 6: [4362, 0]  WARNING. no turn_neck.
+AEteam 6: [4363, 0]  WARNING. no turn_neck.
+AEteam 6: [4364, 0]  WARNING. no turn_neck.
+AEteam 6: [4365, 0]  WARNING. no turn_neck.
+AEteam 6: [4366, 0]  WARNING. no turn_neck.
+AEteam 6: [4392, 0]  WARNING. no turn_neck.
+AEteam 6: [4393, 0]  WARNING. no turn_neck.
+AEteam 6: [4394, 0]  WARNING. no turn_neck.
+AEteam 6: [4395, 0]  WARNING. no turn_neck.
+AEteam 6: [4396, 0]  WARNING. no turn_neck.
+AEteam 6: [4401, 0]  WARNING. no turn_neck.
+AEteam 6: [4402, 0]  WARNING. no turn_neck.
+AEteam 6: [4403, 0]  WARNING. no turn_neck.
+AEteam 6: [4438, 0]  WARNING. no turn_neck.
+AEteam 6: [4443, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [4861, 0]  WARNING. no turn_neck.
+AEteam 6: [4862, 0]  WARNING. no turn_neck.
+AEteam 6: [4863, 0]  WARNING. no turn_neck.
+AEteam 6: [4864, 0]  WARNING. no turn_neck.
+AEteam 6: [4865, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [5299, 0]  WARNING. no turn_neck.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: ERROR: no intercept evaluator.
+AEteam 6: [5669, 0]  WARNING. no turn_neck.
+AEteam 6: [5670, 0]  WARNING. no turn_neck.
+AEteam 6: [5671, 0]  WARNING. no turn_neck.
+AEteam 6: [5672, 0]  WARNING. no turn_neck.
+AEteam 6: [5673, 0]  WARNING. no turn_neck.
+AEteam 6: [5678, 0]  WARNING. no turn_neck.
+AEteam 6: [5679, 0]  WARNING. no turn_neck.
+AEteam 6: [5680, 0]  WARNING. no turn_neck.
+AEteam 6: [5681, 0]  WARNING. no turn_neck.
+AEteam 6: [5682, 0]  WARNING. no turn_neck.
+AEteam 6: [5684, 0]  WARNING. no turn_neck.
+AEteam 6: [5685, 0]  WARNING. no turn_neck.
+AEteam 6: [5686, 0]  WARNING. no turn_neck.
+AEteam 6: [5687, 0]  WARNING. no turn_neck.
+AEteam 6: [5688, 0]  WARNING. no turn_neck.
+AEteam 6: [5726, 0]  WARNING. no turn_neck.
+AEteam 6: [5727, 0]  WARNING. no turn_neck.
+AEteam 6: [5728, 0]  WARNING. no turn_neck.
+AEteam 6: [5760, 0]  WARNING. no turn_neck.
+AEteam 6: [5761, 0]  WARNING. no turn_neck.
+AEteam 6: finished.

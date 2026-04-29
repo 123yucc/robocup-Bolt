@@ -1,0 +1,21 @@
+******************************************************************
+ librcsc 4.1.0
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2024. Hidehisa Akiyama.
+ National Institute of Advanced Industrial Science and Technology
+ This program is modified by <YuShan2024>
+ Copyright 2024. <Team Leader:ChengZekai>.
+ <Anhui University of Technology>
+ All rights reserved.
+*****************************************************************
+YuShan2024: init ok.  unum: 1 side: l
+YuShan2024 1:  KickTable created.
+YuShan2024 1: [-1, 0] set synch see mode.
+YuShan2024 1: [-1, 0] set synch see mode.
+YuShan2024 1: [6755, 0]  WARNING. no body command.
+YuShan2024 1: finished.

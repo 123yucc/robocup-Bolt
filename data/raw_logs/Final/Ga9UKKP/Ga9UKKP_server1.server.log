@@ -1,0 +1,110 @@
+[sudo] password for ss2dtr: rcssserver-19.0.0
+
+Copyright (C) 1995, 1996, 1997, 1998, 1999 Electrotechnical Laboratory.
+2000 - RoboCup Soccer Simulator Maintenance Group.
+
+Trying to create configuration file: ~/.rcssserver/server.conf
+Created configuration file: ~/.rcssserver/server.conf
+Trying to create configuration file: ~/.rcssserver/player.conf
+Created configuration file: ~/.rcssserver/player.conf
+Trying to create configuration file: ~/.rcssserver/CSVSaver.conf
+Created configuration file: ~/.rcssserver/CSVSaver.conf
+Simulator Random Seed: 1721552409
+CSVSaver: Ready
+STDOutSaver: Ready
+Using simulator's random seed as Hetero Player Seed: 1721552409
+wind factor: rand: 0.000000, vector: (0.000000, 0.000000)
+
+Hit CTRL-C to exit
+Waiting for players to connect
+A new (v5) monitor connected.
+A new (v19) player (YuShan2024 1) connected.
+A new (v19) player (YuShan2024 2) connected.
+A new (v19) player (YuShan2024 3) connected.
+A new (v19) player (YuShan2024 4) connected.
+A new (v19) player (YuShan2024 5) connected.
+A new (v19) player (YuShan2024 6) connected.
+A new (v19) player (YuShan2024 7) connected.
+A new (v19) player (YuShan2024 8) connected.
+A new (v19) player (YuShan2024 9) connected.
+A new (v19) player (YuShan2024 10) connected.
+A new (v19) player (YuShan2024 11) connected.
+A new (v19) online coach (YuShan2024) connected.
+A new (v18) player (CYRUS 1) connected.
+A new (v18) player (CYRUS 2) connected.
+A new (v18) player (CYRUS 3) connected.
+A new (v18) player (CYRUS 4) connected.
+A new (v18) player (CYRUS 5) connected.
+A new (v18) player (CYRUS 6) connected.
+A new (v18) player (CYRUS 7) connected.
+A new (v18) player (CYRUS 8) connected.
+A new (v18) player (CYRUS 9) connected.
+A new (v18) player (CYRUS 10) connected.
+A new (v18) player (CYRUS 11) connected.
+Waiting to kick off
+A new (v18) online coach (CYRUS) connected.
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+Waiting to kick off
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+Score:  0-0* after 1 penalties.
+Score: *0-0  after 2 penalties.
+Score:  0-1* after 3 penalties.
+Score: *1-1  after 4 penalties.
+Score:  1-1* after 5 penalties.
+Score: *1-1  after 6 penalties.
+Score:  1-1* after 7 penalties.
+Score: *1-1  after 8 penalties.
+Score:  1-2* after 9 penalties.
+Score: *2-2  after 10 penalties.
+Score:  2-3* after 11 penalties.
+Score: *3-3  after 12 penalties.
+Score:  3-4* after 13 penalties.
+Score: *3-4  after 14 penalties.
+Final score: 3-4
+A player disconnected : (CYRUS 9)
+A player disconnected : (YuShan2024 8)
+A player disconnected : (CYRUS 3)
+A player disconnected : (YuShan2024 6)
+A player disconnected : (CYRUS 11)
+A player disconnected : (CYRUS 2)
+A player disconnected : (CYRUS 7)
+A player disconnected : (CYRUS 6)
+A player disconnected : (YuShan2024 2)
+A player disconnected : (CYRUS 10)
+A player disconnected : (CYRUS 8)
+A player disconnected : (YuShan2024 9)
+A player disconnected : (YuShan2024 1)
+A player disconnected : (YuShan2024 4)
+A player disconnected : (YuShan2024 11)
+An online coach disconnected : (YuShan2024)
+An online coach disconnected : (CYRUS)
+A player disconnected : (CYRUS 5)
+A player disconnected : (YuShan2024 10)
+A player disconnected : (YuShan2024 3)
+A player disconnected : (CYRUS 1)
+A player disconnected : (CYRUS 4)
+A player disconnected : (YuShan2024 7)
+A player disconnected : (YuShan2024 5)
+Waiting after end of match
+
+Game Over. Exiting...
+
+Saving Results:
+	CSVSaver: saving...
+	CSVSaver: ...disabled
+	STDOutSaver: saving...
+
+Game Results:
+	2024-07-21 09:00:09
+	'YuShan2024' vs 'CYRUS'
+	Score: 0 - 0
+ 	Penalties: 3 (7) - 4 (7)
+
+	STDOutSaver: ...saved
+
+Saving Results Complete
+[sudo] password for ss2dtr: 

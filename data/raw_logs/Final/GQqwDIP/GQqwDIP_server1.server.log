@@ -1,0 +1,95 @@
+[sudo] password for ss2dtr: rcssserver-19.0.0
+
+Copyright (C) 1995, 1996, 1997, 1998, 1999 Electrotechnical Laboratory.
+2000 - RoboCup Soccer Simulator Maintenance Group.
+
+Trying to create configuration file: ~/.rcssserver/server.conf
+Created configuration file: ~/.rcssserver/server.conf
+Trying to create configuration file: ~/.rcssserver/player.conf
+Created configuration file: ~/.rcssserver/player.conf
+Trying to create configuration file: ~/.rcssserver/CSVSaver.conf
+Created configuration file: ~/.rcssserver/CSVSaver.conf
+Simulator Random Seed: 1721550310
+CSVSaver: Ready
+STDOutSaver: Ready
+Using simulator's random seed as Hetero Player Seed: 1721550310
+wind factor: rand: 0.000000, vector: (0.000000, 0.000000)
+
+Hit CTRL-C to exit
+Waiting for players to connect
+A new (v5) monitor connected.
+A new (v18) player (FRA-UNIted 1) connected.
+A new (v18) player (FRA-UNIted 2) connected.
+A new (v18) player (FRA-UNIted 3) connected.
+A new (v18) player (FRA-UNIted 4) connected.
+A new (v18) player (FRA-UNIted 5) connected.
+A new (v18) player (FRA-UNIted 6) connected.
+A new (v18) player (FRA-UNIted 7) connected.
+A new (v18) player (FRA-UNIted 8) connected.
+A new (v18) player (FRA-UNIted 9) connected.
+A new (v18) player (FRA-UNIted 10) connected.
+A new (v18) player (FRA-UNIted 11) connected.
+A new (v8) online coach (FRA-UNIted) connected.
+A new (v18) player (R2D2 1) connected.
+A new (v18) player (R2D2 2) connected.
+A new (v18) player (R2D2 3) connected.
+A new (v18) player (R2D2 4) connected.
+A new (v18) player (R2D2 5) connected.
+A new (v18) player (R2D2 6) connected.
+A new (v18) player (R2D2 7) connected.
+A new (v18) player (R2D2 8) connected.
+A new (v18) player (R2D2 9) connected.
+A new (v18) player (R2D2 10) connected.
+A new (v18) player (R2D2 11) connected.
+Waiting to kick off
+A new (v18) online coach (R2D2) connected.
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+Waiting to kick off
+Kick_off_left
+Waiting to kick off
+Kick_off_right
+Score: *1-0  after 1 penalties.
+Score:  1-0* after 2 penalties.
+Score: *2-0  after 3 penalties.
+Score:  2-0* after 4 penalties.
+Score: *2-0  after 5 penalties.
+Score:  2-1* after 6 penalties.
+legal catch. miss of the side 1
+Score: *2-1  after 7 penalties.
+Score:  2-2* after 8 penalties.
+Score: *3-2  after 9 penalties.
+Score:  3-2* after 10 penalties.
+Final score: 3-2
+A player disconnected : (R2D2 6)
+A player disconnected : (R2D2 2)
+A player disconnected : (R2D2 5)
+A player disconnected : (R2D2 11)
+A player disconnected : (R2D2 4)
+A player disconnected : (R2D2 7)
+A player disconnected : (R2D2 3)
+A player disconnected : (R2D2 9)
+An online coach disconnected : (R2D2)
+A player disconnected : (R2D2 1)
+A player disconnected : (R2D2 8)
+A player disconnected : (R2D2 10)
+Waiting after end of match
+
+Game Over. Exiting...
+
+Saving Results:
+	CSVSaver: saving...
+	CSVSaver: ...disabled
+	STDOutSaver: saving...
+
+Game Results:
+	2024-07-21 08:25:10
+	'FRA-UNIted' vs 'R2D2'
+	Score: 1 - 1
+ 	Penalties: 3 (5) - 2 (5)
+
+	STDOutSaver: ...saved
+
+Saving Results Complete
+[sudo] password for ss2dtr: 

@@ -1,0 +1,45 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 11 side: l
+CYRUS 11: [-1, 0] (v18+) force synch see mode.
+CYRUS 11:  KickTable created.
+CYRUS 11: [-1, 0] set synch see mode.
+Read Setting: ./data/settings/Other.json
+CYRUS 11: [106, 0] lost kick by foul at [106, 0] sense=0 internal=1
+CYRUS 11: [3358, 0]  WARNING. no turn_neck.
+yes in 8112
+yes in 8113
+yes in 8114
+yes in 8115
+yes in 8116
+yes in 8117
+yes in 8118
+yes in 8119
+yes in 8120
+yes in 8121
+yes in 8122
+yes in 8123
+yes in 8124
+yes in 8125
+yes in 8126
+yes in 8127
+yes in 8128
+yes in 8129
+yes in 8132
+yes in 8133
+yes in 8134
+yes in 8136
+yes in 8137
+yes in 8140
+CYRUS 11: finished.

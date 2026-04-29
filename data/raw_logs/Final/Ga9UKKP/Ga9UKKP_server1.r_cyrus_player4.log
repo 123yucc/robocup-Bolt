@@ -1,0 +1,47 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 4 side: r
+CYRUS 4: [-1, 0] (v18+) force synch see mode.
+CYRUS 4:  KickTable created.
+CYRUS 4: [-1, 0] set synch see mode.
+Read Setting: data/settings/yush.json
+layerSize: 4
+CYRUS 4: [444, 0] lost kick? at [444, 0] sense=0 internal=1
+CYRUS 4: [3767, 0]  WARNING. no body command.
+CYRUS 4: [3802, 0]  WARNING. no body command.
+CYRUS 4: [3803, 0]  WARNING. no body command.
+yes in 8000
+yes in 8001
+yes in 8002
+yes in 8003
+yes in 8004
+yes in 8005
+yes in 8006
+yes in 8007
+yes in 8008
+yes in 8009
+yes in 8010
+yes in 8011
+yes in 8012
+yes in 8013
+yes in 8014
+yes in 8015
+yes in 8016
+yes in 8017
+yes in 8018
+yes in 8019
+yes in 8020
+yes in 8021
+yes in 8025
+CYRUS 4: finished.

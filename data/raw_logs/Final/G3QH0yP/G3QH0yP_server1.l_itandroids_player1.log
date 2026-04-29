@@ -1,0 +1,25 @@
+******************************************************************
+ librcsc 4.1.0
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is modified by ITAndroids
+ Copyright 2013. Fabio Mello, Luiz Ramos, Marcos Maximo, 
+ Rodrigo Roim, Victor Moura.
+ Copyright 2017 - 2018. Felipe Coimbra, Lucas Bilobran, Raphael Vasconcelos.
+ Copyright 2022 - 2023. Davi M. Vasconcelos.
+ Aeronautics Institute of Technology, Brazil.
+ All rights reserved.
+*****************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+ITAndroids: init ok.  unum: 1 side: l
+ITAndroids 1:  KickTable created.
+ITAndroids 1: [-1, 0] set synch see mode.
+ITAndroids 1: [3138, 0] lost catch? at [3138, 0] sense=0 internal=1
+ITAndroids 1: finished.

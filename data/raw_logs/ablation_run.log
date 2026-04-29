@@ -1,0 +1,10 @@
+[setup_env] BOLT_PROJECT_ROOT not set, using repo root: /home/yucc/robocup-Bolt
+[setup_env] LD_LIBRARY_PATH=/home/yucc/local/lib:/home/yucc/local/lib:/home/yucc/local/lib:/home/yucc/local/lib
+[setup_env] BOLT_PROJECT_ROOT=/home/yucc/robocup-Bolt
+[ablation] Running 5 matches per variant, half_time=300
+[ablation] Results in /home/yucc/robocup-Bolt/eval/match_results/ablation_20260424_231925
+
+[ablation] ===== Variant: baseline =====
+[ablation] baseline match 1/5 (port 7000)...
+[ablation]   -> Bolt 0 - 0 BoltBase (draw)
+[ablation] baseline match 2/5 (port 7010)...

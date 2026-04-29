@@ -1,0 +1,80 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam coach: [-1, 0] recv (ok eye on)
+AEteam coach: [0, 0] updated clang capacity.
+id speed step inc  power  stam  karea
+ 0 1.000   6  45.0 100.0  55.0  1.085
+ 1 0.876   5  44.6 100.0  55.4  1.086
+ 2 0.989   6  43.4 100.0  56.6  1.034
+ 3 0.863   6  45.3 100.0  54.7  1.013
+ 4 0.801   5  48.9 100.0  51.1  1.161
+ 5 0.823   5  47.3 100.0  52.7  1.003
+ 6 1.006   7  45.8 100.0  54.2  1.009
+ 7 1.013   6  43.6 100.0  56.4  1.106
+ 8 0.858   5  44.8 100.0  55.2  1.137
+ 9 0.969   6  49.2 100.0  50.8  1.163
+ 10 0.995   6  46.4 100.0  53.6  1.024
+ 11 1.003   7  43.2 100.0  56.8  1.168
+ 12 0.860   6  49.0 100.0  51.0  1.184
+ 13 0.841   6  49.8 100.0  50.2  1.079
+ 14 0.854   5  42.2 100.0  57.8  1.071
+ 15 1.031   6  41.0 100.0  59.0  1.006
+ 16 0.924   7  50.0 100.0  50.0  1.049
+ 17 0.874   4  42.0 100.0  58.0  1.006
+AEteam coach: change player 1 to type 0
+AEteam coach: change player 11 to type 15
+AEteam coach: change player 2 to type 7
+AEteam coach: change player 3 to type 6
+AEteam coach: change player 10 to type 10
+AEteam coach: change player 9 to type 11
+AEteam coach: change player 6 to type 2
+AEteam coach: change player 4 to type 9
+AEteam coach: change player 5 to type 16
+AEteam coach: change player 7 to type 17
+AEteam coach: change player 8 to type 1
+AEteam coach: [8, 0] determined opponent 7 type = 17
+AEteam coach: [22, 0] determined opponent 3 type = 6
+AEteam coach: [22, 0] determined opponent 5 type = 11
+AEteam coach: [23, 0] determined opponent 6 type = 16
+AEteam coach: [23, 0] determined opponent 8 type = 1
+AEteam coach: [41, 0] determined opponent 9 type = 9
+AEteam coach: [45, 0] determined opponent 2 type = 7
+AEteam coach: [64, 0] determined opponent 11 type = 15
+AEteam coach: [151, 0] sent freeform (player_types (1 0)(2 7)(3 6)(4 -1)(5 11)(6 16)(7 17)(8 1)(9 9)(10 -1)(11 15))
+AEteam coach: [151, 0] freeform 1 / 128
+AEteam coach: [193, 0] determined opponent 10 type = 2
+AEteam coach: [194, 0] determined opponent 4 type = 10
+AEteam coach: [254, 0] sent freeform (player_types (1 0)(2 7)(3 6)(4 10)(5 11)(6 16)(7 17)(8 1)(9 9)(10 2)(11 15))
+AEteam coach: [254, 0] freeform 2 / 128
+AEteam coach: [301, 0] updated clang capacity.
+AEteam coach: [601, 0] updated clang capacity.
+AEteam coach: [901, 0] updated clang capacity.
+AEteam coach: [1201, 0] updated clang capacity.
+AEteam coach: [1501, 0] updated clang capacity.
+AEteam coach: [1801, 0] updated clang capacity.
+AEteam coach: [2101, 0] updated clang capacity.
+AEteam coach: [2401, 0] updated clang capacity.
+AEteam coach: [2701, 0] updated clang capacity.
+AEteam coach: [3001, 0] updated clang capacity.
+AEteam coach: [3301, 0] updated clang capacity.
+AEteam coach: [3601, 0] updated clang capacity.
+AEteam coach: [3901, 0] updated clang capacity.
+AEteam coach: [4201, 0] updated clang capacity.
+AEteam coach: [4501, 0] updated clang capacity.
+AEteam coach: [4801, 0] updated clang capacity.
+AEteam coach: [5101, 0] updated clang capacity.
+AEteam coach: [5401, 0] updated clang capacity.
+AEteam coach: [5654, 0] determined opponent 9 type = 8
+AEteam coach: [5701, 0] updated clang capacity.
+AEteam coach: finished.

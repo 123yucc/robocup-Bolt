@@ -1,0 +1,62 @@
+
+REPORT OF COACH
+---------------
+
+cycles = 30
+------------
+
+1) type = 11  dist = 29.734701  ddb = 29.734701  krb = 0.000000  dwk = 29.734701
+2) type = 6  dist = 29.607500  ddb = 29.607500  krb = 0.000000  dwk = 29.607500
+3) type = 0  dist = 29.333333  ddb = 29.333333  krb = 0.000000  dwk = 29.333333
+4) type = 9  dist = 29.109093  ddb = 29.109093  krb = 0.000000  dwk = 29.109093
+5) type = 8  dist = 28.028217  ddb = 28.028217  krb = 0.000000  dwk = 28.028217
+6) type = 16  dist = 27.974183  ddb = 27.974183  krb = 0.000000  dwk = 27.974183
+7) type = 15  dist = 27.558264  ddb = 27.558264  krb = 0.000000  dwk = 27.558264
+8) type = 12  dist = 26.927874  ddb = 26.927874  krb = 0.000000  dwk = 26.927874
+9) type = 17  dist = 26.149686  ddb = 26.149686  krb = 0.000000  dwk = 26.149686
+10) type = 1  dist = 25.347999  ddb = 25.347999  krb = 0.000000  dwk = 25.347999
+11) type = 13  dist = 25.038983  ddb = 25.038983  krb = 0.000000  dwk = 25.038983
+12) type = 4  dist = 24.975934  ddb = 24.975934  krb = 0.000000  dwk = 24.975934
+13) type = 14  dist = 24.855194  ddb = 24.855194  krb = 0.000000  dwk = 24.855194
+14) type = 3  dist = 24.520783  ddb = 24.520783  krb = 0.000000  dwk = 24.520783
+15) type = 5  dist = 24.461334  ddb = 24.461334  krb = 0.000000  dwk = 24.461334
+16) type = 10  dist = 22.522168  ddb = 22.522168  krb = 0.000000  dwk = 22.522168
+17) type = 7  dist = 22.290244  ddb = 22.290244  krb = 0.000000  dwk = 22.290244
+18) type = 2  dist = 22.217740  ddb = 22.217740  krb = 0.000000  dwk = 22.217740
+
+
+REPORT OF COACH (TIME = 0)
+---------------
+
+opp_team_name = AEteam
+
+opp_number = 1  probable_opp_type = -1
+opp_number = 2  probable_opp_type = -1
+opp_number = 3  probable_opp_type = -1
+opp_number = 4  probable_opp_type = -1
+opp_number = 5  probable_opp_type = -1
+opp_number = 6  probable_opp_type = -1
+opp_number = 7  probable_opp_type = -1
+opp_number = 8  probable_opp_type = -1
+opp_number = 9  probable_opp_type = -1
+opp_number = 10  probable_opp_type = -1
+opp_number = 11  probable_opp_type = -1
+
+
+REPORT OF COACH (TIME = 369)
+---------------
+
+opp_team_name = AEteam
+
+opp_number = 1  probable_opp_type = -1
+opp_number = 2  probable_opp_type = 6
+opp_number = 3  probable_opp_type = 9
+opp_number = 4  probable_opp_type = 12
+opp_number = 5  probable_opp_type = 17
+opp_number = 6  probable_opp_type = 15
+opp_number = 7  probable_opp_type = 1
+opp_number = 8  probable_opp_type = 4
+opp_number = 9  probable_opp_type = 8
+opp_number = 10  probable_opp_type = 16
+opp_number = 11  probable_opp_type = 11
+

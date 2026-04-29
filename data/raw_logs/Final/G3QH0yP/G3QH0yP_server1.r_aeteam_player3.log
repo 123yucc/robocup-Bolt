@@ -1,0 +1,176 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+AEteam: init ok.  unum: 3 side: r
+AEteam 3: [-1, 0] (v18+) force synch see mode.
+AEteam 3:  KickTable created.
+AEteam 3: [-1, 0] set synch see mode.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+layerSize: 4
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: [1305, 0]  WARNING. no turn_neck.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: [2162, 0] lost kick by foul at [2162, 0] sense=18 internal=19
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: ERROR: no intercept evaluator.
+AEteam 3: finished.

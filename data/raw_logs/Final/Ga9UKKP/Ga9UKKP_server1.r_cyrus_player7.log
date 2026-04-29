@@ -1,0 +1,99 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 7 side: r
+CYRUS 7: [-1, 0] (v18+) force synch see mode.
+CYRUS 7:  KickTable created.
+CYRUS 7: [-1, 0] set synch see mode.
+Read Setting: data/settings/yush.json
+layerSize: 4
+CYRUS 7: [2272, 0] lost kick? at [2272, 0] sense=47 internal=48
+yes in 8000
+yes in 8001
+yes in 8002
+yes in 8003
+yes in 8004
+yes in 8005
+yes in 8006
+yes in 8007
+yes in 8008
+yes in 8009
+yes in 8010
+yes in 8011
+yes in 8012
+yes in 8013
+yes in 8014
+yes in 8015
+yes in 8016
+yes in 8017
+yes in 8018
+yes in 8019
+yes in 8020
+yes in 8021
+yes in 8022
+yes in 8023
+yes in 8024
+yes in 8025
+yes in 8026
+yes in 8027
+yes in 8028
+yes in 8029
+yes in 8030
+yes in 8031
+yes in 9228
+yes in 9229
+yes in 9230
+yes in 9231
+yes in 9232
+yes in 9233
+yes in 9234
+yes in 9235
+yes in 9236
+yes in 9237
+yes in 9238
+yes in 9239
+yes in 9240
+yes in 9241
+yes in 9242
+yes in 9243
+yes in 9244
+yes in 9245
+yes in 9246
+yes in 9247
+yes in 9248
+yes in 9249
+yes in 9250
+yes in 9251
+yes in 9252
+yes in 9253
+yes in 9254
+yes in 9255
+yes in 9256
+yes in 9257
+yes in 9258
+yes in 9259
+yes in 9260
+yes in 9261
+yes in 9262
+yes in 9263
+yes in 9264
+yes in 9265
+yes in 9266
+yes in 9267
+yes in 9268
+yes in 9269
+yes in 9270
+yes in 9273
+yes in 9274
+yes in 9278
+CYRUS 7: finished.

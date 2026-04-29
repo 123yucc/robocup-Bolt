@@ -1,0 +1,312 @@
+******************************************************************
+ librcsc 2023
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+R2D2: init ok.  unum: 8 side: r
+R2D2 8: [-1, 0] (v18+) force synch see mode.
+R2D2 8:  KickTable created.
+R2D2 8: [-1, 0] set synch see mode.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [1204, 0]  WARNING. no turn_neck.
+the first score is : 0the second score is : 0
+R2D2 8: [1205, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [1495, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [1618, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : 0the second score is : 0
+the first score is : 0the second score is : 0
+the first score is : -4the second score is : -4
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [2281, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : 0the second score is : 0
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -13the second score is : -13
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [2985, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [3043, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [3156, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : 0the second score is : 0
+the first score is : 0the second score is : 0
+R2D2 8: [4106, 0]  WARNING. no turn_neck.
+R2D2 8: [4107, 0]  WARNING. no turn_neck.
+R2D2 8: [4108, 0]  WARNING. no turn_neck.
+R2D2 8: [4109, 0]  WARNING. no turn_neck.
+the first score is : -1the second score is : -1
+the first score is : -7the second score is : -8
+the first score is : -6the second score is : -11
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [4329, 0]  WARNING. no turn_neck.
+R2D2 8: [4330, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -1the second score is : -2
+R2D2 8: [4666, 0]  WARNING. no turn_neck.
+R2D2 8: [4667, 0]  WARNING. no turn_neck.
+R2D2 8: [4668, 0]  WARNING. no turn_neck.
+R2D2 8: [4669, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -3the second score is : -4
+the first score is : -5the second score is : -5
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [4958, 0]  WARNING. no turn_neck.
+the first score is : -5the second score is : -5
+the first score is : -5the second score is : -5
+R2D2 8: [4959, 0]  WARNING. no turn_neck.
+R2D2 8: [4960, 0]  WARNING. no turn_neck.
+the first score is : -5the second score is : -5
+R2D2 8: [4963, 0]  WARNING. no turn_neck.
+R2D2 8: [4964, 0]  WARNING. no turn_neck.
+R2D2 8: [4965, 0]  WARNING. no turn_neck.
+the first score is : -5the second score is : -9
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -5the second score is : -6
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [5764, 0]  WARNING. no turn_neck.
+the first score is : -1the second score is : -2
+R2D2 8: [5985, 0]  WARNING. no turn_neck.
+R2D2 8: [5990, 0]  WARNING. no turn_neck.
+the first score is : 0the second score is : -2
+the first score is : -4the second score is : -5
+R2D2 8: [5991, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -5the second score is : -5
+the first score is : -10the second score is : -10
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [6797, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [6906, 0]  WARNING. no turn_neck.
+the first score is : 0the second score is : -5
+R2D2 8: [6907, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [6948, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [7273, 0]  WARNING. no turn_neck.
+the first score is : 0the second score is : 0
+R2D2 8: [7298, 0]  WARNING. no turn_neck.
+the first score is : 0the second score is : -3
+the first score is : 0the second score is : 0
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -5the second score is : -5
+the first score is : -5the second score is : -5
+the first score is : -4the second score is : -5
+the first score is : -3the second score is : -5
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: [7767, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : 0the second score is : 0
+R2D2 8: [7911, 0]  WARNING. no turn_neck.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+the first score is : -5the second score is : -6
+the first score is : 0the second score is : 0
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: ERROR: no intercept evaluator.
+R2D2 8: finished.

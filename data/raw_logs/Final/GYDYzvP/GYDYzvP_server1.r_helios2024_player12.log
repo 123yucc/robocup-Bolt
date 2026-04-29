@@ -1,0 +1,152 @@
+******************************************************************
+ HELIOS2024
+ Okayama University of Science & Osaka Metropolitan University
+ Copyright 2000-2007.  Hidehisa Akiyama
+ Copyright 2007-2010.  Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011- Hidehisa Akiyama, Hiroki Shimora,
+   Tomoharu Nakashima (2011-),
+   Yousuke Narimoto, Tomohiko Okayama (2011-)
+   Katsuhiro Yamashita (2013-)
+   Satoshi Mifune (2014-)
+   Sho Tanaka, Jordan Henrio (2015-)
+   Tomonari Nakade, Takuya Fukushima (2016-)
+   Yudai Suzuki, An Ohori (2017-)
+   Jiarun Zhong (2018-)
+   Ryota Kuga, Masaki Yamaguchi, Hiroki Omori (2019-)
+   Kyou Hatakeyama (2021-)
+   Takumi Fujikawa (2022-)
+   Akei Hishiki (2023-)
+   Sota Okayama, Shota Yano (2024-)
+ All rights reserved.
+
+ LIBLINEAR
+   Copyright (c) 2007-2015 The LIBLINEAR Project.
+   All rights reserved.
+ LIBSVM
+   Copyright (c) 2000-2014 Chih-Chung Chang and Chih-Jen Lin
+   All rights reserved.
+******************************************************************
+./start: 85: ping: not found
+player options: --player-config ./player.conf  --common-conf ./common.conf -h 172.11.0.111 -t HELIOS2024 -v 19 --game-id 20240721-092006 --strategy-dir ./data/strategy --formation-dir ./data/formations --setplay-dir ./data/setplay --strategy-conf ./data/strategy.conf --chain-search-method BestFirstSearch --evaluator-name Default --intercept-evaluator-name Default --max-chain-length 3 --max-evaluate-size 3000 --svmrank-evaluator-model ./data/svmrank_evaluator/model --svmrank-intercept-evaluator-model ./data/svmrank_intercept_evaluator/model --neural-network-evaluator-dir ./data/neural_network_evaluator/ --center-forward-free-move-model ./data/center_forward_free_move/model --svm-formation-classifier-model ./data/svm_formation_classifier/svm.model --intercept-conf-dir ./data/intercept_probability/ --opponent-data-dir ./data/opponent_data/ --audio_shift 0 -p 6000
+coach options: --coach-config ./coach.conf  --common-conf ./common.conf -h 172.11.0.111 -t HELIOS2024 -v 19 --game-id 20240721-092006 --strategy-dir ./data/strategy --formation-dir ./data/formations --setplay-dir ./data/setplay --strategy-conf ./data/strategy.conf --chain-search-method BestFirstSearch --evaluator-name Default --intercept-evaluator-name Default --max-chain-length 3 --max-evaluate-size 3000 --svmrank-evaluator-model ./data/svmrank_evaluator/model --svmrank-intercept-evaluator-model ./data/svmrank_intercept_evaluator/model --neural-network-evaluator-dir ./data/neural_network_evaluator/ --center-forward-free-move-model ./data/center_forward_free_move/model --svm-formation-classifier-model ./data/svm_formation_classifier/svm.model --intercept-conf-dir ./data/intercept_probability/ --opponent-data-dir ./data/opponent_data/ --audio_shift 0 -p 6002 --use_team_graphic on --team_graphic_file ./data/team_logo-l.xpm
+dist-datetime = 20240721-1417-JST
+******************************************************************
+ librcsc 2024
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+HELIOS2024 coach: [-1, 0] recv (ok eye on)
+HELIOS2024 coach: [0, 0] updated clang capacity.
+HELIOS2024 coach: [0, 0] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 0] (clang) player_types: (1 0)(2 -1)(3 -1)(4 -1)(5 -1)(6 -1)(7 -1)(8 -1)(9 -1)(10 -1)(11 -1)
+HELIOS2024 coach: [0, 1] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 2] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 3] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 4] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 5] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 6] send team_graphic 32 tiles
+HELIOS2024 coach: [0, 7] send team_graphic 32 tiles
+id speed step inc  karea  turn bipedal  5m 10m 20m 30m
+ 0 1.000   6  45.0 1.085  60.0    80.2   6  11  21  31
+ 1 0.785   6  48.2 1.125  58.8    58.9   8  14  27  40
+ 2 0.955   6  44.5 1.180  47.0    69.2   7  12  22  33
+ 3 0.985   5  41.2 1.095  80.1    86.1   6  11  21  31
+ 4 0.827   5  41.9 1.130  91.1    73.1   7  13  25  37
+ 5 0.888   5  45.6 1.182  72.1    73.8   7  12  24  35
+ 6 0.803   5  43.9 1.066  83.4    68.6   7  14  26  38
+ 7 0.763   6  50.5 1.102  58.9    56.8   8  14  28  41
+ 8 0.813   5  46.7 1.134  71.6    66.2   7  13  26  38
+ 9 0.990   7  44.7 1.079  40.4    68.0   6  12  22  32
+10 0.777   5  50.2 1.062  74.5    63.6   8  14  27  40
+11 0.832   5  46.2 1.007  81.0    70.9   7  13  25  37
+12 0.913   6  44.0 0.985  58.5    71.0   7  12  23  34
+13 0.927   6  46.7 1.007  49.5    67.9   7  12  23  34
+14 1.007   6  41.8 1.022  52.1    77.0   6  11  21  31
+15 1.029   7  46.1 1.028  39.0    70.5   6  11  21  31
+16 0.867   4  43.5 1.078 107.2    80.8   7  12  24  36
+17 0.872   5  48.2 1.088  62.9    68.9   7  13  24  36
+HELIOS2024 coach: first substitution. player 10 to type 3
+HELIOS2024 coach: first substitution. player 9 to type 14
+HELIOS2024 coach: first substitution. player 6 to type 15
+HELIOS2024 coach: first substitution. player 11 to type 9
+HELIOS2024 coach: first substitution. player 2 to type 2
+HELIOS2024 coach: first substitution. player 3 to type 13
+HELIOS2024 coach: first substitution. player 4 to type 12
+HELIOS2024 coach: first substitution. player 5 to type 5
+HELIOS2024 coach: first substitution. player 7 to type 16
+HELIOS2024 coach: first substitution. player 8 to type 17
+HELIOS2024 coach: [0, 16] freeform 1 / 128
+HELIOS2024 coach: [124, 0] determined opponent 8 type = 16
+HELIOS2024 coach: [124, 0] (clang) player_types: (1 0)(2 -1)(3 -1)(4 -1)(5 -1)(6 -1)(7 -1)(8 16)(9 -1)(10 -1)(11 -1)
+HELIOS2024 coach: [124, 0] send clang info. new capacity = 0
+HELIOS2024 coach: [127, 0] determined opponent 11 type = 3
+HELIOS2024 coach: [138, 0] determined opponent 10 type = 2
+HELIOS2024 coach: [143, 0] determined opponent 7 type = 5
+HELIOS2024 coach: [159, 0] determined opponent 2 type = 14
+HELIOS2024 coach: [188, 0] determined opponent 5 type = 12
+HELIOS2024 coach: [188, 0] determined opponent 3 type = 13
+HELIOS2024 coach: [192, 0] determined opponent 9 type = 15
+HELIOS2024 coach: [192, 0] determined opponent 4 type = 9
+HELIOS2024 coach: [285, 0] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 -1)(7 5)(8 16)(9 15)(10 2)(11 3)
+HELIOS2024 coach: [285, 0] freeform 2 / 128
+HELIOS2024 coach: [301, 0] updated clang capacity.
+HELIOS2024 coach: [394, 0] determined opponent 6 type = 17
+HELIOS2024 coach: [394, 0] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 17)(7 5)(8 16)(9 15)(10 2)(11 3)
+HELIOS2024 coach: [601, 0] updated clang capacity.
+HELIOS2024 coach: [668, 0] freeform 3 / 128
+HELIOS2024 coach: [747, 0] freeform 4 / 128
+HELIOS2024 coach: [875, 0] freeform 5 / 128
+HELIOS2024 coach: [901, 0] updated clang capacity.
+HELIOS2024 coach: [1067, 0] freeform 6 / 128
+HELIOS2024 coach: [1137, 0] send clang info. new capacity = 0
+HELIOS2024 coach: [1201, 0] updated clang capacity.
+HELIOS2024 coach: [1201, 0] send clang info. new capacity = 0
+HELIOS2024 coach: [1501, 0] updated clang capacity.
+HELIOS2024 coach: [1608, 0] freeform 7 / 128
+HELIOS2024 coach: [1609, 0] freeform 8 / 128
+HELIOS2024 coach: [1801, 0] updated clang capacity.
+HELIOS2024 coach: [2101, 0] updated clang capacity.
+HELIOS2024 coach: [2265, 0] freeform 9 / 128
+HELIOS2024 coach: [2401, 0] updated clang capacity.
+HELIOS2024 coach: [2701, 0] updated clang capacity.
+HELIOS2024 coach: [3001, 0] updated clang capacity.
+HELIOS2024 coach: [3301, 0] updated clang capacity.
+HELIOS2024 coach: [3601, 0] updated clang capacity.
+HELIOS2024 coach: [3901, 0] updated clang capacity.
+HELIOS2024 coach: [4201, 0] updated clang capacity.
+HELIOS2024 coach: [4501, 0] updated clang capacity.
+HELIOS2024 coach: [4801, 0] updated clang capacity.
+HELIOS2024 coach: [5101, 0] updated clang capacity.
+HELIOS2024 coach: [5401, 0] updated clang capacity.
+HELIOS2024 coach: [5701, 0] updated clang capacity.
+HELIOS2024 coach: [5716, 1] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 -1)(7 -1)(8 -1)(9 15)(10 2)(11 3)
+HELIOS2024 coach: substitute player 8 to type 11
+HELIOS2024 coach: [5832, 0] freeform 10 / 128
+HELIOS2024 coach: [6000, 0] new freeform allowed 256
+HELIOS2024 coach: [6001, 0] updated clang capacity.
+HELIOS2024 coach: [6097, 0] determined opponent 6 type = 11
+HELIOS2024 coach: [6097, 0] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 11)(7 -1)(8 -1)(9 15)(10 2)(11 3)
+HELIOS2024 coach: [6097, 0] send clang info. new capacity = 0
+HELIOS2024 coach: [6196, 0] determined opponent 7 type = 8
+HELIOS2024 coach: [6212, 0] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 11)(7 8)(8 -1)(9 15)(10 2)(11 3)
+HELIOS2024 coach: [6301, 0] updated clang capacity.
+HELIOS2024 coach: [6309, 0] determined opponent 8 type = 4
+HELIOS2024 coach: [6309, 0] (clang) player_types: (1 0)(2 14)(3 13)(4 9)(5 12)(6 11)(7 8)(8 4)(9 15)(10 2)(11 3)
+HELIOS2024 coach: [6309, 0] send clang info. new capacity = 0
+HELIOS2024 coach: [6601, 0] updated clang capacity.
+HELIOS2024 coach: [6832, 1] freeform 11 / 256
+HELIOS2024 coach: [6901, 0] updated clang capacity.
+HELIOS2024 coach: [7201, 0] updated clang capacity.
+HELIOS2024 coach: [7501, 0] updated clang capacity.
+HELIOS2024 coach: [7801, 0] updated clang capacity.
+HELIOS2024 coach: [8010, 0] freeform 12 / 256
+HELIOS2024 coach: [8101, 0] updated clang capacity.
+HELIOS2024 coach: [8401, 0] updated clang capacity.
+HELIOS2024 coach: [8701, 0] updated clang capacity.
+HELIOS2024 coach: [9001, 0] updated clang capacity.
+HELIOS2024 coach: [9301, 0] updated clang capacity.
+HELIOS2024 coach: [9601, 0] updated clang capacity.
+HELIOS2024 coach: finished.

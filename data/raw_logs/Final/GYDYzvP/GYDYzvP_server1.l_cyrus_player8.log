@@ -1,0 +1,110 @@
+******************************************************************
+ librcsc 
+ Copyright 2000 - 2007. Hidehisa Akiyama.
+ Copyright 2007 - 2011. Hidehisa Akiyama and Hiroki Shimora
+ Copyright 2011 -  Hidehisa Akiyama, Hiroki Shimora
+   Takuya Fukushima (2019-)
+ All rights reserved.
+******************************************************************
+*****************************************************************
+ This program is based on agent2d created by Hidehisa Akiyama.
+ Copyright 2006 - 2011. Hidehisa Akiyama and Hiroki Shimora.
+ All rights reserved.
+*****************************************************************
+CYRUS: init ok.  unum: 8 side: l
+CYRUS 8: [-1, 0] (v18+) force synch see mode.
+CYRUS 8:  KickTable created.
+CYRUS 8: [-1, 0] set synch see mode.
+Read Setting: ./data/settings/Other.json
+CYRUS 8: [3270, 0]  WARNING. no body command.
+CYRUS 8: [3271, 0]  WARNING. no body command.
+CYRUS 8: [3408, 0]  WARNING. no turn_neck.
+yes in 8000
+yes in 8001
+yes in 8002
+yes in 8003
+yes in 8004
+yes in 8005
+yes in 8006
+yes in 8007
+yes in 8008
+yes in 8009
+yes in 8010
+yes in 8011
+yes in 8012
+yes in 8013
+yes in 8014
+yes in 8015
+yes in 8016
+yes in 8017
+yes in 8018
+yes in 8019
+yes in 8020
+yes in 8021
+yes in 8022
+yes in 8023
+yes in 8024
+yes in 8025
+yes in 8026
+yes in 8027
+yes in 8028
+yes in 8029
+yes in 8030
+yes in 8031
+yes in 8032
+yes in 8033
+yes in 8034
+yes in 8036
+yes in 8037
+yes in 8039
+yes in 8040
+yes in 8917
+yes in 8918
+yes in 8919
+yes in 8920
+yes in 8921
+yes in 8922
+yes in 8923
+yes in 8924
+yes in 8925
+yes in 8926
+yes in 8927
+yes in 8928
+yes in 8929
+yes in 8930
+yes in 8931
+yes in 8932
+yes in 8933
+yes in 8934
+yes in 8935
+yes in 8936
+yes in 8937
+yes in 8938
+yes in 8939
+yes in 8940
+yes in 8941
+yes in 8942
+yes in 8943
+yes in 8944
+yes in 8945
+yes in 8946
+yes in 8947
+yes in 8948
+yes in 8949
+yes in 8950
+yes in 8951
+yes in 8952
+yes in 8953
+yes in 8954
+yes in 8955
+yes in 8956
+yes in 8957
+yes in 8960
+yes in 8961
+yes in 8962
+yes in 8963
+yes in 8966
+yes in 8967
+yes in 8968
+yes in 8971
+CYRUS 8: finished.
