@@ -13,20 +13,22 @@
 
 using namespace rcsc;
 
-DeepNueralNetwork BoltPassInference::s_dnn;
-bool              BoltPassInference::s_loaded = false;
+BoltPassInference& BoltPassInference::getInstance() {
+    static BoltPassInference instance;
+    return instance;
+}
 
 void BoltPassInference::tryLoad(const std::string& weight_path) {
-    if (!s_loaded) {
-        s_loaded = s_dnn.ReadFromKeras(weight_path);
-        if (s_loaded)
+    if (!m_loaded) {
+        m_loaded = m_dnn.ReadFromKeras(weight_path);
+        if (m_loaded)
             std::cerr << "[BoltPass] loaded: " << weight_path << std::endl;
         else
             std::cerr << "[BoltPass] WARNING: failed to load " << weight_path << std::endl;
     }
 }
 
-bool BoltPassInference::isLoaded() { return s_loaded; }
+bool BoltPassInference::isLoaded() const { return m_loaded; }
 
 static double sdist(double x1, double y1, double x2, double y2) {
     double dx = x1 - x2, dy = y1 - y2;
@@ -63,7 +65,11 @@ double BoltPassInference::score(const WorldModel& wm,
                                 const Vector2D& passer_pos,
                                 const Vector2D& receiver_pos,
                                 const Vector2D& ball_pos) {
-    if (!s_loaded) return 0.5; // neutral score if not loaded
+    if (!m_loaded) {
+        return heuristicScore(wm, passer_pos, receiver_pos, ball_pos);
+    }
+
+    try {
 
     static const double FIELD_LEN  = 105.0;
     static const double FIELD_WID  =  68.0;
@@ -203,6 +209,56 @@ double BoltPassInference::score(const WorldModel& wm,
     input(33, 0) = cycle_norm;
     input(34, 0) = (wm.gameMode().type() == GameMode::PlayOn) ? 1.0 : 0.0;
 
-    s_dnn.Calculate(input);
-    return s_dnn.mOutput(0, 0);
+    m_dnn.Calculate(input);
+    return m_dnn.mOutput(0, 0);
+    } catch (const std::exception& e) {
+        std::cerr << "[BoltPass] ML inference failed: " << e.what() << ", using heuristic" << std::endl;
+        return heuristicScore(wm, passer_pos, receiver_pos, ball_pos);
+    }
+}
+
+double BoltPassInference::heuristicScore(const WorldModel& wm,
+                                         const Vector2D& passer_pos,
+                                         const Vector2D& receiver_pos,
+                                         const Vector2D& ball_pos) {
+    static const double FIELD_LEN = 105.0;
+
+    double p_x = passer_pos.x, p_y = passer_pos.y;
+    double r_x = receiver_pos.x, r_y = receiver_pos.y;
+
+    // Pass distance
+    double dx = r_x - p_x, dy = r_y - p_y;
+    double pass_dist = std::sqrt(dx * dx + dy * dy);
+
+    // Forward progress
+    double forward_progress = (r_x - p_x);
+
+    // Nearest opponent to receiver
+    double nearest_opp_to_receiver = 999.0;
+    int opps_near_path = 0;
+
+    for (const AbstractPlayerObject* opp : wm.opponents()) {
+        if (!opp || !opp->pos().isValid()) continue;
+
+        double d_receiver = std::sqrt((r_x - opp->pos().x) * (r_x - opp->pos().x) +
+                                      (r_y - opp->pos().y) * (r_y - opp->pos().y));
+        if (d_receiver < nearest_opp_to_receiver) nearest_opp_to_receiver = d_receiver;
+
+        // Check if opponent is near pass path
+        double ex = opp->pos().x - p_x, ey = opp->pos().y - p_y;
+        double t = std::max(0.0, std::min(1.0, (ex * dx + ey * dy) / (pass_dist * pass_dist + 1e-6)));
+        double proj_x = p_x + t * dx, proj_y = p_y + t * dy;
+        double dist_to_path = std::sqrt((opp->pos().x - proj_x) * (opp->pos().x - proj_x) +
+                                        (opp->pos().y - proj_y) * (opp->pos().y - proj_y));
+        if (dist_to_path < 3.0) ++opps_near_path;
+    }
+
+    // Heuristic score: favor forward passes, clear paths, receivers far from opponents
+    double score = 0.5; // baseline
+    score += 0.2 * std::max(0.0, std::min(1.0, forward_progress / 20.0)); // forward progress bonus
+    score += 0.2 * std::min(1.0, nearest_opp_to_receiver / 5.0); // receiver space bonus
+    score -= 0.15 * std::min(1.0, opps_near_path / 3.0); // path blocking penalty
+    score += 0.15 * std::max(0.0, 1.0 - pass_dist / 30.0); // reasonable distance bonus
+
+    return std::max(0.0, std::min(1.0, score));
 }

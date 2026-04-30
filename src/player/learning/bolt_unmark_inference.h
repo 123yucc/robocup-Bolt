@@ -12,16 +12,29 @@ namespace rcsc { class WorldModel; }
 // Score is in [0, 1]: probability that the candidate position is "receivable".
 class BoltUnmarkInference {
 public:
-    static void tryLoad(const std::string& weight_path);
-    static bool isLoaded();
+    static BoltUnmarkInference& getInstance();
+
+    void tryLoad(const std::string& weight_path);
+    bool isLoaded() const;
 
     // candidate_pos: the unmark target position being evaluated
     // passer_unum  : unum of the presumed passer (0 = use fastest teammate)
-    static double score(const rcsc::WorldModel& wm,
-                        const rcsc::Vector2D& candidate_pos,
-                        int passer_unum);
+    double score(const rcsc::WorldModel& wm,
+                 const rcsc::Vector2D& candidate_pos,
+                 int passer_unum);
+
+    // Heuristic fallback when ML model is not loaded
+    double heuristicScore(const rcsc::WorldModel& wm,
+                          const rcsc::Vector2D& candidate_pos,
+                          int passer_unum);
+
+    // Delete copy constructor and assignment operator
+    BoltUnmarkInference(const BoltUnmarkInference&) = delete;
+    BoltUnmarkInference& operator=(const BoltUnmarkInference&) = delete;
 
 private:
-    static DeepNueralNetwork s_dnn;
-    static bool s_loaded;
+    BoltUnmarkInference() : m_loaded(false) {}
+
+    DeepNueralNetwork m_dnn;
+    bool m_loaded;
 };

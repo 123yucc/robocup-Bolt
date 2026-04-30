@@ -12,20 +12,22 @@
 
 using namespace rcsc;
 
-DeepNueralNetwork BoltShotInference::s_dnn;
-bool              BoltShotInference::s_loaded = false;
+BoltShotInference& BoltShotInference::getInstance() {
+    static BoltShotInference instance;
+    return instance;
+}
 
 void BoltShotInference::tryLoad(const std::string& weight_path) {
-    if (!s_loaded) {
-        s_loaded = s_dnn.ReadFromKeras(weight_path);
-        if (s_loaded)
+    if (!m_loaded) {
+        m_loaded = m_dnn.ReadFromKeras(weight_path);
+        if (m_loaded)
             std::cerr << "[BoltShot] loaded: " << weight_path << std::endl;
         else
             std::cerr << "[BoltShot] WARNING: failed to load " << weight_path << std::endl;
     }
 }
 
-bool BoltShotInference::isLoaded() { return s_loaded; }
+bool BoltShotInference::isLoaded() const { return m_loaded; }
 
 static double sdist(double x1, double y1, double x2, double y2) {
     double dx = x1 - x2, dy = y1 - y2;
@@ -54,7 +56,11 @@ double BoltShotInference::score(const WorldModel& wm,
                                 const Vector2D& shooter_pos,
                                 const Vector2D& ball_pos,
                                 double target_y) {
-    if (!s_loaded) return 0.0;
+    if (!m_loaded) {
+        return heuristicScore(wm, shooter_pos, ball_pos, target_y);
+    }
+
+    try {
 
     static const double FIELD_LEN  = 105.0;
     static const double FIELD_WID  =  68.0;
@@ -146,6 +152,53 @@ double BoltShotInference::score(const WorldModel& wm,
     input(25, 0) = score_diff;
     input(26, 0) = cycle_norm;
 
-    s_dnn.Calculate(input);
-    return s_dnn.mOutput(0, 0);
+    m_dnn.Calculate(input);
+    return m_dnn.mOutput(0, 0);
+    } catch (const std::exception& e) {
+        std::cerr << "[BoltShot] ML inference failed: " << e.what() << ", using heuristic" << std::endl;
+        return heuristicScore(wm, shooter_pos, ball_pos, target_y);
+    }
+}
+
+double BoltShotInference::heuristicScore(const WorldModel& wm,
+                                         const Vector2D& shooter_pos,
+                                         const Vector2D& ball_pos,
+                                         double target_y) {
+    static const double FIELD_LEN = 105.0;
+    static const double FIELD_WID = 68.0;
+    static const double GOAL_Y_TOP = 7.01;
+    static const double GOAL_Y_BOT = -7.01;
+
+    double target_x = (wm.ourSide() == LEFT) ? 52.5 : -52.5;
+    double sx = shooter_pos.x, sy = shooter_pos.y;
+
+    // Distance to target
+    double dx = target_x - sx, dy = target_y - sy;
+    double shot_dist = std::sqrt(dx * dx + dy * dy);
+
+    // Shooting angle (goal opening)
+    double top_ang = std::atan2(GOAL_Y_TOP - sy, target_x - sx);
+    double bot_ang = std::atan2(GOAL_Y_BOT - sy, target_x - sx);
+    double open_angle = std::abs(top_ang - bot_ang) * 180.0 / M_PI;
+
+    // Count blockers on shot path
+    int blockers = 0;
+    double path_len = shot_dist;
+    for (const AbstractPlayerObject* opp : wm.theirPlayers()) {
+        if (!opp || !opp->pos().isValid()) continue;
+        double ex = opp->pos().x - sx, ey = opp->pos().y - sy;
+        double t = std::max(0.0, std::min(1.0, (ex * dx + ey * dy) / (path_len * path_len)));
+        double px = sx + t * dx, py = sy + t * dy;
+        double dist_to_path = std::sqrt((opp->pos().x - px) * (opp->pos().x - px) +
+                                        (opp->pos().y - py) * (opp->pos().y - py));
+        if (dist_to_path < 0.6) ++blockers;
+    }
+
+    // Heuristic score: favor close shots with wide angles and few blockers
+    double score = 0.5; // baseline
+    score += 0.3 * std::max(0.0, 1.0 - shot_dist / 30.0); // closer is better
+    score += 0.2 * std::min(1.0, open_angle / 20.0); // wider angle is better
+    score -= 0.15 * std::min(1.0, blockers / 3.0); // fewer blockers is better
+
+    return std::max(0.0, std::min(1.0, score));
 }

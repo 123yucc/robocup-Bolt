@@ -12,20 +12,22 @@
 
 using namespace rcsc;
 
-DeepNueralNetwork BoltUnmarkInference::s_dnn;
-bool              BoltUnmarkInference::s_loaded = false;
+BoltUnmarkInference& BoltUnmarkInference::getInstance() {
+    static BoltUnmarkInference instance;
+    return instance;
+}
 
 void BoltUnmarkInference::tryLoad(const std::string& weight_path) {
-    if (!s_loaded) {
-        s_loaded = s_dnn.ReadFromKeras(weight_path);
-        if (s_loaded)
+    if (!m_loaded) {
+        m_loaded = m_dnn.ReadFromKeras(weight_path);
+        if (m_loaded)
             std::cerr << "[BoltUnmark] loaded: " << weight_path << std::endl;
         else
             std::cerr << "[BoltUnmark] WARNING: failed to load " << weight_path << std::endl;
     }
 }
 
-bool BoltUnmarkInference::isLoaded() { return s_loaded; }
+bool BoltUnmarkInference::isLoaded() const { return m_loaded; }
 
 static double udist(double x1, double y1, double x2, double y2) {
     double dx = x1 - x2, dy = y1 - y2;
@@ -46,7 +48,11 @@ static double estimateOffsideX(const WorldModel& wm) {
 double BoltUnmarkInference::score(const WorldModel& wm,
                                   const Vector2D& candidate_pos,
                                   int passer_unum) {
-    if (!s_loaded) return 0.0;
+    if (!m_loaded) {
+        return heuristicScore(wm, candidate_pos, passer_unum);
+    }
+
+    try {
 
     static const double FIELD_LEN = 105.0;
     static const double FIELD_WID =  68.0;
@@ -150,6 +156,60 @@ double BoltUnmarkInference::score(const WorldModel& wm,
     input(28, 0) = score_diff;
     input(29, 0) = cycle_norm;
 
-    s_dnn.Calculate(input);
-    return s_dnn.mOutput(0, 0);
+    m_dnn.Calculate(input);
+    return m_dnn.mOutput(0, 0);
+    } catch (const std::exception& e) {
+        std::cerr << "[BoltUnmark] ML inference failed: " << e.what() << ", using heuristic" << std::endl;
+        return heuristicScore(wm, candidate_pos, passer_unum);
+    }
+}
+
+double BoltUnmarkInference::heuristicScore(const WorldModel& wm,
+                                           const Vector2D& candidate_pos,
+                                           int passer_unum) {
+    static const double FIELD_LEN = 105.0;
+    static const double GOAL_X = 52.5;
+
+    // Find passer
+    const AbstractPlayerObject* passer = nullptr;
+    if (passer_unum > 0) passer = wm.ourPlayer(passer_unum);
+    if (!passer || !passer->pos().isValid()) {
+        const AbstractPlayerObject* tm = wm.interceptTable().firstTeammate();
+        if (tm && tm->unum() != wm.self().unum()) passer = tm;
+    }
+
+    double pa_x = 0.0, pa_y = 0.0;
+    if (passer && passer->pos().isValid()) {
+        pa_x = passer->pos().x;
+        pa_y = passer->pos().y;
+    }
+
+    double rx = candidate_pos.x;
+    double ry = candidate_pos.y;
+    double att_goal_x = (wm.ourSide() == LEFT) ? GOAL_X : -GOAL_X;
+
+    // Distance to passer
+    double dx = rx - pa_x, dy = ry - pa_y;
+    double dist_to_passer = std::sqrt(dx * dx + dy * dy);
+
+    // Distance to goal
+    double gx = rx - att_goal_x, gy = ry;
+    double dist_to_goal = std::sqrt(gx * gx + gy * gy);
+
+    // Nearest opponent distance
+    double nearest_opp = 99.0;
+    for (const AbstractPlayerObject* opp : wm.theirPlayers()) {
+        if (!opp || !opp->pos().isValid()) continue;
+        double ox = rx - opp->pos().x, oy = ry - opp->pos().y;
+        double d = std::sqrt(ox * ox + oy * oy);
+        if (d < nearest_opp) nearest_opp = d;
+    }
+
+    // Heuristic score: favor positions close to goal, far from opponents, reasonable distance from passer
+    double score = 0.5; // baseline
+    score += 0.25 * std::max(0.0, 1.0 - dist_to_goal / 50.0); // closer to goal is better
+    score += 0.25 * std::min(1.0, nearest_opp / 5.0); // farther from opponents is better
+    score += 0.15 * std::max(0.0, 1.0 - std::abs(dist_to_passer - 15.0) / 15.0); // optimal pass distance ~15m
+
+    return std::max(0.0, std::min(1.0, score));
 }

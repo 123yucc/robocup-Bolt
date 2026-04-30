@@ -30,6 +30,7 @@
 #include "data_extractor/offensive_data_extractor.h"
 #include "data_extractor/DEState.h"
 #include "learning/bolt_unmark_inference.h"
+#include "ml_config.h"
 
 using namespace std;
 using namespace rcsc;
@@ -439,7 +440,7 @@ double Bhv_Unmark::evaluate_position(const WorldModel &wm, const UnmarkPosition 
     (!have_turn) ? sum_eval += 10 : sum_eval += 0;
     (up_pos) ? sum_eval += 10 : sum_eval += 0;
 
-    if (BoltUnmarkInference::isLoaded()) {
+    if (BoltUnmarkInference::getInstance().isLoaded()) {
         int passer_unum = 0;
         const AbstractPlayerObject * tm = wm.interceptTable().firstTeammate();
         if (tm && tm->unum() != wm.self().unum())
@@ -447,7 +448,7 @@ double Bhv_Unmark::evaluate_position(const WorldModel &wm, const UnmarkPosition 
 
         // 阶段7优化：提高跑位权重（翻倍）
         static const double LAMBDA_UNMARK = 10.0;
-        double ml_score = BoltUnmarkInference::score(wm, unmark_position.target, passer_unum);
+        double ml_score = BoltUnmarkInference::getInstance().score(wm, unmark_position.target, passer_unum);
         sum_eval += LAMBDA_UNMARK * ml_score;
 
 #ifdef DEBUG_PRINT
@@ -500,7 +501,7 @@ void Bhv_Unmark::load_dnn(){
     if(!load_dnn){
         load_dnn = true;
         pass_prediction->ReadFromKeras("./unmark_dnn_weights.txt");
-        BoltUnmarkInference::tryLoad("./unmark_mlp_weights.txt");
+        BoltUnmarkInference::getInstance().tryLoad(MLConfig::getInstance().getWeightPath("unmark").c_str());
     }
 }
 

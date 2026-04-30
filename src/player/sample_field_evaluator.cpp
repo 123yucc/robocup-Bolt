@@ -440,12 +440,12 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const s
 #endif
         }
 
-        if ( BoltShotInference::isLoaded() )
+        if ( BoltShotInference::getInstance().isLoaded() )
         {
             double best_ml = 0.0;
             double best_ty = 0.0;
 
-            // 阶段7优化：根据守门员位置自适应采样
+            // 阶段10优化：自适应采样增强
             Vector2D goalie_pos(52.5, 0.0);
             int goalie_unum = wm.theirGoalieUnum();
             if ( goalie_unum > 0 )
@@ -456,11 +456,69 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const s
                 }
             }
 
-            // 扩展采样范围：覆盖85%球门宽度
-            static const double TARGET_YS[] = { -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0 };
-            for ( double target_y : TARGET_YS )
+            // 计算射门距离
+            double shot_dist = holder->pos().dist( Vector2D(52.5, 0.0) );
+
+            // 动态采样点数量和分布
+            std::vector<double> sample_points;
+
+            if ( shot_dist < 15.0 ) {
+                // 近距离射门（<15m）：9个采样点，更精细
+                sample_points = { -6.5, -5.0, -3.5, -2.0, 0.0, 2.0, 3.5, 5.0, 6.5 };
+            } else if ( shot_dist < 25.0 ) {
+                // 中距离射门（15-25m）：7个采样点（当前）
+                sample_points = { -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0 };
+            } else {
+                // 远距离射门（>25m）：5个采样点，减少计算
+                sample_points = { -5.0, -2.5, 0.0, 2.5, 5.0 };
+            }
+
+            // 守门员位置自适应：调整采样密度
+            double goalie_y = goalie_pos.y;
+            if ( std::abs(goalie_y) > 1.5 ) {
+                // 守门员偏离中心，增加空档侧的采样密度
+                if ( goalie_y > 1.5 ) {
+                    // 守门员偏右，增加左侧（负y）采样
+                    sample_points.push_back(-7.0);
+                    sample_points.push_back(-5.5);
+                } else {
+                    // 守门员偏左，增加右侧（正y）采样
+                    sample_points.push_back(7.0);
+                    sample_points.push_back(5.5);
+                }
+            }
+
+            // 防守者分布感知：避开防守密集区域
+            std::vector<int> defender_density(3, 0); // 左中右三个区域
+            for ( const AbstractPlayerObject* opp : wm.theirPlayers() ) {
+                if ( !opp || !opp->pos().isValid() || opp->unum() == goalie_unum ) continue;
+
+                // 检查防守者是否在射门路径上
+                double opp_x = opp->pos().x;
+                double opp_y = opp->pos().y;
+                if ( opp_x > holder->pos().x && opp_x < 52.5 ) {
+                    if ( opp_y < -2.0 ) defender_density[0]++; // 左侧
+                    else if ( opp_y > 2.0 ) defender_density[2]++; // 右侧
+                    else defender_density[1]++; // 中间
+                }
+            }
+
+            // 在防守薄弱区域增加采样点
+            int min_density = *std::min_element(defender_density.begin(), defender_density.end());
+            if ( defender_density[0] == min_density && shot_dist < 20.0 ) {
+                sample_points.push_back(-6.8);
+            }
+            if ( defender_density[2] == min_density && shot_dist < 20.0 ) {
+                sample_points.push_back(6.8);
+            }
+
+            // 评估所有采样点
+            for ( double target_y : sample_points )
             {
-                double score = BoltShotInference::score( wm, holder->pos(), state.ball().pos(), target_y );
+                // 确保采样点在球门范围内
+                if ( target_y < -7.01 || target_y > 7.01 ) continue;
+
+                double score = BoltShotInference::getInstance().score( wm, holder->pos(), state.ball().pos(), target_y );
                 if ( score > best_ml ) {
                     best_ml = score;
                     best_ty = target_y;
@@ -473,8 +531,8 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const s
 
 #ifdef DEBUG_PRINT
             dlog.addText( Logger::SHOOT,
-                          "(eval) ML shot score: %.4f at y=%.1f, contribution=%.1f",
-                          best_ml, best_ty, LAMBDA_SHOT * best_ml );
+                          "(eval) ML shot score: %.4f at y=%.1f, contribution=%.1f, samples=%d, dist=%.1f",
+                          best_ml, best_ty, LAMBDA_SHOT * best_ml, (int)sample_points.size(), shot_dist );
 #endif
         }
     }
@@ -490,7 +548,7 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const s
     }
 
     // 阶段9优化：传球决策ML评分
-    if ( !path.empty() && BoltPassInference::isLoaded() ) {
+    if ( !path.empty() && BoltPassInference::getInstance().isLoaded() ) {
         const CooperativeAction & first_action = path[0].action();
 
         if ( first_action.category() == CooperativeAction::Pass ) {
@@ -500,7 +558,7 @@ evaluate_state( const PredictState & state, const rcsc::WorldModel & wm, const s
             Vector2D ball_pos = wm.ball().pos();
 
             // 调用ML推理
-            double pass_score = BoltPassInference::score( wm, passer_pos, receiver_pos, ball_pos );
+            double pass_score = BoltPassInference::getInstance().score( wm, passer_pos, receiver_pos, ball_pos );
 
             // 阶段9：传球ML权重
             static const double LAMBDA_PASS = 50.0;

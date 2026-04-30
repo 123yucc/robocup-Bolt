@@ -86,6 +86,7 @@
 
 #include "learning/bolt_shot_inference.h"
 #include "learning/bolt_pass_inference.h"
+#include "ml_config.h"
 
 using namespace rcsc;
 
@@ -479,8 +480,20 @@ SamplePlayer::handleServerParam()
         M_communication = Communication::Ptr( new KeepawayCommunication() );
     }
 
-    BoltShotInference::tryLoad( "./shot_target_mlp_weights.txt" );
-    BoltPassInference::tryLoad( "./pass_decision_mlp_weights.txt" );
+    // 加载ML配置
+    MLConfig::getInstance().load("./ml_config.conf");
+
+    // 使用配置化的路径加载ML模型
+    std::string shot_path = MLConfig::getInstance().getWeightPath("ml_shot_model");
+    std::string pass_path = MLConfig::getInstance().getWeightPath("ml_pass_model");
+
+    if (!shot_path.empty()) {
+        BoltShotInference::getInstance().tryLoad(shot_path);
+    }
+
+    if (!pass_path.empty()) {
+        BoltPassInference::getInstance().tryLoad(pass_path);
+    }
 }
 
 /*-------------------------------------------------------------------*/
